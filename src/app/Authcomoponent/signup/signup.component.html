@@ -1,0 +1,11 @@
+<p>signup works!</p>
+<div class="card">
+    <div class="card-body">
+        <form #signUpform =ngForm (ngSubmit)="onSubmit()" >
+            <input type="text" name="name" class="form-control" [(ngModel)]="name">
+            <input type="email" name="email" class="form-control" [(ngModel)]="email">
+            <input type="password" name="password" class="form-control" [(ngModel)]="password">
+            <button type="submit" class="btn btn-danger">signUp</button>
+        </form>
+    </div>
+</div>
