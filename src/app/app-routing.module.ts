@@ -3,13 +3,17 @@ import { CommonModule } from '@angular/common';
 import { RouterModule,Routes } from '@angular/router';
 import { LoginComponent } from './Authcomoponent/login/login.component';
 import { SignupComponent } from './Authcomoponent/signup/signup.component';
-import { HomeComponent } from './Home/home.component';
+import { HomeModule } from './Home/home.module';
 
 
 const appRoutes : Routes=[
   {
+    
     path: '',
-    component:HomeComponent
+    loadChildren: () =>
+    import("./Home/home.module").then(
+      (m) => m.HomeModule
+    ),
   },
   {
     path: 'login',
