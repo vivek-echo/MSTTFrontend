@@ -1,4 +1,4 @@
-<p>login works!</p>
+<!-- <p>login works!</p>
 <div class="card">
     <div class="card-body">
         <form #loginform =ngForm (ngSubmit)="onSubmit()" >
@@ -7,4 +7,96 @@
             <button type="submit" class="btn btn-danger">login</button>
         </form>
     </div>
-</div>
+</div> -->
+
+
+
+ <!-- Login Area -->
+ <section class="position-relative">
+    <div class="container-fluid">
+        <div class="row">
+           <a routerLink="" class="back-link-mobile" data-bs-toggle="tooltip" title="Back">
+              <div class="arrow-box-circle-mobile">
+                 <i class="fa fa-chevron-left mt-0"></i>
+              </div>
+           </a>
+            <div class="col-md-4 col-lg-5 col-xl-5 col-sm-12 login-image-container">
+               <div class="login-info-box position-relative">
+                    <div class="content-center w-100">
+                       <div class="desk-image mx-auto">
+                          <img class="img-fluid w-100" src="../../../assets/admin/images/desk.png" alt="desk">
+                       </div>
+                       <div class="login-text">
+                          <h1>Application Login</h1><br>
+                          <p class="lead mb-3">Don't have an account ?</p>
+                          <a routerLink="../signup" class="register text-center btn btn-outline-light">Register</a>
+                       </div>
+                    </div>
+               </div>
+            </div>
+            <div class="col-sm-12 col-md-8 col-lg-7 col-xl-7 position-relative">
+              <a routerLink="" class="back-link" data-bs-toggle="tooltip" title="Back">
+                 <div class="arrow-box-circle">
+                    <i class="fa fa-chevron-left mt-0"></i>
+                 </div>
+              </a>
+               <div class="form-box">
+                  <div class="row">
+                     <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 mx-auto">
+                       <div class="card border-0">
+                          <div class="card-body p-4">
+                             <div class="rounded-image mb-3 mx-auto">
+                                <img class="img-fluid" src="../../../assets/admin/images/user.svg" alt="user">
+                             </div>
+                             <!-- form-area -->
+                             <h5 class="text-center">Log in to your account</h5>
+                             <form action="#.">
+                                <div class="form-floating mb-3 mt-3">
+                                   <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+                                   <label for="email">Email</label>
+                                 </div>
+                                 <div class="form-floating mt-3 mb-3">
+                                   <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                                   <label for="pwd">Password</label>
+                                 </div>
+                                <div class="form-check ms-4 my-4">
+                                   <label class="form-check-label float-start lh-1">
+                                      <input class="form-check-input" type="checkbox" name="remember"> 
+                                      <span class="remember">Remember me</span>
+                                   </label>
+                                   <label class="form-check-label float-end">
+                                      <a href="javascript:void();" class="forget-pwd">Forgot Password?</a>
+                                   </label>
+                                </div>
+                                
+                                <div class="gap-2 text-center ">
+                                   <button style="padding: 0.38rem 4rem;" type="button" class="btn btn-primary btn-sm">Login</button>
+                                </div>
+                                
+
+                                <!-- social-icons -->
+                                <div class="login-types text-center mt-4 pb-1">
+                                   <small>OR LOGIN WITH</small>
+                                </div>
+                                <div class="text-center mt-1">
+                                   <ul class="social-network social-circle">
+                                      <li><a href="javascript:void();" class="icoGoogle" title="Google"><i class="myicon-google"></i></a></li>
+                                     <li><a href="javascript:void();" class="icoFacebook" title="Facebook"><i class="myicon-facebook1"></i></a></li>
+                                     <li><a href="javascript:void();" class="icoTwitter" title="Twitter"><i class="myicon-twitter1"></i></a></li>
+                                     <li><a href="javascript:void();" class="icoLinkedin" title="Linkedin"><i class="myicon-linkedin1"></i></a></li>
+                                   </ul>
+                                 </div>
+                                 <!-- social-icons -->
+                                 
+                             </form>
+                             <!-- form-area-ends -->
+                          </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</section>
+

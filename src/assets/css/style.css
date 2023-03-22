@@ -4,7 +4,7 @@ body {
     padding: 0;
     margin: 0;
     font-size: 16px;
-    font-family: rubik, sans-serif
+    font-family: 'poppins', sans-serif
 }
 
 .h1,
@@ -70,7 +70,7 @@ p {
     font-size: 16px;
     margin-bottom: 15px;
     font-weight: 400;
-    font-family: roboto, sans-serif
+    font-family: 'poppins', sans-serif
 }
 
 .ptb-100 {
@@ -288,7 +288,7 @@ p {
     margin-right: 0
 }
 
-.form-control {
+/* .form-control {
     height: 58px;
     color: #090031;
     -webkit-box-shadow: unset !important;
@@ -328,7 +328,7 @@ p {
 
 .form-control:focus {
     border-color: #fd5056
-}
+} */
 
 textarea.form-control {
     height: auto;

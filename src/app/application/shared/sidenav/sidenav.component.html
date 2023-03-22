@@ -1,0 +1,64 @@
+<!-- for desktop/big screens -->
+<div class="margin-sidebar" id="sidebar-wrapper"
+    style="background-color: #524A8A; font-size: 0.8rem;overflow-x: hidden;">
+    <div class="sidebar-heading text-center primary-text fs-5 text-uppercase border-bottom"><i
+            class="myicon-slack me-2"></i>ADMIN</div>
+    <div class="card p-3 mb-3">
+        <div class="d-flex justify-content-between">
+            <div class="d-flex flex-row align-items-center">
+                <div class="icon-trans"> <img class="img-fluid user-image"
+                        src="../../../../assets/admin/images/testimonials/img2.jpg" alt=""> </div>
+                <div class="ms-2 c-details">
+                    <h6 class="mb-0">Vishal Kumar</h6> <span>Admin</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="list-group list-group-flush my-3">
+        <a routerLink="/admin/dashboard"
+            class="list-group-item list-group-item-action bg-transparent white-text active"><i
+                class="myicon-monitor fs-6 me-2"></i> &nbsp;Dashboard</a>
+        <a routerLink="/admin/viewReport" class="list-group-item list-group-item-action bg-transparent white-text"><i
+                class="myicon-table2 fs-6 me-2"></i> &nbsp;Tables</a>
+        <a routerLink="/admin/forms" class="list-group-item list-group-item-action bg-transparent white-text"><i
+                class="myicon-file-text1 fs-6 me-2"></i> &nbsp;Forms</a>
+        <a routerLink="../login" class="list-group-item list-group-item-action bg-transparent"><i
+                class="myicon-log-out fs-6 me-2"></i> &nbsp;Logout</a>
+    </div>
+</div>
+
+
+<!-- for mobile -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="menutoggle_small" aria-labelledby="menutoggle_smallLabel">
+    <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title text-white" id="offcanvasExampleLabel"><i class="fa fa-dashcube me-2"></i>ADMIN</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-0" style="font-size: 0.8rem;overflow-x: hidden;">
+        <div class="card p-3 mb-3">
+            <div class="d-flex justify-content-between">
+                <div class="d-flex flex-row align-items-center">
+                    <div class="icon-trans"> <img class="img-fluid user-image"
+                            src="..\..\assets\images\testimonials\img2.jpg" alt=""> </div>
+                    <div class="ms-2 c-details">
+                        <h6 class="mb-0">Vishal Kumar</h6> <span>Admin</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="list-group list-group-flush my-3">
+                <a routerLink="/admin/dashboard"
+                    class="list-group-item list-group-item-action bg-transparent white-text active"><i
+                        class="icon-meter2 fs-6 me-2"></i> &nbsp;Dashboard</a>
+                <a routerLink="/admin/viewReport"
+                    class="list-group-item list-group-item-action bg-transparent white-text"><i
+                        class="icon-stack fs-6 me-2"></i> &nbsp;Tables</a>
+                <a routerLink="/admin/forms" class="list-group-item list-group-item-action bg-transparent white-text"><i
+                        class="fa fa-gift fs-6 me-2"></i> &nbsp;Forms</a>
+                <a routerLink="login" class="list-group-item list-group-item-action bg-transparent"><i
+                        class="icon-exit fs-6 me-2"></i> &nbsp;Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
