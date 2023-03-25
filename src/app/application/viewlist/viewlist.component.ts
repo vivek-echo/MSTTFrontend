@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit  } from '@angular/core';
+import Swal from 'sweetalert2'
 declare let $: any;
 
 @Component({
@@ -7,6 +8,9 @@ declare let $: any;
   styleUrls: ['./viewlist.component.css']
 })
 export class ViewlistComponent implements OnInit, AfterViewInit{
+
+  
+   Swal = require('sweetalert2');
 
   ngAfterViewInit(): void {
     $('#example').DataTable();
@@ -23,7 +27,15 @@ export class ViewlistComponent implements OnInit, AfterViewInit{
     this.display = !this.display;
   }
   //SIDEMENU TOGGLE ENDS
-
+  
+  buttonFire() {
+    Swal.fire({
+      title: 'Error!',
+      text: 'Do you want to continue',
+      icon: 'error',
+      confirmButtonText: 'Cool'
+    })
+  }
 
   ngOnInit(): void {
 
