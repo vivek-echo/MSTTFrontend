@@ -4750,7 +4750,7 @@ textarea.form-control {
 }
 
 .pagination {
-    display: block;
+    /* display: block; */
     margin-top: 35px;
     margin-left: auto;
     margin-right: auto

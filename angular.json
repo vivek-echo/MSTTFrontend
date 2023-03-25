@@ -36,9 +36,12 @@
               "src/assets/css/owl.carousel.min.css",
               "src/assets/css/meanmenu.min.css",
               "src/assets/css/style.css",
+              "src/assets/admin/css/main.css",
               "src/assets/css/responsive.css",
               "src/assets/css/theme-dark.css",
-              "src/assets/css/icomoon/style.css"
+              "src/assets/css/icomoon/style.css",
+
+              "./node_modules/datatables.net-bs5/css/dataTables.bootstrap5.css"
 
               
               
@@ -55,9 +58,10 @@
               "src/assets/js/form-validator.min.js",
               "src/assets/js/contact-form-script.js",
               "src/assets/js/jquery.ajaxchimp.min.js",
-              "src/assets/js/script.js"
+              "src/assets/js/script.js",
 
-
+              "./node_modules/datatables.net/js/jquery.dataTables.js",
+              "./node_modules/datatables.net-bs5/js/dataTables.bootstrap5.js"
               
             ]
           },

@@ -51,7 +51,7 @@ $border-radius-4: 1.4rem; */
 }
 
 .border-bottom {
-  border-bottom: .5px solid #b684dd8f !important;
+  border-bottom: .5px solid #e2b991 !important;
 }
 
 #wrapper {
@@ -79,7 +79,7 @@ $border-radius-4: 1.4rem; */
 #sidebar-wrapper .sidebar-heading {
   padding: 0.9rem 1.25rem;
   font-size: 1.2rem;
-  background-color: #524A8A;
+  background-color: #d37b26;
   color: #fff;
 }
 
@@ -113,8 +113,8 @@ $border-radius-4: 1.4rem; */
 
 .list-group-item:hover {
   border-radius: 40px;
-  background-color: rgb(241 245 249) !important;
-  color: #164e63;
+  background-color: rgb(167 97 30) !important;
+  color: #fff;
   /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   background-image: radial-gradient(circle at 26px 26px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 26px, #164e63 28px); */
 }
@@ -157,7 +157,7 @@ $border-radius-4: 1.4rem; */
   word-wrap: break-word;
   background-color: transparent;
   background-clip: border-box;
-  border-bottom: 0.5px solid #b684dd8f !important;
+  border-bottom: 0.5px solid #e2b991 !important;
   border-radius: 0;
 }
 
@@ -194,5 +194,5 @@ $border-radius-4: 1.4rem; */
 }
 
 .offcanvas {
-  background-color: #524a8a;
+  background-color: #d37b26;
 }

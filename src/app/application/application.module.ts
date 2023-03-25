@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TopnavComponent } from './shared/topnav/topnav.component';
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { ViewlistComponent } from './viewlist/viewlist.component';
 
 
 
@@ -15,7 +16,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     DashboardComponent,
     TopnavComponent,
     SidenavComponent,
-    FooterComponent
+    FooterComponent,
+    ViewlistComponent
   ],
   imports: [
     CommonModule,RouterModule

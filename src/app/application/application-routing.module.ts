@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule,Routes } from '@angular/router';
 import { ApplicationComponent } from './application.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ViewlistComponent } from './viewlist/viewlist.component';
 
 const routes : Routes=[
   {
@@ -16,6 +17,10 @@ const routes : Routes=[
     {
       path: "dashboard",
       component: DashboardComponent,
+    },
+    {
+      path: "viewlist",
+      component: ViewlistComponent,
     },
   ]
   },
