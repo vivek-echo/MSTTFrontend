@@ -1,26 +1,24 @@
-
-        
-        <div class="container-fluid pt-4 pb-1 px-4">
-            <div class="col-lg-12">
-                <div class="row g-3">
-                    <div class="d-flex justify-content-between mt-0">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb p-1">
-                                <li class="breadcrumb-item text-custom"><a href="javascript:void();">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-                            </ol>
-                        </nav>
-                        <div>
-                            <button class="btn btn-light btn-sm p-btn-sm btn-light-shadow me-2 rounded">Share</button>
-                            <button class="btn btn-success btn-sm p-btn-sm btn-dark-shadow rounded" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop"> <i class="myicon-plus-square fs-6 me-2"></i>Create</button>
-                        </div>
-                      </div>
+<div class="container-fluid pt-4 pb-1 px-4">
+    <div class="col-lg-12">
+        <div class="row g-3">
+            <div class="d-flex justify-content-between mt-0">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb p-1">
+                        <li class="breadcrumb-item text-custom"><a href="javascript:void();">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Bus Booking</li>
+                    </ol>
+                </nav>
+                <div>
+                    <button class="btn btn-light btn-sm p-btn-sm btn-light-shadow me-2 rounded">Share</button>
+                    <button class="btn btn-success btn-sm p-btn-sm btn-dark-shadow rounded" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop"> <i class="myicon-plus-square fs-6 me-2"></i>Create</button>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
-        <!-- <div class="container-fluid px-4">
+<!-- <div class="container-fluid px-4">
             <div class="col-lg-12">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
@@ -36,281 +34,181 @@
             </div>
         </div> -->
 
-        <div class="container-fluid">
-            
+<div class="container-fluid">
 
-            <div class="row mt-0">
-                <!-- <div class="col-lg-6 col-sm-12">
+
+    <div class="row mt-0">
+        <!-- <div class="col-lg-6 col-sm-12">
                     <div id="bar"></div>
                 </div> -->
-                <div class="col-lg-12 col-sm-12">
-                    <div class="card border-0">
-                        <div class="card-header pt-1">
-                            <!-- <h4 class="fs-6">Monthly Incidents</h4> -->
-                            <span class="d-inline-block align-middle h6">Basic DataTable</span>
+        <div class="col-lg-12 col-sm-12">
+            <div class="card border-0">
+                <div class="card-header pt-1">
+                    <!-- <h4 class="fs-6">Monthly Incidents</h4> -->
+                    <span class="d-inline-block align-middle h6">Bus Booking</span>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3 ">
+                        <div class="col-md-4">
+                            <label for="fromcity" class="form-label">From City</label>
+                            <select id="" class="form-select form-select-sm">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
                         </div>
-                        <div class="card-body">
-                            <form class="row g-3 mb-4">
-                                <div class="col-md-3">
-                                    <label for="inputEmail4" class="form-label">From Date</label>
-                                    <input type="date" class="form-control form-control-sm" id="inputEmail4">
-                                </div>
-                                <div class="col-md-3">
-                                    <label for="inputPassword4" class="form-label">To Date</label>
-                                    <input type="date" class="form-control form-control-sm" id="inputPassword4">
-                                </div>
-                                <div class="col-md-3">
-                                    <label for="inputState" class="form-label">State</label>
-                                    <select id="inputState" class="form-select form-select-sm">
-                                        <option selected>Choose...</option>
-                                        <option>...</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-3">
-                                    <button type="button" class="btn btn-sm btn-success margin-btn-top">Search</button>
-                                </div>
-                            </form>
-                            <hr class="h-rule">
-                            <div class="table-responsive">
-                                <table id="example" class="table rounded">
-                                    <thead class="sticky-top">
-                                        <tr class="text-dark">
-                                            <th style="width: 2rem;" class="custom-table-head">#</th>
-                                            <th style="width: 15rem;" class="custom-table-head">Name</th>
-                                            <th style="width: 12rem;" class="custom-table-head">Due Date</th>
-                                            <th style="width: 10rem;" class="custom-table-head">Status</th>
-                                            <th style="width: 15rem;" class="custom-table-head">Completion</th>
-                                            <th style="width: 15rem;" class="custom-table-head text-center">Actions</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="align-middle">
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>Website Redesign</td>
-                                            <td>23-01-2022</td>
-                                            <td><span class="dot-yellow"></span> In progress</td>
-                                            <td>
-                                                <div class="progress" style="height: 10px; font-size: 8px;">
-                                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
-                                                        style="min-width: 70%;">70%</div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="text-center">
-                                                    <div class="btn-group me-2" role="group" aria-label="First group">
-                                                        <button type="button" class="btn btn-sm btn-neutral"><i
-                                                                class="myicon-eye1 fs-6"></i></button>
-                                                    </div>
-                                                    <div class="btn-group" role="group" aria-label="Third group">
-                                                        <button type="button" class="btn btn-sm btn-neutral"><i
-                                                                class="myicon-trash fs-6"></i></button>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>Website Redesign</td>
-                                            <td>23-01-2022</td>
-                                            <td><span class="dot-green"></span> Completed</td>
-                                            <td>
-                                                <div class="progress" style="height: 10px; font-size: 8px;">
-                                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-                                                        style="min-width: 100%;">100%</div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="text-center">
-                                                    <div class="btn-group me-2" role="group" aria-label="First group">
-                                                        <button type="button" class="btn btn-sm btn-neutral"><i
-                                                                class="myicon-eye1 fs-6"></i></button>
-                                                    </div>
-                                                    <div class="btn-group" role="group" aria-label="Third group">
-                                                        <button type="button" class="btn btn-sm btn-neutral"><i
-                                                                class="myicon-trash fs-6"></i></button>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>Website Redesign</td>
-                                            <td>23-01-2022</td>
-                                            <td><span class="dot-green"></span> Completed</td>
-                                            <td>
-                                                <div class="progress" style="height: 10px; font-size: 8px;">
-                                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-                                                        style="min-width: 100%;">100%</div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="text-center">
-                                                    <div class="btn-group me-2" role="group" aria-label="First group">
-                                                        <button type="button" class="btn btn-sm btn-neutral"><i
-                                                                class="myicon-eye1 fs-6"></i></button>
-                                                    </div>
-                                                    <div class="btn-group" role="group" aria-label="Third group">
-                                                        <button type="button" class="btn btn-sm btn-neutral"><i
-                                                                class="myicon-trash fs-6"></i></button>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>Website Redesign</td>
-                                            <td>23-01-2022</td>
-                                            <td><span class="dot-green"></span> Completed</td>
-                                            <td>
-                                                <div class="progress" style="height: 10px; font-size: 8px;">
-                                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-                                                        style="min-width: 100%;">100%</div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="text-center">
-                                                    <div class="btn-group me-2" role="group" aria-label="First group">
-                                                        <button type="button" class="btn btn-sm btn-neutral"><i
-                                                                class="myicon-eye1 fs-6"></i></button>
-                                                    </div>
-                                                    <div class="btn-group" role="group" aria-label="Third group">
-                                                        <button type="button" class="btn btn-sm btn-neutral"><i
-                                                                class="myicon-trash fs-6"></i></button>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">5</th>
-                                            <td>Website Redesign</td>
-                                            <td>23-01-2022</td>
-                                            <td><span class="dot-yellow"></span> In progress</td>
-                                            <td>
-                                                <div class="progress" style="height: 10px; font-size: 8px;">
-                                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
-                                                        style="min-width: 70%;">70%</div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="text-center">
-                                                    <div class="btn-group me-2" role="group" aria-label="First group">
-                                                        <button type="button" class="btn btn-sm btn-neutral"><i
-                                                                class="myicon-eye1 fs-6"></i></button>
-                                                    </div>
-                                                    <div class="btn-group" role="group" aria-label="Third group">
-                                                        <button type="button" class="btn btn-sm btn-neutral"><i
-                                                                class="myicon-trash fs-6"></i></button>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">6</th>
-                                            <td>Website Redesign</td>
-                                            <td>23-01-2022</td>
-                                            <td><span class="dot-red"></span> At risk</td>
-                                            <td>
-                                                <div class="progress" style="height: 10px; font-size: 8px;">
-                                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
-                                                        style="min-width: 20%;">20%</div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="text-center">
-                                                    <div class="btn-group me-2" role="group" aria-label="First group">
-                                                        <button type="button" class="btn btn-sm btn-neutral"><i
-                                                                class="myicon-eye1 fs-6"></i></button>
-                                                    </div>
-                                                    <div class="btn-group" role="group" aria-label="Third group">
-                                                        <button type="button" class="btn btn-sm btn-neutral"><i
-                                                                class="myicon-trash fs-6"></i></button>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">7</th>
-                                            <td>Website Redesign</td>
-                                            <td>23-01-2022</td>
-                                            <td><span class="dot-green"></span> Completed</td>
-                                            <td>
-                                                <div class="progress" style="height: 10px; font-size: 8px;">
-                                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-                                                        style="min-width: 100%;">100%</div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="text-center">
-                                                    <div class="btn-group me-2" role="group" aria-label="First group">
-                                                        <button type="button" class="btn btn-sm btn-neutral"><i
-                                                                class="myicon-eye1 fs-6"></i></button>
-                                                    </div>
-                                                    <div class="btn-group" role="group" aria-label="Third group">
-                                                        <button type="button" class="btn btn-sm btn-neutral"><i
-                                                                class="myicon-trash fs-6"></i></button>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">8</th>
-                                            <td>Website Redesign</td>
-                                            <td>23-01-2022</td>
-                                            <td><span class="dot-green"></span> Completed</td>
-                                            <td>
-                                                <div class="progress" style="height: 10px; font-size: 8px;">
-                                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-                                                        style="min-width: 100%;">100%</div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="text-center">
-                                                    <div class="btn-group me-2" role="group" aria-label="First group">
-                                                        <button type="button" class="btn btn-sm btn-neutral"><i
-                                                                class="myicon-eye1 fs-6"></i></button>
-                                                    </div>
-                                                    <div class="btn-group" role="group" aria-label="Third group">
-                                                        <button type="button" class="btn btn-sm btn-neutral"><i
-                                                                class="myicon-trash fs-6"></i></button>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">9</th>
-                                            <td>Website Redesign</td>
-                                            <td>23-01-2022</td>
-                                            <td><span class="dot-green"></span> Completed</td>
-                                            <td>
-                                                <div class="progress" style="height: 10px; font-size: 8px;">
-                                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-                                                        style="min-width: 100%;">100%</div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="text-center">
-                                                    <div class="btn-group me-2" role="group" aria-label="First group">
-                                                        <button type="button" class="btn btn-sm btn-neutral"><i
-                                                                class="myicon-eye1 fs-6"></i></button>
-                                                    </div>
-                                                    <div class="btn-group" role="group" aria-label="Third group">
-                                                        <button id="jasa" type="button" class="btn btn-sm btn-neutral"><i
-                                                                class="myicon-trash fs-6"></i></button>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                        <div class="col-md-4">
+                            <label for="tocity" class="form-label">To City</label>
+                            <select id="" class="form-select form-select-sm">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
                         </div>
-                      </div>
+                        <div class="col-md-4">
+                            <label for="inputEmail4" class="form-label"> Date</label>
+                            <input type="date" class="form-control form-control-sm" id="inputEmail4">
+                        </div>
+                        <div class="col-md-3">
+                            <button type="button" class="btn btn-sm btn-success margin-btn-top"
+                                (click)='toggleDisplayDivIf()'>Search</button>
+                        </div>
+                    </div>
+                    <hr class="h-rule">
+                    <div class="table-responsive" *ngIf="!isShowDivIf">
+                        <table id="example" class="table rounded">
+                            <thead class="sticky-top">
+                                <tr >
+                                    <th class="custom-table-head">Buses</th>
+                                    <th class="custom-table-head">Departure</th>
+                                    <th class="custom-table-head">Duration</th>
+                                    <th class="custom-table-head">Arrival</th>
+                                    <th class="custom-table-head">Ratings</th>
+                                    <th class="custom-table-head">Fare</th>
+                                    <th class="custom-table-head">Seats Available</th>
+                                    <th class="custom-table-head">Book Now</th>
+                                </tr>
+                            </thead>
+                            <tbody class="align-middle">
+                                <tr>
+                                    <th>MAHALAXMI BUS<br><small>A/C Seater / Sleeper (2+1)</small></th>
+                                    <td>21:40</td>
+                                    <td>07h 20m</td>
+                                    <td>05:00</td>
+                                    <td>4.3</td>
+                                    <td>INR 615</td>
+                                    <td>30 Seats available</td>
+                                    <td><button class="btn btn-warning bt-sm"> Book </button></td>
+                                </tr>
+                                <tr>
+                                    <th>Nilamadhab Travels<br><small>A/C Seater / Sleeper (2+1)</small></th>
+                                    <td>21:05</td>
+                                    <td>07h 55m</td>
+                                    <td>05:00</td>
+                                    <td>4.9</td>
+                                    <td>INR 699</td>
+                                    <td>8 Seats available</td>
+                                    <td><button class="btn btn-warning bt-sm"> Book </button></td>
+                                </tr>
+                                <tr>
+                                    <th>Dolphin tours and travels<br><small>A/C Seater / Sleeper (2+1)</small></th>
+                                    <td>20:20</td>
+                                    <td>08h 40m</td>
+                                    <td>05:00</td>
+                                    <td>4.0</td>
+                                    <td>INR 616</td>
+                                    <td>45 Seats available</td>
+                                    <td><button class="btn btn-warning bt-sm"> Book </button></td>
+                                </tr>
+                                <tr>
+                                    <th>Dolphin tours and travels<br><small>A/C Seater / Sleeper (2+1)</small></th>
+                                    <td>20:20</td>
+                                    <td>08h 40m</td>
+                                    <td>05:00</td>
+                                    <td>4.0</td>
+                                    <td>INR 616</td>
+                                    <td>45 Seats available</td>
+                                    <td><button class="btn btn-warning bt-sm"> Book </button></td>
+                                </tr>
+                                <tr>
+                                    <th>MAHALAXMI BUS<br><small>A/C Seater / Sleeper (2+1)</small></th>
+                                    <td>21:40</td>
+                                    <td>07h 20m</td>
+                                    <td>05:00</td>
+                                    <td>4.3</td>
+                                    <td>INR 615</td>
+                                    <td>30 Seats available</td>
+                                    <td><button class="btn btn-warning bt-sm"> Book </button></td>
+                                </tr>
+                                <tr>
+                                    <th>Dolphin tours and travels<br><small>A/C Seater / Sleeper (2+1)</small></th>
+                                    <td>20:20</td>
+                                    <td>08h 40m</td>
+                                    <td>05:00</td>
+                                    <td>4.0</td>
+                                    <td>INR 616</td>
+                                    <td>45 Seats available</td>
+                                    <td><button class="btn btn-warning bt-sm"> Book </button></td>
+                                </tr>
+                                <tr>
+                                    <th>Dolphin tours and travels<br><small>A/C Seater / Sleeper (2+1)</small></th>
+                                    <td>20:20</td>
+                                    <td>08h 40m</td>
+                                    <td>05:00</td>
+                                    <td>4.0</td>
+                                    <td>INR 616</td>
+                                    <td>45 Seats available</td>
+                                    <td><button class="btn btn-warning bt-sm"> Book </button></td>
+                                </tr>
+                                <tr>
+                                    <th>MAHALAXMI BUS<br><small>A/C Seater / Sleeper (2+1)</small></th>
+                                    <td>21:40</td>
+                                    <td>07h 20m</td>
+                                    <td>05:00</td>
+                                    <td>4.3</td>
+                                    <td>INR 615</td>
+                                    <td>30 Seats available</td>
+                                    <td><button class="btn btn-warning bt-sm"> Book </button></td>
+                                </tr>
+                                <tr>
+                                    <th>MAHALAXMI BUS<br><small>A/C Seater / Sleeper (2+1)</small></th>
+                                    <td>21:40</td>
+                                    <td>07h 20m</td>
+                                    <td>05:00</td>
+                                    <td>4.3</td>
+                                    <td>INR 615</td>
+                                    <td>30 Seats available</td>
+                                    <td><button class="btn btn-warning bt-sm"> Book </button></td>
+                                </tr>
+                                <tr>
+                                    <th>MAHALAXMI BUS<br><small>A/C Seater / Sleeper (2+1)</small></th>
+                                    <td>21:40</td>
+                                    <td>07h 20m</td>
+                                    <td>05:00</td>
+                                    <td>4.3</td>
+                                    <td>INR 615</td>
+                                    <td>30 Seats available</td>
+                                    <td><button class="btn btn-warning bt-sm"> Book </button></td>
+                                </tr>
+                                <tr>
+                                    <th>Dolphin tours and travels <br><small>A/C Seater / Sleeper (2+1)</small></th>
+                                    <td>20:20</td>
+                                    <td>08h 40m</td>
+                                    <td>05:00</td>
+                                    <td>4.0</td>
+                                    <td>INR 616</td>
+                                    <td>45 Seats available</td>
+                                    <td><button class="btn btn-warning bt-sm"> Book </button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-
         </div>
+    </div>
 
-        <!-- <div class="container-fluid px-4">
+</div>
+
+<!-- <div class="container-fluid px-4">
             <div class="row mt-4 mb-3">
                 <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12">
                     <div class="card p-3 mb-2 card-light-shadow">
@@ -398,7 +296,7 @@
         <span class="text-white">Place sticky footer content here.</span>
     </div>
 </footer> -->
-  
+
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -420,7 +318,8 @@
                     </div>
                     <div class="col-12">
                         <label for="inputAddress" class="form-label">Address</label>
-                        <input type="text" class="form-control form-control-sm" id="inputAddress" placeholder="1234 Main St">
+                        <input type="text" class="form-control form-control-sm" id="inputAddress"
+                            placeholder="1234 Main St">
                     </div>
                     <div class="col-12">
                         <label for="inputAddress2" class="form-label">Address 2</label>
@@ -451,7 +350,8 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <button type="button" class="btn btn-success btn-sm px-3 btn-dark-shadow rounded">Create</button>
+                        <button type="button"
+                            class="btn btn-success btn-sm px-3 btn-dark-shadow rounded">Create</button>
                     </div>
                 </form>
             </div>
