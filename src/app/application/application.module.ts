@@ -7,6 +7,7 @@ import { TopnavComponent } from './shared/topnav/topnav.component';
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { ViewlistComponent } from './viewlist/viewlist.component';
+import { BusbookingComponent } from './busbooking/busbooking.component';
 
 
 
@@ -17,7 +18,8 @@ import { ViewlistComponent } from './viewlist/viewlist.component';
     TopnavComponent,
     SidenavComponent,
     FooterComponent,
-    ViewlistComponent
+    ViewlistComponent,
+    BusbookingComponent
   ],
   imports: [
     CommonModule,RouterModule

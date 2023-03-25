@@ -16,16 +16,6 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   }
 
 
-
-  //SIDEMENU TOOGLE STARTS
-  display = true;
-
-  menutog() {
-    this.display = !this.display;
-  }
-  //SIDEMENU TOGGLE ENDS
-
-
   ngOnInit(): void {
 
     // CARDS PROGRESS BAR ANIMATION

@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class TopnavComponent {
 
+  display = true;
+
+  menutog() {
+    this.display = !this.display;
+  }
 }

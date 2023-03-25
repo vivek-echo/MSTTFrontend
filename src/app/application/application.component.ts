@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./application.component.css']
 })
 export class ApplicationComponent {
+  //SIDEMENU TOOGLE STARTS
+  display = true;
 
+  menutog() {
+    this.display = !this.display;
+  }
+  //SIDEMENU TOGGLE ENDS
 }

@@ -6,7 +6,7 @@ import { ViewlistComponent } from './viewlist/viewlist.component';
 
 const routes : Routes=[
   {
-    path: '',
+    path: 'Application',
    component: ApplicationComponent,
    children: [
     {
@@ -19,7 +19,7 @@ const routes : Routes=[
       component: DashboardComponent,
     },
     {
-      path: "viewlist",
+      path: "busbooking",
       component: ViewlistComponent,
     },
   ]
