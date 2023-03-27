@@ -9,7 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ApplicationRoutingModule } from './application/application-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeModule } from './Home/home.module';
-
+import { AlertHelper } from './core/helper/alert-helper';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import { HomeModule } from './Home/home.module';
     HttpClientModule,
     HomeModule
   ],
-  providers: [],
+  providers: [AlertHelper],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

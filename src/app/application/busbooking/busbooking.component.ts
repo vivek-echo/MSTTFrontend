@@ -1,5 +1,6 @@
 import { Component, OnInit,AfterViewInit } from '@angular/core';
 declare let $:any;
+import { Router ,ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-busbooking',
@@ -7,7 +8,16 @@ declare let $:any;
   styleUrls: ['./busbooking.component.css']
 })
 export class BusbookingComponent implements OnInit ,AfterViewInit{
+  bookingtype:any = "";
+  constructor(
+    private route : Router,
+    private ActivatedRoute : ActivatedRoute
+  ) { }
   ngOnInit(): void {
+   this.bookingtype = this.ActivatedRoute.snapshot.data['bookingtype'];
+    // .data.subscribe((res:any)=>{
+    //   this.bookingtype=res.bookingtype
+    // })
     $('#example').DataTable();
 
   }

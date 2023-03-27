@@ -22,6 +22,44 @@ const routes : Routes=[
     {
       path: "busbooking",
       component: BusbookingComponent,
+      data:{
+        bookingtype : "Bus Booking"
+      }
+    },
+    {
+      path: "taxibooking",
+      component: BusbookingComponent,
+      data:{
+        bookingtype : "Taki Booking"
+      }
+    },
+    {
+      path: "truckbooking",
+      component: BusbookingComponent,
+      data:{
+        bookingtype : "Truck Booking"
+      }
+    },
+    {
+      path: "bikebooking",
+      component: BusbookingComponent,
+      data:{
+        bookingtype : "Bike Booking"
+      }
+    },
+    {
+      path: "airticket",
+      component: BusbookingComponent,
+      data:{
+        bookingtype : "Air Ticket"
+      }
+    },
+    {
+      path: "hotelBooking",
+      component: BusbookingComponent,
+      data:{
+        bookingtype : "Hotel Booking"
+      }
     },
     {
       path: "viewList",
