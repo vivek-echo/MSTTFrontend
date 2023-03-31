@@ -79,8 +79,8 @@ $border-radius-4: 1.4rem; */
 #sidebar-wrapper .sidebar-heading {
   padding: 0.9rem 1.25rem;
   font-size: 1.2rem;
-  background-color: #d37b26;
   color: #fff;
+  border-bottom: 0.5px solid #fa685a !important;
 }
 
 #sidebar-wrapper .list-group {
@@ -113,7 +113,7 @@ $border-radius-4: 1.4rem; */
 
 .list-group-item:hover {
   border-radius: 40px;
-  background-color: rgb(167 97 30) !important;
+  background-color: #00000035 !important;
   color: #fff;
   /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   background-image: radial-gradient(circle at 26px 26px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 26px, #164e63 28px); */
@@ -157,7 +157,7 @@ $border-radius-4: 1.4rem; */
   word-wrap: break-word;
   background-color: transparent;
   background-clip: border-box;
-  border-bottom: 0.5px solid #e2b991 !important;
+  border-bottom: 0.5px solid #fa685a !important;
   border-radius: 0;
 }
 
