@@ -26,20 +26,22 @@
             ],
             "styles": [
               "src/styles.css",
+              
+              "src/assets/css/animate.css",
+              "src/assets/css/all.css",
               "src/assets/css/bootstrap.min.css",
-              "src/assets/css/fontawesome.min.css",
               "src/assets/css/boxicons.min.css",
-              "src/assets/css/animate.min.css",
-              "src/assets/css/bootstrap-datepicker.min.css",
+              "src/assets/css/bootstrap-icons.css",
+              "src/assets/css/jquery-ui.css",
+              "src/assets/css/swiper-bundle.css",
               "src/assets/css/nice-select.css",
-              "src/assets/css/magnific-popup.min.css",
-              "src/assets/css/owl.carousel.min.css",
-              "src/assets/css/meanmenu.min.css",
+              "src/assets/css/select2.min.css",
+              "src/assets/css/magnific-popup.css",
+              "src/assets/css/odometer.css",
               "src/assets/css/style.css",
-              "src/assets/admin/css/main.css",
-              "src/assets/css/responsive.css",
-              "src/assets/css/theme-dark.css",
+              
               "src/assets/css/icomoon/style.css",
+              "src/assets/admin/css/main.css",
 
               "./node_modules/datatables.net-bs5/css/dataTables.bootstrap5.css"
 
@@ -47,18 +49,16 @@
               
             ],
             "scripts": [
-              "src/assets/js/jquery.min.js",
+              "src/assets/js/jquery-3.6.0.min.js",
+              "src/assets/js/jquery-ui.js",
               "src/assets/js/bootstrap.bundle.min.js",
-              "src/assets/js/bootstrap-datepicker.min.js",
-              "src/assets/js/jquery.nice-select.min.js",
+              "src/assets/js/swiper-bundle.min.js",
+              "src/assets/js/jquery.nice-select.js",
+              "src/assets/js/odometer.min.js",
+              "src/assets/js/viewport.jquery.js",
               "src/assets/js/jquery.magnific-popup.min.js",
-              "src/assets/js/jquery.filterizr.min.js",
-              "src/assets/js/owl.carousel.min.js",
-              "src/assets/js/meanmenu.min.js",
-              "src/assets/js/form-validator.min.js",
-              "src/assets/js/contact-form-script.js",
-              "src/assets/js/jquery.ajaxchimp.min.js",
-              "src/assets/js/script.js",
+              "src/assets/js/isotope.pkgd.min.js",
+              "src/assets/js/main.js",
 
               "./node_modules/datatables.net/js/jquery.dataTables.js",
               "./node_modules/datatables.net-bs5/js/dataTables.bootstrap5.js"
