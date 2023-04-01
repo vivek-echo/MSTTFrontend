@@ -113,5 +113,6 @@ export class LandingComponent implements OnInit {
       $('.main-nav').removeClass('show-menu');
     });
     
+    
   }
 }
