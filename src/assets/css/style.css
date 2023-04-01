@@ -9,8 +9,8 @@
 :root {
     --primary-color2: #F2AA4CFF;
     --primary-color3: #D55437;
-    --primary-color1: #90B956;
-    --primary-color1-light: rgba(144, 185, 86, 0.7);
+    --primary-color1: #ff2f00;
+    --primary-color1-light: rgba(255, 47, 0, 0.7);
     --primary1-dark: #359D9E;
     --white: #fff;
     --text-primary: #09100D;
@@ -125,6 +125,10 @@ i.bx {
 
 .pt-120 {
     padding-top: 120px
+}
+
+.w-38 {
+    width: 38% !important;
 }
 
 @media(min-width:992px)and (max-width:1199px) {
@@ -5582,7 +5586,7 @@ form.style-1 .form-inner .searchbox-input textarea::placeholder {
     background: var(--white);
     box-shadow: 4px 3px 40px rgba(16, 33, 34, .06);
     text-align: center;
-    padding: 30px 25px
+    padding: 30px 23px
 }
 
 @media(max-width:576px) {

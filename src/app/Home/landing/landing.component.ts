@@ -1,97 +1,117 @@
-import { Component,OnInit } from '@angular/core';
-declare let $ : any;
+import { Component, OnInit } from '@angular/core';
+declare let $: any;
 
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.css']
 })
-export class LandingComponent implements OnInit  {
+export class LandingComponent implements OnInit {
   ngOnInit(): void {
 
-    $(".banner-slider").owlCarousel({
-      loop: true,
-      margin: 0,
-      items: 1,
-      dots: false,
-      dotsContainer: "#owl-custom-dots",
-      nav: true,
-      navText: [
-        "<i class='bx bxs-chevron-left'></i>",
-        "<i class='bx bxs-chevron-right'></i>",
-      ],
-      autoplay: true,
-      autoplayHoverPause: true,
-      autoplayTimeout: 8500,
-      smartSpeed: 450,
+    // $(".banner-slider").owlCarousel({
+    //   loop: true,
+    //   margin: 0,
+    //   items: 1,
+    //   dots: false,
+    //   dotsContainer: "#owl-custom-dots",
+    //   nav: true,
+    //   navText: [
+    //     "<i class='bx bxs-chevron-left'></i>",
+    //     "<i class='bx bxs-chevron-right'></i>",
+    //   ],
+    //   autoplay: true,
+    //   autoplayHoverPause: true,
+    //   autoplayTimeout: 8500,
+    //   smartSpeed: 450,
+    // });
+    // var bannerSlider = $(".banner-slider");
+    // $(".owl-dot").click(function () {
+    //   bannerSlider.trigger("to.owl.carousel", [$('.owl-dot').index(), 300]);
+    // });
+    // $(".banner-slider-two").owlCarousel({
+    //   loop: true,
+    //   margin: 0,
+    //   items: 1,
+    //   dots: false,
+    //   nav: true,
+    //   navText: [
+    //     "<i class='bx bxs-chevron-left'></i>",
+    //     "<i class='bx bxs-chevron-right'></i>",
+    //   ],
+    //   autoplay: true,
+    //   autoplayHoverPause: true,
+    //   autoplayTimeout: 8500,
+    //   smartSpeed: 1000,
+    // });
+    // $(".banner-slider-three").owlCarousel({
+    //   loop: true,
+    //   margin: 0,
+    //   items: 1,
+    //   dots: false,
+    //   nav: true,
+    //   navText: [
+    //     "<i class='bx bxs-chevron-left'></i>",
+    //     "<i class='bx bxs-chevron-right'></i>",
+    //   ],
+    //   autoplay: true,
+    //   autoplayHoverPause: true,
+    //   autoplayTimeout: 8500,
+    //   smartSpeed: 1000,
+    // });
+    // $(".testimonial-slider").owlCarousel({
+    //   loop: true,
+    //   nav: true,
+    //   navText: [
+    //     "<i class='bx bx-left-arrow-alt'></i>",
+    //     "<i class='bx bx-right-arrow-alt'></i>",
+    //   ],
+    //   dots: false,
+    //   autoplay: true,
+    //   autoplayHoverPause: true,
+    //   autoplayTimeout: 8500,
+    //   smartSpeed: 450,
+    //   items: 1,
+    // });
+    // $(".tours-slider").owlCarousel({
+    //   loop: true,
+    //   margin: 20,
+    //   nav: true,
+    //   navText: [
+    //     "<i class='bx bxs-chevron-left'></i>",
+    //     "<i class='bx bxs-chevron-right'></i>",
+    //   ],
+    //   dots: false,
+    //   autoplay: true,
+    //   autoplayHoverPause: true,
+    //   autoplayTimeout: 8500,
+    //   smartSpeed: 450,
+    //   responsiveClass: true,
+    //   responsive: {
+    //     0: { items: 1, margin: 10 },
+    //     768: { items: 2 },
+    //     991: { items: 3 },
+    //   },
+    // });
+
+    $('select').niceSelect();
+    $('#datepicker').datepicker({
+      format: 'dd-mm-yyyy',
+      startDate: '+1d'
     });
-    var bannerSlider = $(".banner-slider");
-    $(".owl-dot").click(function () {
-      bannerSlider.trigger("to.owl.carousel", [$('.owl-dot').index(), 300]);
+
+    $('.search-btn').on("click", function () {
+      $('.mobile-search').addClass('slide');
     });
-    $(".banner-slider-two").owlCarousel({
-      loop: true,
-      margin: 0,
-      items: 1,
-      dots: false,
-      nav: true,
-      navText: [
-        "<i class='bx bxs-chevron-left'></i>",
-        "<i class='bx bxs-chevron-right'></i>",
-      ],
-      autoplay: true,
-      autoplayHoverPause: true,
-      autoplayTimeout: 8500,
-      smartSpeed: 1000,
+    $('.search-cross-btn').on("click", function () {
+      $('.mobile-search').removeClass('slide');
     });
-    $(".banner-slider-three").owlCarousel({
-      loop: true,
-      margin: 0,
-      items: 1,
-      dots: false,
-      nav: true,
-      navText: [
-        "<i class='bx bxs-chevron-left'></i>",
-        "<i class='bx bxs-chevron-right'></i>",
-      ],
-      autoplay: true,
-      autoplayHoverPause: true,
-      autoplayTimeout: 8500,
-      smartSpeed: 1000,
+    $('.mobile-menu-btn').on("click", function () {
+      $('.main-nav').addClass('show-menu');
     });
-    $(".testimonial-slider").owlCarousel({
-      loop: true,
-      nav: true,
-      navText: [
-        "<i class='bx bx-left-arrow-alt'></i>",
-        "<i class='bx bx-right-arrow-alt'></i>",
-      ],
-      dots: false,
-      autoplay: true,
-      autoplayHoverPause: true,
-      autoplayTimeout: 8500,
-      smartSpeed: 450,
-      items: 1,
+    $('.menu-close-btn').on("click", function () {
+      $('.main-nav').removeClass('show-menu');
     });
-    $(".tours-slider").owlCarousel({
-      loop: true,
-      margin: 20,
-      nav: true,
-      navText: [
-        "<i class='bx bxs-chevron-left'></i>",
-        "<i class='bx bxs-chevron-right'></i>",
-      ],
-      dots: false,
-      autoplay: true,
-      autoplayHoverPause: true,
-      autoplayTimeout: 8500,
-      smartSpeed: 450,
-      responsiveClass: true,
-      responsive: {
-        0: { items: 1, margin: 10 },
-        768: { items: 2 },
-        991: { items: 3 },
-      },
-    });
+    
   }
 }
