@@ -29,7 +29,7 @@ const appRoutes : Routes=[
     loadChildren: () =>
       import("./application/application.module").then(
         (m) => m.ApplicationModule
-      ),canActivateChild:[AuthGuard]
+      ),canActivate:[AuthGuard]
   },
 ]
 @NgModule({
