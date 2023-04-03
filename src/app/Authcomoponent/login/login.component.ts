@@ -29,9 +29,7 @@ export class LoginComponent implements OnInit {
     });
     // FOR VIEW PASSWORD STARTS ENDS
     if(this.Auth.isAuthorized()){
-      this.route.navigateByUrl('/Application/dashboard')
-    }else{
-      this.route.navigate(['login']);
+      this.route.navigateByUrl('/application/dashboard')
     }
   }
   email:any ="";
