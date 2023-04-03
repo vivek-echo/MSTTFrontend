@@ -7,7 +7,7 @@ import { ViewlistComponent } from './viewlist/viewlist.component';
 
 const routes : Routes=[
   {
-    path: 'Application',
+    path: 'application',
    component: ApplicationComponent,
    children: [
     {
@@ -67,8 +67,8 @@ const routes : Routes=[
     },
   ]
   },
- 
- 
+
+
 ]
 
 @NgModule({

@@ -25,11 +25,12 @@ const appRoutes : Routes=[
     component:SignupComponent
   },
   {
-    path: "Application",
+    path: "application",
+    canActivate:[AuthGuard],
     loadChildren: () =>
       import("./application/application.module").then(
         (m) => m.ApplicationModule
-      ),canActivate:[AuthGuard]
+      ),
   },
 ]
 @NgModule({

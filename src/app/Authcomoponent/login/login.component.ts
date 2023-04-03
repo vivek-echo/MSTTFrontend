@@ -13,6 +13,7 @@ import { AlertHelper } from 'src/app/core/helper/alert-helper';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+
   ngOnInit(): void {
 
     // FOR VIEW PASSWORD STARTS
@@ -27,6 +28,11 @@ export class LoginComponent implements OnInit {
       }
     });
     // FOR VIEW PASSWORD STARTS ENDS
+    if(this.Auth.isAuthorized()){
+      this.route.navigateByUrl('/Application/dashboard')
+    }else{
+      this.route.navigate(['login']);
+    }
   }
   email:any ="";
   password:any="";
