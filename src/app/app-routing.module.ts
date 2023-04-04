@@ -5,6 +5,7 @@ import { LoginComponent } from './Authcomoponent/login/login.component';
 import { SignupComponent } from './Authcomoponent/signup/signup.component';
 import { HomeModule } from './Home/home.module';
 import { AuthGuard } from './Authcomoponent/authguard/auth.guard';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 const appRoutes : Routes=[
@@ -32,6 +33,10 @@ const appRoutes : Routes=[
         (m) => m.ApplicationModule
       ),
   },
+  // {
+  //   path:"**",
+  //   component:NotFoundComponent
+  // }
 ]
 @NgModule({
   declarations: [],

@@ -11,12 +11,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeModule } from './Home/home.module';
 import { AlertHelper } from './core/helper/alert-helper';
 import { AuthGuard } from './Authcomoponent/authguard/auth.guard';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    NotFoundComponent
 
   ],
   imports: [
