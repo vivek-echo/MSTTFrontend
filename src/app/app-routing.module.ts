@@ -6,6 +6,7 @@ import { SignupComponent } from './Authcomoponent/signup/signup.component';
 import { HomeModule } from './Home/home.module';
 import { AuthGuard } from './Authcomoponent/authguard/auth.guard';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { OtpcheckComponent } from './Authcomoponent/otpcheck/otpcheck.component';
 
 
 const appRoutes : Routes=[
@@ -33,6 +34,11 @@ const appRoutes : Routes=[
         (m) => m.ApplicationModule
       ),
   },
+  {
+    path:"otpcheck",
+    component:OtpcheckComponent,
+    canActivate:[AuthGuard]
+  }
   // {
   //   path:"**",
   //   component:NotFoundComponent

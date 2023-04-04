@@ -64,7 +64,8 @@ export class LoginComponent implements OnInit {
   handleResponse(e:any){
     this.TokenService.handle(e.access_token,e.data);
     this.Auth.changeAuthStatus(true);
-    this.route.navigateByUrl('/Application/dashboard')
+    // this.route.navigateByUrl('/Application/dashboard')
+    this.route.navigateByUrl('/otpcheck')
   }
   errorHandel(e:any){
     this.loadding = false;
