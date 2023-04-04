@@ -4,10 +4,11 @@ import { ApplicationComponent } from './application.component';
 import { BusbookingComponent } from './busbooking/busbooking.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ViewlistComponent } from './viewlist/viewlist.component';
+import { AuthGuard } from '../Authcomoponent/authguard/auth.guard';
 
 const routes : Routes=[
   {
-    path: 'application',
+    path: 'Application',
    component: ApplicationComponent,
    children: [
     {
@@ -18,10 +19,12 @@ const routes : Routes=[
     {
       path: "dashboard",
       component: DashboardComponent,
+      canActivate:[AuthGuard]
     },
     {
       path: "busbooking",
       component: BusbookingComponent,
+      canActivate:[AuthGuard],
       data:{
         bookingtype : "Bus Booking"
       }
@@ -29,6 +32,7 @@ const routes : Routes=[
     {
       path: "taxibooking",
       component: BusbookingComponent,
+      canActivate:[AuthGuard],
       data:{
         bookingtype : "Taki Booking"
       }
@@ -36,6 +40,7 @@ const routes : Routes=[
     {
       path: "truckbooking",
       component: BusbookingComponent,
+      canActivate:[AuthGuard],
       data:{
         bookingtype : "Truck Booking"
       }
@@ -43,6 +48,7 @@ const routes : Routes=[
     {
       path: "bikebooking",
       component: BusbookingComponent,
+      canActivate:[AuthGuard],
       data:{
         bookingtype : "Bike Booking"
       }
@@ -50,6 +56,7 @@ const routes : Routes=[
     {
       path: "airticket",
       component: BusbookingComponent,
+      canActivate:[AuthGuard],
       data:{
         bookingtype : "Air Ticket"
       }
@@ -57,6 +64,7 @@ const routes : Routes=[
     {
       path: "hotelBooking",
       component: BusbookingComponent,
+      canActivate:[AuthGuard],
       data:{
         bookingtype : "Hotel Booking"
       }
@@ -64,6 +72,7 @@ const routes : Routes=[
     {
       path: "viewList",
       component: ViewlistComponent,
+      canActivate:[AuthGuard]
     },
   ]
   },

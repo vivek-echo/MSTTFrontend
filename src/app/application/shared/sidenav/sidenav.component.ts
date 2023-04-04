@@ -11,6 +11,7 @@ import { AuthService } from 'src/app/Authcomoponent/services/auth.service';
 })
 export class SidenavComponent implements OnInit {
   public userProfile = localStorage.getItem('profile');
+
   constructor(
     private TokenService : TokenService,
     private AlertHelper : AlertHelper,

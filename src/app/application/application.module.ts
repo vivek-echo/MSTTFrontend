@@ -8,6 +8,7 @@ import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { ViewlistComponent } from './viewlist/viewlist.component';
 import { BusbookingComponent } from './busbooking/busbooking.component';
+import { AuthGuard } from '../Authcomoponent/authguard/auth.guard';
 
 
 
@@ -23,6 +24,7 @@ import { BusbookingComponent } from './busbooking/busbooking.component';
   ],
   imports: [
     CommonModule,RouterModule
-  ]
+  ],
+  providers: [AuthGuard]
 })
 export class ApplicationModule { }

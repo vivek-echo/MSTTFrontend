@@ -10,6 +10,7 @@ import { ApplicationRoutingModule } from './application/application-routing.modu
 import { HttpClientModule } from '@angular/common/http';
 import { HomeModule } from './Home/home.module';
 import { AlertHelper } from './core/helper/alert-helper';
+import { AuthGuard } from './Authcomoponent/authguard/auth.guard';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { AlertHelper } from './core/helper/alert-helper';
     HttpClientModule,
     HomeModule
   ],
-  providers: [AlertHelper],
+  providers: [AlertHelper,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

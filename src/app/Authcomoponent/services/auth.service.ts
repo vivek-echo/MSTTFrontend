@@ -17,7 +17,7 @@ export class AuthService {
   ) { }
 
   isAuthorized(){
-    if(this.Token.loggedIn()){
+    if(this.Token.isValid()){
       return true;
     }
     return false;

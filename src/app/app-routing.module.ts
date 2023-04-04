@@ -25,7 +25,7 @@ const appRoutes : Routes=[
     component:SignupComponent
   },
   {
-    path: "application",
+    path: "Application",
     canActivate:[AuthGuard],
     loadChildren: () =>
       import("./application/application.module").then(

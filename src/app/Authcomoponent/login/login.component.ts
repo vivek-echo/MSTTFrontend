@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
     });
     // FOR VIEW PASSWORD STARTS ENDS
     if(this.Auth.isAuthorized()){
-      this.route.navigateByUrl('/application/dashboard')
+      this.route.navigateByUrl('/Application/dashboard')
     }
   }
   email:any ="";
