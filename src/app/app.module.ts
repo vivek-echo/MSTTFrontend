@@ -13,16 +13,13 @@ import { AlertHelper } from './core/helper/alert-helper';
 import { AuthGuard } from './Authcomoponent/authguard/auth.guard';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NgxOtpInputModule } from 'ngx-otp-input';
-import { OtpcheckComponent } from './Authcomoponent/otpcheck/otpcheck.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     LoginComponent,
-    NotFoundComponent,
-    OtpcheckComponent
-
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +30,7 @@ import { OtpcheckComponent } from './Authcomoponent/otpcheck/otpcheck.component'
     HomeModule,
     NgxOtpInputModule
   ],
-  providers: [AlertHelper,AuthGuard,OtpcheckComponent],
+  providers: [AlertHelper,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

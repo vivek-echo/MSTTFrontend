@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { TokenService } from './token.service';
-import { OtpcheckComponent } from '../otpcheck/otpcheck.component';
+
 
 @Injectable({
   providedIn: 'root'
@@ -14,18 +14,11 @@ export class AuthService {
     this.loggedIn.next(value);
   }
   constructor(
-    private Token: TokenService, private otpcheck: OtpcheckComponent
+    private Token: TokenService
   ) { }
 
   isAuthorized(){
     if(this.Token.isValid()){
-      return true;
-    }
-    return false;
-  }
-
-  isOtpValid(){
-    if(this.otpcheck.isOtpValid){
       return true;
     }
     return false;
