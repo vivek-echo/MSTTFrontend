@@ -1,27 +1,17 @@
 <!-- for desktop/big screens -->
-<div
-  class="margin-sidebar"
-  id="sidebar-wrapper"
-  style="
+<div class="margin-sidebar" id="sidebar-wrapper" style="
     background: linear-gradient(to bottom, #ff0000, #ff8100);
     font-size: 0.8rem;
     overflow-x: hidden;
-  "
->
-  <div
-    class="sidebar-heading text-center primary-text fs-5 text-uppercase sidebar-border-bottom"
-  >
+  ">
+  <div class="sidebar-heading text-center primary-text fs-5 text-uppercase sidebar-border-bottom">
     <i class="myicon-slack me-2"></i>ADMIN
   </div>
   <div class="card p-3 mb-3">
     <div class="d-flex justify-content-between">
       <div class="d-flex flex-row align-items-center">
         <div class="icon-trans">
-          <img
-            class="img-fluid user-image"
-            src="../../../assets/admin/images/testimonials/dh.jpg"
-            alt=""
-          />
+          <img class="img-fluid user-image" src="../../../assets/admin/images/testimonials/dh.jpg" alt="" />
         </div>
         <div class="ms-2 c-details">
           <h6 class="mb-0">Vishal Kumar</h6>
@@ -31,21 +21,24 @@
     </div>
   </div>
   <div class="list-group list-group-flush my-3">
-    <a
-      routerLink="/Application/dashboard"
-      class="list-group-item list-group-item-action bg-transparent white-text active"
-      ><i class="myicon-monitor fs-6 me-2"></i> &nbsp;Dashboard</a
-    >
-    <!-- <a
-      routerLink="/Application/busbooking"
-      class="list-group-item list-group-item-action bg-transparent white-text"
-      ><i class="myicon-table2 fs-6 me-2"></i> &nbsp;Bus Booking</a
-    > -->
-    <a
-      routerLink="/Application/taxibooking"
-      class="list-group-item list-group-item-action bg-transparent white-text"
-      ><i class="myicon-car-service fs-6 me-2"></i> &nbsp;Taxi booking</a
-    >
+    <a routerLink="/Application/dashboard"
+      class="list-group-item list-group-item-action bg-transparent white-text active"><i
+        class="myicon-monitor fs-6 me-2"></i> &nbsp;Dashboard</a>
+
+    <a routerLink="/Application/taxibooking" class="list-group-item list-group-item-action bg-transparent white-text"><i
+        class="myicon-car-service fs-6 me-2"></i> &nbsp;Taxi booking</a>
+
+    <div class="d-flex justify-content-start align-items-center">
+      <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+        aria-controls="collapseExample" class="list-group-item list-group-item-action bg-transparent white-text"><i
+          class="myicon-table2 fs-6 me-2"></i> &nbsp;Wallet</a>
+      <i class="myicon-chevron-right"></i>
+    </div>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        Some placeholder content for the collapse component.
+      </div>
+    </div>
     <!-- <a
       routerLink="/Application/truckbooking"
       class="list-group-item list-group-item-action bg-transparent white-text"
@@ -78,43 +71,25 @@
     > -->
     <!-- <a routerLink="/admin/forms" class="list-group-item list-group-item-action bg-transparent white-text"><i
                 class="myicon-file-text1 fs-6 me-2"></i> &nbsp;Forms</a> -->
-    <a
-      href="#"
-      (click)="logout($event)"
-      class="list-group-item list-group-item-action bg-transparent"
-      ><i class="myicon-log-out fs-6 me-2"></i> &nbsp;Logout</a
-    >
+    <a href="#" (click)="logout($event)" class="list-group-item list-group-item-action bg-transparent"><i
+        class="myicon-log-out fs-6 me-2"></i> &nbsp;Logout</a>
   </div>
 </div>
 
 <!-- for mobile -->
-<div
-  class="offcanvas offcanvas-start"
-  tabindex="-1"
-  id="menutoggle_small"
-  aria-labelledby="menutoggle_smallLabel"
->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="menutoggle_small" aria-labelledby="menutoggle_smallLabel">
   <div class="offcanvas-header border-bottom">
     <h5 class="offcanvas-title text-white" id="offcanvasExampleLabel">
       <i class="myicon-slack me-2"></i>ADMIN
     </h5>
-    <button
-      type="button"
-      class="btn-close btn-close-white"
-      data-bs-dismiss="offcanvas"
-      aria-label="Close"
-    ></button>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body p-0" style="font-size: 0.8rem; overflow-x: hidden">
     <div class="card p-3 mb-3">
       <div class="d-flex justify-content-between">
         <div class="d-flex flex-row align-items-center">
           <div class="icon-trans">
-            <img
-              class="img-fluid user-image"
-              src="../../../../assets/admin/images/testimonials/dh.jpg"
-              alt=""
-            />
+            <img class="img-fluid user-image" src="../../../../assets/admin/images/testimonials/dh.jpg" alt="" />
           </div>
           <div class="ms-2 c-details">
             <h6 class="mb-0">Vishal Kumar</h6>
@@ -125,22 +100,18 @@
     </div>
     <div class="">
       <div class="list-group list-group-flush my-3">
-        <a
-          routerLink="/Application/dashboard"
-          class="list-group-item list-group-item-action bg-transparent white-text active"
-          ><i class="myicon-monitor fs-6 me-2"></i> &nbsp;Dashboard</a
-        >
-        <a
+        <a routerLink="/Application/dashboard"
+          class="list-group-item list-group-item-action bg-transparent white-text active"><i
+            class="myicon-monitor fs-6 me-2"></i> &nbsp;Dashboard</a>
+        <!-- <a
           routerLink="/Application/busbooking"
           class="list-group-item list-group-item-action bg-transparent white-text"
           ><i class="myicon-table2 fs-6 me-2"></i> &nbsp;Bus Booking</a
-        >
-        <a
-          routerLink="/Application/takibooking"
-          class="list-group-item list-group-item-action bg-transparent white-text"
-          ><i class="myicon-table2 fs-6 me-2"></i> &nbsp;Taki booking</a
-        >
-        <a
+        > -->
+        <a routerLink="/Application/takibooking"
+          class="list-group-item list-group-item-action bg-transparent white-text"><i
+            class="myicon-table2 fs-6 me-2"></i> &nbsp;Taxi booking</a>
+        <!-- <a
           routerLink="/Application/truckbooking"
           class="list-group-item list-group-item-action bg-transparent white-text"
           ><i class="myicon-table2 fs-6 me-2"></i> &nbsp;Truck booking</a
@@ -165,13 +136,11 @@
           class="list-group-item list-group-item-action bg-transparent white-text"
           ><i class="myicon-table2 fs-6 me-2"></i> &nbsp;Insurance</a
         >
-        <!-- <a routerLink="/admin/forms" class="list-group-item list-group-item-action bg-transparent white-text"><i
-                        class="myicon-file-text1 fs-6 me-2"></i> &nbsp;Forms</a> -->
         <a
           routerLink="login"
           class="list-group-item list-group-item-action bg-transparent"
           ><i class="myicon-log-out fs-6 me-2"></i> &nbsp;Logout</a
-        >
+        > -->
       </div>
     </div>
   </div>
