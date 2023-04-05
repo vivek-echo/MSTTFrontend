@@ -36,6 +36,10 @@ export class LoginComponent implements OnInit {
   password:any="";
   loginParams:any
   loadding:boolean = false;
+  checkUserValid:boolean = false;
+  userOtp:any="";
+  encryptOtp:any="";
+  validLogin:any;
   public api_url = environment.api_url;
   constructor(
     private HttpClient : HttpClient,
@@ -59,15 +63,31 @@ export class LoginComponent implements OnInit {
       'email':this.email,'password':this.password
     }
 
-    this.HttpClient.post(  this.api_url + "/login", this.loginParams).subscribe(data=> this.handleResponse(data),error => this.errorHandel(error))
+    this.HttpClient.post(  this.api_url + "/checkUser", this.loginParams).subscribe(data=> this.checkUser(data),error => this.errorHandel(error))
+  }
+
+  checkUser(data:any){
+    console.log(data);
+    this.checkUserValid = true;
+    console.log(this.checkUserValid);
+    this.encryptOtp = data.otp
+    $('#otpModal').modal('show');
+  }
+  validateOtp(){
+    this.validLogin = {
+      'email':this.email,'password':this.password , 'otp':this.encryptOtp, 'userOtp':this.userOtp
+    }
+    this.HttpClient.post(  this.api_url + "/validateOtp", this.validLogin).subscribe(data=> this.handleResponse(data),error => this.errorHandel(error))
   }
   handleResponse(e:any){
+    console.log(e)
     this.TokenService.handle(e.access_token,e.data);
     this.Auth.changeAuthStatus(true);
     this.route.navigateByUrl('/Application/dashboard')
   }
   errorHandel(e:any){
     this.loadding = false;
+    this.checkUserValid = false;
     this.AlertHelper.viewAlert('error',"INVALID",e.error.message)
   }
 }

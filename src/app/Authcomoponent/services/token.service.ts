@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 export class TokenService {
   public api_url = environment.api_url;
   private iss = {
-    login :this.api_url+"/login" ,
+    login :this.api_url+"/validateOtp" ,
     signUp :this.api_url+"/signUp" ,
   };
   constructor(
@@ -30,8 +30,10 @@ export class TokenService {
   }
   isValid(){
     const token = this.get();
+
     if(token){
       const payload = this.payload(token)
+      console.log(payload);
       if(payload){
         return (Object.values(this.iss).indexOf(payload.iss) > -1 )? true : false ;
       }
@@ -40,7 +42,7 @@ export class TokenService {
   }
   payload(token:any){
     const payload = token.split('.')[1]
-    
+
     return this.decode(payload);
   }
   decode(payload:any){

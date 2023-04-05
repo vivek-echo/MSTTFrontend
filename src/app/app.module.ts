@@ -12,6 +12,7 @@ import { HomeModule } from './Home/home.module';
 import { AlertHelper } from './core/helper/alert-helper';
 import { AuthGuard } from './Authcomoponent/authguard/auth.guard';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { NgxOtpInputModule } from 'ngx-otp-input';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
     SignupComponent,
     LoginComponent,
     NotFoundComponent
-
   ],
   imports: [
     BrowserModule,
@@ -27,7 +27,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ApplicationRoutingModule,
     FormsModule,
     HttpClientModule,
-    HomeModule
+    HomeModule,
+    NgxOtpInputModule
   ],
   providers: [AlertHelper,AuthGuard],
   bootstrap: [AppComponent]

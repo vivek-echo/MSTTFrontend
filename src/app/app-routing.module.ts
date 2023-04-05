@@ -8,6 +8,7 @@ import { AuthGuard } from './Authcomoponent/authguard/auth.guard';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 
+
 const appRoutes : Routes=[
   {
 
