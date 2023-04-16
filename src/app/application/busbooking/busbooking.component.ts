@@ -34,5 +34,5 @@ export class BusbookingComponent implements OnInit ,AfterViewInit{
     this.isShowDivIf = !this.isShowDivIf;
   }
 
-  
+
 }

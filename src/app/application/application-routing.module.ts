@@ -5,6 +5,8 @@ import { BusbookingComponent } from './busbooking/busbooking.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ViewlistComponent } from './viewlist/viewlist.component';
 import { AuthGuard } from '../Authcomoponent/authguard/auth.guard';
+import { CarbookingComponent } from './carbooking/carbooking.component';
+import { AddcarComponent } from './carbooking/addcar/addcar.component';
 
 const routes : Routes=[
   {
@@ -31,11 +33,16 @@ const routes : Routes=[
     },
     {
       path: "taxibooking",
-      component: BusbookingComponent,
+      component: CarbookingComponent,
       canActivate:[AuthGuard],
       data:{
-        bookingtype : "Taki Booking"
-      }
+        bookingtype : "Taxi Booking"
+      },
+      children:[
+        {path:'addcar', component: AddcarComponent , data:{
+          bookingtype : "Add Car"
+        }}
+      ]
     },
     {
       path: "truckbooking",
