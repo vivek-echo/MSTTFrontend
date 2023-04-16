@@ -38,11 +38,17 @@ const routes : Routes=[
       data:{
         bookingtype : "Taxi Booking"
       },
-      children:[
-        {path:'addcar', component: AddcarComponent , data:{
-          bookingtype : "Add Car"
-        }}
-      ]
+      // children:[
+      //   {path:'addcar', component: AddcarComponent , data:{
+      //     bookingtype : "Add Car"
+      //   }}
+      // ]
+    },
+    {
+      path: "addcar",
+      component: AddcarComponent,
+      canActivate:[AuthGuard],
+
     },
     {
       path: "truckbooking",
