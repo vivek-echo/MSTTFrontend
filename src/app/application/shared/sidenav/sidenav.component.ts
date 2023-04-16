@@ -45,5 +45,7 @@ export class SidenavComponent implements OnInit {
     this.route.navigateByUrl('/login');
 
   }
-
+  menutog(){
+    
+  }
 }

@@ -12,14 +12,18 @@ import { HomeModule } from './Home/home.module';
 import { AlertHelper } from './core/helper/alert-helper';
 import { AuthGuard } from './Authcomoponent/authguard/auth.guard';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { NgxOtpInputModule } from 'ngx-otp-input';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { LoadScreenComponent } from './load-screen/load-screen.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { NgxOtpInputModule } from 'ngx-otp-input';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     LoginComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoadScreenComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,9 @@ import { NgxOtpInputModule } from 'ngx-otp-input';
     FormsModule,
     HttpClientModule,
     HomeModule,
-    NgxOtpInputModule
+    NgxSpinnerModule,
+    BrowserAnimationsModule
+    // NgxOtpInputModule
   ],
   providers: [AlertHelper,AuthGuard],
   bootstrap: [AppComponent]

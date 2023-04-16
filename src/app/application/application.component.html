@@ -1,11 +1,185 @@
 <div class="d-flex" id="wrapper">
     <!-- Sidebar -->
-    <app-sidenav *ngIf="display"></app-sidenav>
+    <!-- <app-sidenav *ngIf="display"></app-sidenav> -->
+    <div *ngIf="display">
+    <div class="margin-sidebar" id="sidebar-wrapper"
+        style=" background: linear-gradient(to bottom, #ff0000, #ff8100); font-size: 0.8rem; overflow-x: hidden; ">
+        <div class="sidebar-heading text-center primary-text fs-5 text-uppercase sidebar-border-bottom">
+            <i class="myicon-slack me-2"></i>ADMIN
+        </div>
+        <div class="card p-3 mb-3">
+            <div class="d-flex justify-content-between">
+                <div class="d-flex flex-row align-items-center">
+                    <div class="icon-trans">
+                        <img class="img-fluid user-image" src="../../../assets/admin/images/testimonials/dh.jpg"
+                            alt="" />
+                    </div>
+                    <div class="ms-2 c-details">
+                        <h6 class="mb-0">Vishal Kumar</h6>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="list-group list-group-flush my-3">
+            <a routerLink="/Application/dashboard"
+                class="list-group-item list-group-item-action bg-transparent white-text active"><i
+                    class="myicon-monitor fs-6 me-2"></i> &nbsp;Dashboard</a>
+
+            <a routerLink="/Application/taxibooking"
+                class="list-group-item list-group-item-action bg-transparent white-text"><i
+                    class="myicon-car-service fs-6 me-2"></i> &nbsp;Taxi booking</a>
+
+            <div class="d-flex justify-content-start align-items-center">
+                <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                    aria-controls="collapseExample"
+                    class="list-group-item list-group-item-action bg-transparent white-text"><i
+                        class="myicon-table2 fs-6 me-2"></i> &nbsp;Wallet</a>
+                <i class="myicon-chevron-right"></i>
+            </div>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    Some placeholder content for the collapse component.
+                </div>
+            </div>
+
+            <a href="#" (click)="logout($event)" class="list-group-item list-group-item-action bg-transparent"><i
+                    class="myicon-log-out fs-6 me-2"></i> &nbsp;Logout</a>
+        </div>
+    </div>
+
+    <!-- for mobile -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="menutoggle_small" aria-labelledby="menutoggle_smallLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title text-white" id="offcanvasExampleLabel">
+                <i class="myicon-slack me-2"></i>ADMIN
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-0" style="font-size: 0.8rem; overflow-x: hidden">
+            <div class="card p-3 mb-3">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="icon-trans">
+                            <img class="img-fluid user-image" src="../../../../assets/admin/images/testimonials/dh.jpg"
+                                alt="" />
+                        </div>
+                        <div class="ms-2 c-details">
+                            <h6 class="mb-0">Vishal Kumar</h6>
+                            <span>Admin</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="list-group list-group-flush my-3">
+                    <a routerLink="/Application/dashboard"
+                        class="list-group-item list-group-item-action bg-transparent white-text active"><i
+                            class="myicon-monitor fs-6 me-2"></i> &nbsp;Dashboard</a>
+
+                    <a routerLink="/Application/takibooking"
+                        class="list-group-item list-group-item-action bg-transparent white-text"><i
+                            class="myicon-table2 fs-6 me-2"></i> &nbsp;Taxi booking</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
-        <app-topnav></app-topnav>
+        <!-- <app-topnav></app-topnav> -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-nav-custom px-4">
+            <div class="d-flex align-items-center">
+                <!-- for big screen  -->
+                <a id="tog-big" (click)="menutog()"> <i class="bx bx-menu text-custom fs-2 mt-2 me-3"></i></a>
+                <!-- for small screen -->
+                <a id="tog-small" data-bs-toggle="offcanvas" href="#menutoggle_small" role="button"
+                    aria-controls="menutoggle_small"> <i class="bx bx-menu text-custom fs-4 mt-2 me-3"></i></a>
+                <!-- <h4 class="fs-5 m-0 text-custom" id="dashboardLink">Dashboard</h4> -->
+            </div>
+
+            <!-- FOR MOBILE -->
+            <div class="mobile-show">
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle text-dark px-0" href="javascript:void();" id="navbarDropdown"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="myicon-user1 fs-6 me-2"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end animate__animated animate__fadeInDown rounded shadow-sm">
+                        <li>
+                            <h5 class="dropdown-header fw-normal pb-0">Signed in as</h5>
+                            <h5 class="dropdown-header text-dark">Vishal Kumar</h5>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="javascript:void();"><i class="myicon-home1 fs-6 me-2"></i>
+                                Home</a></li>
+                        <li><a class="dropdown-item" href="javascript:void();"><i class="myicon-edit-2 fs-6 me-2"></i>
+                                Edit
+                                Profile</a></li>
+                        <li><a class="dropdown-item" href="javascript:void();"><i class="myicon-image1 fs-6 me-2"></i>
+                                Media</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="javascript:void();"><i class="myicon-settings fs-6 me-2"></i>
+                                Settings</a></li>
+                        <li><a class="dropdown-item text-danger" href="/website/login"><i
+                                    class="myicon-log-out fs-6 me-2"></i>
+                                Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <!-- FOR BIG SCREENS -->
+            <div class="navbar-collapse mobile-hide" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle px-0 text-dark" href="javascript:void();" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="myicon-user1 fs-6 me-2"></i>Vishal
+                        </a>
+                        <ul
+                            class="dropdown-menu dropdown-menu-end animate__animated animate__fadeInDown rounded shadow-sm">
+                            <li>
+                                <h5 class="dropdown-header fw-normal pb-0">Signed in as</h5>
+                                <h5 class="dropdown-header text-dark">Vishal Kumar</h5>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="javascript:void();"><i
+                                        class="myicon-home1 fs-6 me-2"></i> Home</a>
+                            </li>
+                            <li><a class="dropdown-item" href="javascript:void();"><i
+                                        class="myicon-edit-2 fs-6 me-2"></i> Edit
+                                    Profile</a></li>
+                            <li><a class="dropdown-item" href="javascript:void();"><i
+                                        class="myicon-image1 fs-6 me-2"></i> Media</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="javascript:void();"><i
+                                        class="myicon-settings fs-6 me-2"></i>
+                                    Settings</a></li>
+                            <li><a class="dropdown-item text-danger" href="/website/login"><i
+                                        class="myicon-log-out fs-6 me-2"></i>
+                                    Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
         <router-outlet></router-outlet>
     </div>
 </div>
