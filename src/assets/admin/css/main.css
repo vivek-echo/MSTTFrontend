@@ -478,6 +478,11 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 /* MEDIA QUERIES STARTS ENDS */
 
 
+.custom-border-left {
+    border-left: 4px solid #ff2f00!important;
+}
+
+
 .navbar a {
     cursor: pointer;
 }
@@ -1078,6 +1083,7 @@ div.dataTables_wrapper div.dataTables_info {
     font-size: .8rem;
 }
 
+.form-control:focus,
 .form-select:focus {
     border-color: #fa9a7f;
     outline: 0;

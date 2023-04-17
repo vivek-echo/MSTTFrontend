@@ -25,13 +25,13 @@
             <div class="col-lg-12">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="javascript:void();">View All</a>
+                        <a class="nav-link active" aria-current="page" href="javascript:void();">Add Car</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void();">Most Recent</a>
+                        <a class="nav-link" href="javascript:void();">View Cars</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void();">Popular</a>
+                        <a class="nav-link" href="javascript:void();">Booking History</a>
                     </li>
                 </ul>
             </div>
@@ -51,14 +51,42 @@
                             <span class="d-inline-block align-middle h6">Add Car</span>
                         </div>
                         <div class="card-body">
+                            <span class="d-inline-block align-middle h6 custom-border-left ps-2 mb-3">General Information</span>
                             <form class="row g-3 mb-4">
                                 <div class="col-md-3">
+                                    <label for="carType" class="form-label">Car Type</label>
+                                    <select id="" class="form-select form-select-sm">
+                                        <option selected>Sedan</option>
+                                        <option>Hatchback</option>
+                                        <option>SUV</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="col-md-3">
                                     <label for="inputEmail4" class="form-label">From Date</label>
                                     <input type="date" class="form-control form-control-sm" id="inputEmail4">
+                                </div> -->
+                                <div class="col-md-3">
+                                    <label for="inputPassword4" class="form-label">Brand</label>
+                                    <input type="text" class="form-control form-control-sm" id="">
                                 </div>
                                 <div class="col-md-3">
-                                    <label for="inputPassword4" class="form-label">To Date</label>
-                                    <input type="date" class="form-control form-control-sm" id="inputPassword4">
+                                    <label for="mnfYear" class="form-label">Manufacturing Year</label>
+                                    <input type="date" class="form-control form-control-sm" id="">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="carType" class="form-label">Fuel Type</label>
+                                    <select id="" class="form-select form-select-sm">
+                                        <option selected>Petrol</option>
+                                        <option>Diesel</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="OwnerName" class="form-label">Mileage(Km/L)</label>
+                                    <input type="text" class="form-control form-control-sm" id="">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="OwnerName" class="form-label">Car Owner Name</label>
+                                    <input type="text" class="form-control form-control-sm" id="">
                                 </div>
                                 <div class="col-md-3">
                                     <label for="inputState" class="form-label">State</label>
@@ -68,11 +96,71 @@
                                     </select>
                                 </div>
                                 <div class="col-md-3">
-                                    <button type="button" class="btn btn-sm btn-success margin-btn-top">Search</button>
+                                    <label for="inputState" class="form-label">City</label>
+                                    <select id="inputState" class="form-select form-select-sm">
+                                        <option selected>Choose...</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="OwnerName" class="form-label">Owner Address</label>
+                                    <textarea rows="3" class="form-control form-control-sm" id=""></textarea>
                                 </div>
                             </form>
-                            <hr class="h-rule">
-                            <div class="table-responsive">
+                            
+                            <span class="d-inline-block align-middle h6 custom-border-left ps-2 mb-3">Car Information</span>
+                            <form class="row g-3 mb-4">
+                                <div class="col-md-3">
+                                    <label for="RCno" class="form-label">RC No.</label>
+                                    <input type="text" class="form-control form-control-sm" id="">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="RC" class="form-label">Upload RC</label>
+                                    <div class="input-group">
+                                        <input type="file" class="form-control form-control-sm" id="inputGroupFile04" aria-describedby="RCupload" aria-label="Upload">
+                                        <button class="btn btn-sm btn-outline-secondary" type="button" id="" title="View/ Download PDF"><i class="myicon-file-pdf"></i></button>
+                                      </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="ChassisNo" class="form-label">Chassis No.</label>
+                                    <input type="text" class="form-control form-control-sm" id="">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="RC" class="form-label">Upload Insurance</label>
+                                    <div class="input-group">
+                                        <input type="file" class="form-control form-control-sm" id="inputGroupFile04" aria-describedby="RCupload" aria-label="Upload">
+                                        <button class="btn btn-sm btn-outline-secondary" type="button" id="" title="View/ Download PDF"><i class="myicon-file-pdf"></i></button>
+                                      </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="InsuranceYearFrom" class="form-label">Insurance Valid From</label>
+                                    <input type="date" class="form-control form-control-sm" id="">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="InsuranceYearTo" class="form-label">Insurance Valid Till</label>
+                                    <input type="date" class="form-control form-control-sm" id="">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="RC" class="form-label">Upload Pollution</label>
+                                    <div class="input-group">
+                                        <input type="file" class="form-control form-control-sm" id="inputGroupFile04" aria-describedby="RCupload" aria-label="Upload">
+                                        <button class="btn btn-sm btn-outline-secondary" type="button" id="" title="View/ Download PDF"><i class="myicon-file-pdf"></i></button>
+                                      </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="PollutionYearFrom" class="form-label">Pollution Valid From</label>
+                                    <input type="date" class="form-control form-control-sm" id="">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="PollutionYearTo" class="form-label">Pollution Valid Till</label>
+                                    <input type="date" class="form-control form-control-sm" id="">
+                                </div>
+                            </form>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-sm btn-success me-2">Submit</button>
+                                <button type="button" class="btn btn-sm btn-secondary">Cancel</button>
+                            </div>
+                            <!-- <div class="table-responsive">
                                 <table id="example" class="table rounded">
                                     <thead class="sticky-top">
                                         <tr class="text-dark">
@@ -303,7 +391,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
+                            </div> -->
                         </div>
                       </div>
                 </div>
@@ -392,70 +480,3 @@
         
         </div> -->
 <!-- /#page-content-wrapper -->
-
-
-<!-- <footer class="footer mt-auto py-1">
-    <div class="container">
-        <span class="text-white">Place sticky footer content here.</span>
-    </div>
-</footer> -->
-  
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Create</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form class="row g-3">
-                    <div class="col-md-6">
-                        <label for="inputEmail4" class="form-label">Email</label>
-                        <input type="email" class="form-control form-control-sm" id="inputEmail4">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="inputPassword4" class="form-label">Password</label>
-                        <input type="password" class="form-control form-control-sm" id="inputPassword4">
-                    </div>
-                    <div class="col-12">
-                        <label for="inputAddress" class="form-label">Address</label>
-                        <input type="text" class="form-control form-control-sm" id="inputAddress" placeholder="1234 Main St">
-                    </div>
-                    <div class="col-12">
-                        <label for="inputAddress2" class="form-label">Address 2</label>
-                        <input type="text" class="form-control form-control-sm" id="inputAddress2"
-                            placeholder="Apartment, studio, or floor">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="inputCity" class="form-label">City</label>
-                        <input type="text" class="form-control form-control-sm" id="inputCity">
-                    </div>
-                    <div class="col-md-4">
-                        <label for="inputState" class="form-label">State</label>
-                        <select id="inputState" class="form-select form-select-sm">
-                            <option selected>Choose...</option>
-                            <option>...</option>
-                        </select>
-                    </div>
-                    <div class="col-md-2">
-                        <label for="inputZip" class="form-label">Zip</label>
-                        <input type="text" class="form-control form-control-sm" id="inputZip">
-                    </div>
-                    <div class="col-12">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck">
-                            <label class="form-check-label" for="gridCheck">
-                                Check me out
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <button type="button" class="btn btn-success btn-sm px-3 btn-dark-shadow rounded">Create</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
