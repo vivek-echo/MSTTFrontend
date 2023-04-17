@@ -16,6 +16,8 @@ export class AddcarComponent {
   selectedCarSegmentInternal: any;
   carmodelsuv!: string[];
   selectedCarModelInternal: any;
+  url: any = "";
+	msg = "";
   // selectedCarSegment!:string;
 
   constructor(
@@ -79,23 +81,7 @@ export class AddcarComponent {
       }
 
     }
-    // outputPanPhoto : any;
-    onselectimage(e:any){
-      if(e.target.files){
-        var reader = new FileReader();
-        reader.readAsDataURL(e.target.files)
-        reader.onload=(event:any)=>{
-          this.url=event.target.result;
-          console.log(this.url)
-        }
-      }
 
-
-    }
-
-
-	url: any = "";
-	msg = "";
 
 	//selectFile(event) { //Angular 8
 	selectFile(event: any) { //Angular 11, for stricter type
