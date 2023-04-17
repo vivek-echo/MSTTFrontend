@@ -8,10 +8,10 @@
         format: 'dd-mm-yyyy',
         startDate: '+1d'
     });
-    window.addEventListener('scroll', function() {
-        const header = document.querySelector('header.style-1, header.style-2, header.style-3,header.style-4,header.style-5');
-        header.classList.toggle("sticky", window.scrollY > 0);
-    });
+    // window.addEventListener('scroll', function() {
+    //     const header = document.querySelector('header.style-1, header.style-2, header.style-3,header.style-4,header.style-5');
+    //     header.classList.toggle("sticky", window.scrollY > 0);
+    // });
     $('.search-btn').on("click", function() {
         $('.mobile-search').addClass('slide');
     });
@@ -686,40 +686,40 @@
             $(this).parent().attr("data-rating", $(this).prevAll().length + 1);
         });
     });
-    document.addEventListener("DOMContentLoaded", function(event) {
-        let offset = 50;
-        let circleContainer = document.querySelector(".circle-container");
-        let circlePath = document.querySelector('.circle-container path');
-        let pathLength = circlePath.getTotalLength();
-        circlePath.style.transition = circlePath.style.WebkitTransition = 'none';
-        circlePath.style.strokeDasharray = pathLength;
-        circlePath.style.strokeDashoffset = pathLength;
-        circlePath.getBoundingClientRect();
-        circlePath.style.transition = circlePath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
-        let updateLoader = () => {
-            let scrollTop = window.scrollY;
-            let docHeight = document.body.offsetHeight;
-            let winHeight = window.innerHeight;
-            let height = docHeight - winHeight;
-            let progress = pathLength - (scrollTop * pathLength / height);
-            circlePath.style.strokeDashoffset = progress;
-            if (scrollTop > offset) {
-                circleContainer.classList.add("active");
-            } else {
-                circleContainer.classList.remove("active");
-            }
-        }
-        circleContainer.onclick = function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-        window.onscroll = () => {
-            updateLoader();
-        }
-        updateLoader();
-    });
+    // document.addEventListener("DOMContentLoaded", function(event) {
+    //     let offset = 50;
+    //     let circleContainer = document.querySelector(".circle-container");
+    //     let circlePath = document.querySelector('.circle-container path');
+    //     let pathLength = circlePath.getTotalLength();
+    //     circlePath.style.transition = circlePath.style.WebkitTransition = 'none';
+    //     circlePath.style.strokeDasharray = pathLength;
+    //     circlePath.style.strokeDashoffset = pathLength;
+    //     circlePath.getBoundingClientRect();
+    //     circlePath.style.transition = circlePath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+    //     let updateLoader = () => {
+    //         let scrollTop = window.scrollY;
+    //         let docHeight = document.body.offsetHeight;
+    //         let winHeight = window.innerHeight;
+    //         let height = docHeight - winHeight;
+    //         let progress = pathLength - (scrollTop * pathLength / height);
+    //         circlePath.style.strokeDashoffset = progress;
+    //         if (scrollTop > offset) {
+    //             circleContainer.classList.add("active");
+    //         } else {
+    //             circleContainer.classList.remove("active");
+    //         }
+    //     }
+    //     circleContainer.onclick = function() {
+    //         window.scrollTo({
+    //             top: 0,
+    //             behavior: 'smooth'
+    //         });
+    //     }
+    //     window.onscroll = () => {
+    //         updateLoader();
+    //     }
+    //     updateLoader();
+    // });
     $('#price-range-submit').hide();
     $("#min_price,#max_price").on('change', function() {
         $('#price-range-submit').show();

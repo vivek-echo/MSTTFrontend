@@ -9,6 +9,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ViewlistComponent } from './viewlist/viewlist.component';
 import { BusbookingComponent } from './busbooking/busbooking.component';
 import { AuthGuard } from '../Authcomoponent/authguard/auth.guard';
+import { AddcarComponent } from './carbookng/addcar/addcar.component';
 
 
 
@@ -20,7 +21,8 @@ import { AuthGuard } from '../Authcomoponent/authguard/auth.guard';
     SidenavComponent,
     FooterComponent,
     ViewlistComponent,
-    BusbookingComponent
+    BusbookingComponent,
+    AddcarComponent
   ],
   imports: [
     CommonModule,RouterModule

@@ -32,7 +32,6 @@
               "src/assets/css/bootstrap.min.css",
               "src/assets/css/boxicons.min.css",
               "src/assets/css/bootstrap-icons.css",
-              "src/assets/css/jquery-ui.css",
               "src/assets/css/swiper-bundle.css",
               "src/assets/css/nice-select.css",
               "src/assets/css/select2.min.css",
@@ -77,12 +76,12 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumError": "2mb"
                 }
               ],
               "outputHashing": "all"

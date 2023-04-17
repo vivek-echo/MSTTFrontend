@@ -493,6 +493,11 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
     --animate-duration: .2s;
 }
 
+.nav {
+    border: none;
+    margin-bottom: 25px;
+}
+
 
 .nav-tabs {
     border-bottom: 1px solid #009d6326;
@@ -502,16 +507,16 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 .nav-tabs .nav-link:hover {
     border-color: transparent;
     isolation: isolate;
-    color: #524A8A;
+    color: #ff2f00;
     font-weight: 500;
 }
 
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
-    color: #524A8A;
+    color: #ff2f00;
     background-color: transparent;
     border-color: transparent;
-    border-bottom: 2px solid #524A8A;
+    border-bottom: 2px solid #ff2f00;
     font-weight: 500;
 }
 
@@ -1098,4 +1103,118 @@ div.dataTables_wrapper div.dataTables_info {
     border-top-right-radius: .5rem;
     background: #524a8a;
     margin: 0;
+}
+
+
+.pageLoader {
+	position: fixed;
+	z-index: 999999;
+	background: #ffffff6e;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center
+}
+
+.pageLoader .dot {
+	position: relative;
+	width: 22px;
+	height: 22px;
+	margin: 8px;
+	border-radius: 50%
+}
+
+.pageLoader .dot::before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: inherit;
+	border-radius: inherit;
+	-webkit-animation: wave 2s ease infinite;
+	animation: wave 2s ease infinite
+}
+
+.pageLoader .dot:nth-child(1) {
+	background: #ff0900
+}
+
+.pageLoader .dot:nth-child(1)::before {
+	-webkit-animation-delay: .2s;
+	animation-delay: .2s
+}
+
+.pageLoader .dot:nth-child(2) {
+	background:#ff1f00
+}
+
+.pageLoader .dot:nth-child(2)::before {
+	-webkit-animation-delay: .4s;
+	animation-delay: .4s
+}
+
+.pageLoader .dot:nth-child(3) {
+	background: #ff3d00
+}
+
+.pageLoader .dot:nth-child(3)::before {
+	-webkit-animation-delay: .6s;
+	animation-delay: .6s
+}
+
+.pageLoader .dot:nth-child(4) {
+	background: #ff5a00
+}
+
+.pageLoader .dot:nth-child(4)::before {
+	-webkit-animation-delay: .8s;
+	animation-delay: .8s
+}
+
+.pageLoader .dot:nth-child(5) {
+	background:#ff7900
+}
+
+.pageLoader .dot:nth-child(5)::before {
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s
+}
+
+@-webkit-keyframes wave {
+
+	50%,
+	75% {
+		-webkit-transform: scale(2.5);
+		transform: scale(2.5)
+	}
+
+	80%,
+	100% {
+		opacity: 0
+	}
+}
+
+@keyframes wave {
+
+	50%,
+	75% {
+		-webkit-transform: scale(2.5);
+		transform: scale(2.5)
+	}
+
+	80%,
+	100% {
+		opacity: 0
+	}
 }
