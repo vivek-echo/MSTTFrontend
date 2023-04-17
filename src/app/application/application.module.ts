@@ -11,6 +11,9 @@ import { BusbookingComponent } from './busbooking/busbooking.component';
 import { AuthGuard } from '../Authcomoponent/authguard/auth.guard';
 import { CarbookingComponent } from './carbooking/carbooking.component';
 import { AddcarComponent } from './carbooking/addcar/addcar.component';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormComponent } from 'angular-reactive-form/lib/components/reactive-form/reactive-form.component';
 
 
 
@@ -27,7 +30,7 @@ import { AddcarComponent } from './carbooking/addcar/addcar.component';
     AddcarComponent
   ],
   imports: [
-    CommonModule,RouterModule
+    CommonModule,RouterModule, NgSelectModule , FormsModule
   ],
   providers: [AuthGuard]
 })

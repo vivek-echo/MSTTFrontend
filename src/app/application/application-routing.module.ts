@@ -48,7 +48,9 @@ const routes : Routes=[
       path: "addcar",
       component: AddcarComponent,
       canActivate:[AuthGuard],
-
+      data:{
+        bookingtype : "Taxi Booking / Add Car"
+      }
     },
     {
       path: "truckbooking",

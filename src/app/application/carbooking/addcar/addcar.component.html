@@ -1,1 +1,107 @@
-<p>addcar works!</p>
+<div id="page-content-wrapper">
+  <div class="container-fluid pt-4 pb-1 px-4">
+    <div class="col-lg-12">
+      <div class="row g-3">
+        <div class="d-flex justify-content-between mt-0">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb p-1">
+              <li class="breadcrumb-item text-custom">
+                <a href="javascript:void();">Home</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                {{ bookingtype }}
+              </li>
+            </ol>
+          </nav>
+          <div>
+            <button
+              class="btn btn-light btn-sm p-btn-sm btn-light-shadow me-2 rounded"
+            >
+              Share
+            </button>
+            <button
+              class="btn btn-success btn-sm p-btn-sm btn-dark-shadow rounded"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+            >
+              <i class="myicon-plus-square fs-6 me-2"></i>Create
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <label for="fromcity" class="form-label">Car Segment</label>
+        <ng-select class="form-select form-select-sm" [items]="carsegment" bindLabel="name" bindValue="id"
+        placeholder="Select car segment" [(ngModel)]="selectedCarSegment"
+        ></ng-select>
+      </div>
+      <div class="col-md-4" *ngIf="selectedCarSegment=='SUV'">
+        <!-- <label for="tocity" class="form-label">Select Brand</label> -->
+        <!-- <select [disabled]="!suv" id="carbrand" class="form-select form-select-sm">
+          <option selected>Choose...</option>
+          <option>Hyundai</option>
+          <option>Maruti Suzuki</option>
+          <option>Toyota</option>
+          <option>Volkswagon</option>
+        </select> -->
+
+        <label for="tocity" class="form-label">Select Model</label>
+        <ng-select class="form-select form-select-sm" [items]="carmodelsuv" bindLabel="name" bindValue="id"
+        placeholder="Select car model" [(ngModel)]="selectedCarModel"
+        ></ng-select>
+        <!-- <select [disabled]="!suv" id="" class="form-select form-select-sm">
+          <option selected>Choose...</option>
+          <option>Hyundai</option>
+          <option>Maruti Suzuki</option>
+          <option>Toyota</option>
+          <option>Volkswagon</option>
+        </select> -->
+      </div>
+
+      <div class="col-md-4" *ngIf="selectedCarModel">
+        <label for="image" class="form-label">Attach Car Images</label>
+        <!-- <label for="inputEmail4" class="form-label"> Date</label> -->
+        <!-- <input
+          type="date"
+          class="form-control form-control-sm"
+          id="inputEmail4"
+        /> -->
+
+        <input class="form-select form-select-sm" type="file" (change)="onselectimage($event)">
+      </div>
+      <div class="row g-3" *ngIf="selectedCarModel">
+        <div class="col-md-4"><img [src]="url" height="40" width="40"></div>
+        <div class="col-md-4">
+        <button
+          type="button"
+          class="btn btn-sm btn-success"
+          (click)="submitDisplay()"
+        >
+          Add Car
+        </button>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="container-fluid px-4">
+              <div class="col-lg-12">
+                  <ul class="nav nav-tabs">
+                      <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="javascript:void();">View All</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="javascript:void();">Most Recent</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="javascript:void();">Popular</a>
+                      </li>
+                  </ul>
+              </div>
+          </div> -->
+
+
+  </div>

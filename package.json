@@ -18,6 +18,8 @@
     "@angular/platform-browser": "^15.0.0",
     "@angular/platform-browser-dynamic": "^15.0.0",
     "@angular/router": "^15.0.0",
+    "@ng-select/ng-select": "^10.0.4",
+    "angular-reactive-form": "^1.0.0",
     "bootstrap": "^5.3.0-alpha1",
     "datatables.net": "^1.13.4",
     "datatables.net-bs5": "^1.13.4",

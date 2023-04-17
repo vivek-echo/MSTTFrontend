@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgSelectOption, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 // import { HomeComponent } from './Home/home.component';
 import { SignupComponent } from './Authcomoponent/signup/signup.component';
@@ -15,6 +15,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { LoadScreenComponent } from './load-screen/load-screen.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgSelectModule } from '@ng-select/ng-select';
 // import { NgxOtpInputModule } from 'ngx-otp-input';
 
 @NgModule({
@@ -33,7 +34,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     HomeModule,
     NgxSpinnerModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgSelectModule,
+    ReactiveFormsModule
     // NgxOtpInputModule
   ],
   providers: [AlertHelper,AuthGuard],
