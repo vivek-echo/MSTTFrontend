@@ -35,7 +35,7 @@ export class AddcarComponent {
 
 
   }
-  url="src/assets/img/xuv700.jpg";
+
   set selectedCarSegment(value: any){
     if(value){
       this.selectedCarSegmentInternal = value;
@@ -79,6 +79,7 @@ export class AddcarComponent {
       }
 
     }
+    // outputPanPhoto : any;
     onselectimage(e:any){
       if(e.target.files){
         var reader = new FileReader();
@@ -88,7 +89,36 @@ export class AddcarComponent {
           console.log(this.url)
         }
       }
+
+
     }
+
+
+	url: any = "";
+	msg = "";
+
+	//selectFile(event) { //Angular 8
+	selectFile(event: any) { //Angular 11, for stricter type
+		if(!event.target.files[0] || event.target.files[0].length == 0) {
+			this.msg = 'You must select an image';
+			return;
+		}
+
+		var mimeType = event.target.files[0].type;
+
+		if (mimeType.match(/image\/*/) == null) {
+			this.msg = "Only images are supported";
+			return;
+		}
+
+		var reader = new FileReader();
+		reader.readAsDataURL(event.target.files[0]);
+
+		reader.onload = (_event) => {
+			this.msg = "";
+			this.url = reader.result;
+		}
+	}
 
 
   submitDisplay(){

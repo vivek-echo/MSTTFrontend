@@ -60,9 +60,17 @@
           <option>Volkswagon</option>
         </select> -->
       </div>
-
-      <div class="col-md-4" *ngIf="selectedCarModel">
+      <div class="col-md-4" *ngIf="selectedCarModel" style="text-align:center">
         <label for="image" class="form-label">Attach Car Images</label>
+        <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
+
+        <p>
+          <input class="form-select form-select-sm"  type="file" (change)="selectFile($event)">
+        </p>
+      </div>
+<!--
+      <div class="col-md-4" *ngIf="selectedCarModel">
+        <label for="image" class="form-label">Attach Car Images</label> -->
         <!-- <label for="inputEmail4" class="form-label"> Date</label> -->
         <!-- <input
           type="date"
@@ -70,10 +78,10 @@
           id="inputEmail4"
         /> -->
 
-        <input class="form-select form-select-sm" type="file" (change)="onselectimage($event)">
-      </div>
+        <!-- <input class="form-select form-select-sm" type="file" (change)="onselectimage($event)">
+      </div> -->
       <div class="row g-3" *ngIf="selectedCarModel">
-        <div class="col-md-4"><img [src]="url" height="40" width="40"></div>
+        <div class="col-md-4"><img [src]="url" height="100" width="100"></div>
         <div class="col-md-4">
         <button
           type="button"
