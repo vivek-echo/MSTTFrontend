@@ -53,10 +53,11 @@
                   <form class="row g-3 mb-4">
                       <div class="col-md-3">
                           <label for="carType" class="form-label">Car Type</label>
-                          <select id="" class="form-select form-select-sm">
-                              <option selected>Sedan</option>
-                              <option>Hatchback</option>
-                              <option>SUV</option>
+                          <select id="" class="form-select form-select-sm" name="carType" [(ngModel)]="carType" >
+                              <option value = "">--Select--</option>
+                              <option value = "1">Sedan</option>
+                              <option value = "2" >Hatchback</option>
+                              <option value = "3">SUV</option>
                           </select>
                       </div>
                       <!-- <div class="col-md-3">
@@ -65,26 +66,27 @@
                       </div> -->
                       <div class="col-md-3">
                           <label for="inputPassword4" class="form-label">Brand</label>
-                          <input type="text" class="form-control form-control-sm" id="">
+                          <input type="text" class="form-control form-control-sm" id="" name="carBrand" [(ngModel)]="carBrand">
                       </div>
                       <div class="col-md-3">
                           <label for="mnfYear" class="form-label">Manufacturing Year</label>
-                          <input type="date" class="form-control form-control-sm" id="">
+                          <input type="date" class="form-control form-control-sm" id="" name="carYear" [(ngModel)]="carYear">
                       </div>
                       <div class="col-md-3">
                           <label for="carType" class="form-label">Fuel Type</label>
-                          <select id="" class="form-select form-select-sm">
-                              <option selected>Petrol</option>
-                              <option>Diesel</option>
+                          <select id="" class="form-select form-select-sm" id="" name="fuelType" [(ngModel)]="fuelType">
+                              <option value = "">Select fuel type...</option>
+                              <option value="1">Petrol</option>
+                              <option value="2">Diesel</option>
                           </select>
                       </div>
                       <div class="col-md-3">
                           <label for="OwnerName" class="form-label">Mileage(Km/L)</label>
-                          <input type="text" class="form-control form-control-sm" id="">
+                          <input type="text" class="form-control form-control-sm" id="" name="mileage" [(ngModel)]="mileage">
                       </div>
                       <div class="col-md-3">
                           <label for="OwnerName" class="form-label">Car Owner Name</label>
-                          <input type="text" class="form-control form-control-sm" id="">
+                          <input type="text" class="form-control form-control-sm" id="" name="ownerName" [(ngModel)]="ownerName">
                       </div>
                       <div class="col-md-3">
                           <!-- <label for="inputState" class="form-label">State</label>
@@ -102,8 +104,9 @@
 
                           <div class="form-group" >
                               <label>Select State</label>
-                              <select id="inputState" class="form-select form-select-sm" (change)="onChangeState($event)">
+                              <select id="inputState" class="form-select form-select-sm" (change)="onChangeState($event)" name="stateName" [(ngModel)]="stateName">
                                 <option *ngIf="stateInfo === null" value="-1">--Select State--</option>
+                                <option *ngIf="stateLoading == true" value="-1">Loading...</option>
                                 <option selected>Choose State...</option>
                                 <option *ngFor="let state of stateInfo; let j = index" value="{{j}}">{{state.StateName}}</option>
                               </select>
@@ -111,9 +114,10 @@
 
                           <div class="form-group" >
                               <label>Select City</label>
-                              <select id="inputState" class="form-select form-select-sm" >
+                              <select id="inputState" class="form-select form-select-sm" name="cityName" [(ngModel)]="cityName">
+                                <option selected>Choose City...</option>
                                   <option *ngIf="cityInfo == null" value="-1">--Select CIty--</option>
-                                  <option selected>Choose City...</option>
+                                  <!-- <option selected>Choose City...</option> -->
                                 <option *ngFor="let city of cityInfo; let k = index" value="{{k}}">{{city}}</option>
                               </select>
                           </div>
@@ -127,7 +131,7 @@
                       </div> -->
                       <div class="col-md-3">
                           <label for="OwnerName" class="form-label">Owner Address</label>
-                          <textarea rows="3" class="form-control form-control-sm" id=""></textarea>
+                          <textarea rows="3" class="form-control form-control-sm" id="" name="address" [(ngModel)]="address"></textarea>
                       </div>
                   </form>
 
@@ -135,7 +139,7 @@
                   <form class="row g-3 mb-4">
                       <div class="col-md-3">
                           <label for="RCno" class="form-label">RC No.</label>
-                          <input type="text" class="form-control form-control-sm" id="">
+                          <input type="text" class="form-control form-control-sm" id="" name="RCNo" [(ngModel)]="RCNo">
                       </div>
                       <div class="col-md-3">
                           <label for="RC" class="form-label">Upload RC</label>
@@ -146,7 +150,7 @@
                       </div>
                       <div class="col-md-3">
                           <label for="ChassisNo" class="form-label">Chassis No.</label>
-                          <input type="text" class="form-control form-control-sm" id="">
+                          <input type="text" class="form-control form-control-sm" id="" name="chassisNo" [(ngModel)]="chassisNo">
                       </div>
                       <div class="col-md-3">
                           <label for="RC" class="form-label">Upload Insurance</label>
@@ -157,11 +161,11 @@
                       </div>
                       <div class="col-md-3">
                           <label for="InsuranceYearFrom" class="form-label">Insurance Valid From</label>
-                          <input type="date" class="form-control form-control-sm" id="">
+                          <input type="date" class="form-control form-control-sm" id="" name="insuranceValidFrom" [(ngModel)]="insuranceValidFrom">
                       </div>
                       <div class="col-md-3">
                           <label for="InsuranceYearTo" class="form-label">Insurance Valid Till</label>
-                          <input type="date" class="form-control form-control-sm" id="">
+                          <input type="date" class="form-control form-control-sm" id="" name="insuranceValidTill" [(ngModel)]="insuranceValidTill">
                       </div>
                       <div class="col-md-3">
                           <label for="RC" class="form-label">Upload Pollution</label>
@@ -172,11 +176,11 @@
                       </div>
                       <div class="col-md-3">
                           <label for="PollutionYearFrom" class="form-label">Pollution Valid From</label>
-                          <input type="date" class="form-control form-control-sm" id="">
+                          <input type="date" class="form-control form-control-sm" id="" name="pollutionValidFrom" [(ngModel)]="pollutionValidFrom">
                       </div>
                       <div class="col-md-3">
                           <label for="PollutionYearTo" class="form-label">Pollution Valid Till</label>
-                          <input type="date" class="form-control form-control-sm" id="">
+                          <input type="date" class="form-control form-control-sm" id="" name="pollutionValidTill" [(ngModel)]="pollutionValidTill">
                       </div>
                       <div class="col-md-3">
                           <label for="RC" class="form-label">Upload Car Image</label>
@@ -197,7 +201,7 @@
                       </div>
                   </form>
                   <div class="col-md-3">
-                      <button type="button"  class="btn btn-sm btn-success me-2" (click)="registerCar('car added successfully!')">Submit</button>
+                      <button type="submit"  class="btn btn-sm btn-success me-2" (click)="registerCar('car added successfully!')">Submit</button>
                       <button type="button" class="btn btn-sm btn-secondary">Cancel</button>
                   </div>
                   <!-- <div class="table-responsive">

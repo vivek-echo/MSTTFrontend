@@ -5,6 +5,8 @@ import { LocationSelectorService } from 'src/app/services/location-selector.serv
 import { AlertHelper } from 'src/app/core/helper/alert-helper';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
+
+
   isErrorState(
     control: FormControl | null,
     form: FormGroupDirective | NgForm | null
@@ -33,8 +35,9 @@ export class AddcarComponent implements OnInit {
   matcher = new MyErrorStateMatcher();
 
   countries!: Country[];
-  states!: string[];
+  states: any= "";
   cities!: string[];
+  stateLoading: boolean = false;
 
   country = new FormControl(null, [Validators.required]);
   state = new FormControl({ value: null, disabled: true }, [
@@ -52,6 +55,21 @@ export class AddcarComponent implements OnInit {
   url: any = "";
 	msg = "";
   imagerendered!: boolean;
+  carType : any = "";
+  carBrand: any = "";
+  carYear: any = "";
+  fuelType: any = "";
+  mileage: any = "";
+  ownerName: any = "";
+  stateName: any = "";
+  cityName: any = "";
+  address: any = "";
+  RCNo: any = "";
+  chassisNo: any = "";
+  insuranceValidFrom: any = "";
+  insuranceValidTill: any = "";
+  pollutionValidTill: any = "";
+  pollutionValidFrom: any = "";
 
   constructor(private service: LocationSelectorService,private AlertHelper: AlertHelper) {
     // this.form = new FormGroup({
@@ -69,12 +87,14 @@ export class AddcarComponent implements OnInit {
     // this.imagerendered = false;
   }
   getCountries(){
+    this.stateLoading = true;
     // this.countryInfo= ["India"];
     this.service.getCountries().
     subscribe(
       data2 => {
         this.countryInfo=data2.Countries;
         console.log('Data:', this.countryInfo);
+        this.stateLoading = false;
       },
       err => console.log(err),
       () => console.log('complete')
@@ -85,7 +105,8 @@ export class AddcarComponent implements OnInit {
     var country : any;
     country = (countryValue.target as HTMLTextAreaElement).value
     // this.cityInfo=this.stateInfo[country].Cities;
-    this.stateInfo=this.countryInfo[country].States;
+    this.stateInfo=this.countryInfo[country]?.States;
+    console.log(this.countryInfo[country]);
     this.cityInfo=this.stateInfo[0].Cities;
     console.log(this.countryInfo[countryValue].States);
     console.log(country)
@@ -122,8 +143,96 @@ export class AddcarComponent implements OnInit {
 	}
 
   registerCar(e:any){
-    this.AlertHelper.viewAlert('success', "VALID", e)
+
+    if(this.carType == ""){
+
+      this.AlertHelper.viewAlert('info', "Required", "select a valid car type!");
+      return ;
+    }
+
+    if(this.carBrand ==""){
+      this.AlertHelper.viewAlert('info', "Required", "invalid car brand");
+      return;
+    }
+
+    if(this.carYear ==""){
+      this.AlertHelper.viewAlert('info', "Required", "invalid car year");
+      return;
+    }
+
+    if(this.fuelType ==""){
+      this.AlertHelper.viewAlert('info', "Required", "invalid fuel type");
+      return;
+    }
+
+    if(this.mileage ==""){
+      this.AlertHelper.viewAlert('info', "Required", "invalid mileage");
+      return;
+    }
+
+    if(this.ownerName ==""){
+      this.AlertHelper.viewAlert('info', "Required", "invalid owner name");
+      return;
+    }
+
+    if(this.stateName ==""){
+      this.AlertHelper.viewAlert('info', "Required", "invalid state name");
+      return;
+    }
+
+    if(this.cityName ==""){
+      this.AlertHelper.viewAlert('info', "Required", "invalid city name");
+      return;
+    }
+
+    if(this.address==""){
+      this.AlertHelper.viewAlert('info', "Required", "invalid address");
+      return;
+    }
+
+    if(this.RCNo==""){
+      this.AlertHelper.viewAlert('info', "Required", "invalid RC Number");
+      return;
+    }
+
+    if(this.RCNo==""){
+      this.AlertHelper.viewAlert('info', "Required", "invalid RC Number");
+      return;
+    }
+
+    if(this.chassisNo==""){
+      this.AlertHelper.viewAlert('info', "Required", "invalid Chassis Number");
+      return;
+    }
+
+    if(this.insuranceValidFrom==""){
+      this.AlertHelper.viewAlert('info', "Required", "invalid insurance validity start date!");
+      return;
+    }
+
+    if(this.insuranceValidTill==""){
+      this.AlertHelper.viewAlert('info', "Required", "invalid insurance validity end date!");
+      return;
+    }
+
+    if(this.pollutionValidTill==""){
+      this.AlertHelper.viewAlert('info', "Required", "invalid insurance validity end date!");
+      return;
+    }
+
+    if(this.pollutionValidFrom==""){
+      this.AlertHelper.viewAlert('info', "Required", "invalid pollution validity start date!");
+      return;
+    }
+
+
+
+
+
+
+    this.AlertHelper.viewAlert('success', "VALID", e);
   }
+
 
 
 }
