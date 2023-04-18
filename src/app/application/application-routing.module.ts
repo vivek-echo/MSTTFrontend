@@ -5,7 +5,7 @@ import { BusbookingComponent } from './busbooking/busbooking.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ViewlistComponent } from './viewlist/viewlist.component';
 import { AuthGuard } from '../Authcomoponent/authguard/auth.guard';
-import { AddcarComponent } from './carbookng/addcar/addcar.component';
+import { AddcarComponent } from './carbooking/addcar/addcar.component';
 
 const routes : Routes=[
   {

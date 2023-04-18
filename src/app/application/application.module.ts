@@ -9,7 +9,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ViewlistComponent } from './viewlist/viewlist.component';
 import { BusbookingComponent } from './busbooking/busbooking.component';
 import { AuthGuard } from '../Authcomoponent/authguard/auth.guard';
-import { AddcarComponent } from './carbookng/addcar/addcar.component';
+import { AddcarComponent } from './carbooking/addcar/addcar.component';
+import { CarbookingComponent } from './carbooking/carbooking.component';
 
 
 
@@ -22,7 +23,8 @@ import { AddcarComponent } from './carbookng/addcar/addcar.component';
     FooterComponent,
     ViewlistComponent,
     BusbookingComponent,
-    AddcarComponent
+    AddcarComponent,
+    CarbookingComponent
   ],
   imports: [
     CommonModule,RouterModule
