@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { LocationSelectorService } from 'src/app/services/location-selector.service';
+import { AlertHelper } from 'src/app/core/helper/alert-helper';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(
@@ -50,8 +51,9 @@ export class AddcarComponent implements OnInit {
   cityInfo: any[] = [];
   url: any = "";
 	msg = "";
+  imagerendered!: boolean;
 
-  constructor(private service: LocationSelectorService) {
+  constructor(private service: LocationSelectorService,private AlertHelper: AlertHelper) {
     // this.form = new FormGroup({
     //   country: this.country,
     //   state: this.state,
@@ -64,6 +66,7 @@ export class AddcarComponent implements OnInit {
     //   return new bootstrap.Tooltip(tooltipTriggerEl)
     // })
     this.getCountries();
+    // this.imagerendered = false;
   }
   getCountries(){
     // this.countryInfo= ["India"];
@@ -114,8 +117,13 @@ export class AddcarComponent implements OnInit {
 		reader.onload = (_event) => {
 			this.msg = "";
 			this.url = reader.result;
+      this.imagerendered = true;
 		}
 	}
+
+  registerCar(e:any){
+    this.AlertHelper.viewAlert('success', "VALID", e)
+  }
 
 
 }

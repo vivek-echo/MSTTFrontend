@@ -187,17 +187,17 @@
                             <!-- <div class="col-md-4" *ngIf="selectedCarModel"> -->
                               <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
 
-                              <p>
+                              <div class="input-group">
                                 <input type="file" class="form-control form-control-sm" id="inputGroupFile04" aria-describedby="RCupload" aria-label="Upload" (change)="selectFile($event)">
                                 <button class="btn btn-sm btn-outline-secondary" type="button" id="" title="View/ Download Image"><i class="myicon-image1"></i></button>
                                 <!-- <div class="col-md-4"><img [src]="url" height="100" width="100"></div> -->
-                              </p>
-                              <div class="col-md-4"><img [src]="url" height="100" width="100"></div>
+                              </div>
+                              <div class="col-md-4" *ngIf="imagerendered"><img [src]="url" height="120" width="200"></div>
                             </div>
                       </div>
                   </form>
                   <div class="col-md-3">
-                      <button type="button" class="btn btn-sm btn-success me-2">Submit</button>
+                      <button type="button"  class="btn btn-sm btn-success me-2" (click)="registerCar('car added successfully!')">Submit</button>
                       <button type="button" class="btn btn-sm btn-secondary">Cancel</button>
                   </div>
                   <!-- <div class="table-responsive">
