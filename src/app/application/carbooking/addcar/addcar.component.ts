@@ -48,8 +48,8 @@ export class AddcarComponent implements OnInit {
   stateInfo: any[] = [];
   countryInfo: any[] = [];
   cityInfo: any[] = [];
-  msg!: string;
-  url!: string;
+  url: any = "";
+	msg = "";
 
   constructor(private service: LocationSelectorService) {
     // this.form = new FormGroup({
