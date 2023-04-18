@@ -1,0 +1,36 @@
+<div class="container-fluid pt-4 pb-1 px-4">
+  <div class="col-lg-12">
+      <div class="row g-3">
+          <div class="d-flex justify-content-between mt-0">
+              <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb p-1">
+                      <li class="breadcrumb-item text-custom"><a href="javascript:void();">Home</a></li>
+                      <li class="breadcrumb-item" aria-current="page">Dashboard</li>
+                      <li class="breadcrumb-item active" aria-current="page">Add Car</li>
+                  </ol>
+              </nav>
+              <div>
+                  <button class="btn btn-light btn-sm p-btn-sm btn-light-shadow me-2 rounded">Share</button>
+                  <button class="btn btn-success btn-sm p-btn-sm btn-dark-shadow rounded" data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop"> <i class="myicon-plus-square fs-6 me-2"></i>Create</button>
+              </div>
+            </div>
+      </div>
+  </div>
+</div>
+
+<div class="container-fluid px-4">
+  <div class="col-lg-12">
+      <ul class="nav nav-tabs">
+          <li class="nav-item">
+              <a class="nav-link" aria-current="page" [routerLink]="['/Application/addcar']">Add Car</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link active" [routerLink]="['/Application/viewcars']" routerLinkActive="router-link-active" >View Cars</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="javascript:void();">Booking History</a>
+          </li>
+      </ul>
+  </div>
+</div>
