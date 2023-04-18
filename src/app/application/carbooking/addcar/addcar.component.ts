@@ -225,14 +225,7 @@ export class AddcarComponent implements OnInit {
       return;
     }
 
-
-
-
-
-
     this.AlertHelper.viewAlert('success', "VALID", e);
   }
-
-
 
 }
