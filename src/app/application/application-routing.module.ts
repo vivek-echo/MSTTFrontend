@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ViewlistComponent } from './viewlist/viewlist.component';
 import { AuthGuard } from '../Authcomoponent/authguard/auth.guard';
 import { AddcarComponent } from './carbooking/addcar/addcar.component';
+import { CarbookingComponent } from './carbooking/carbooking.component';
 
 const routes : Routes=[
   {
@@ -32,7 +33,7 @@ const routes : Routes=[
     },
     {
       path: "taxibooking",
-      component: BusbookingComponent,
+      component: CarbookingComponent,
       canActivate:[AuthGuard],
       data:{
         bookingtype : "Taxi Booking"

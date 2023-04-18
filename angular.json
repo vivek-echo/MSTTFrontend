@@ -25,8 +25,8 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.css",
-              
               "src/assets/css/animate.css",
               "src/assets/css/all.css",
               "src/assets/css/bootstrap.min.css",
@@ -38,14 +38,9 @@
               "src/assets/css/magnific-popup.css",
               "src/assets/css/odometer.css",
               "src/assets/css/style.css",
-              
               "src/assets/css/icomoon/style.css",
               "src/assets/admin/css/main.css",
-
               "./node_modules/datatables.net-bs5/css/dataTables.bootstrap5.css"
-
-              
-              
             ],
             "scripts": [
               "src/assets/js/jquery-3.6.0.min.js",
@@ -128,6 +123,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.css"
             ],
             "scripts": [ ]

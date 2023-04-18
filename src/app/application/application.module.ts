@@ -11,6 +11,11 @@ import { BusbookingComponent } from './busbooking/busbooking.component';
 import { AuthGuard } from '../Authcomoponent/authguard/auth.guard';
 import { AddcarComponent } from './carbooking/addcar/addcar.component';
 import { CarbookingComponent } from './carbooking/carbooking.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatSelectModule } from '@angular/material/select';
 
 
 
@@ -27,7 +32,17 @@ import { CarbookingComponent } from './carbooking/carbooking.component';
     CarbookingComponent
   ],
   imports: [
-    CommonModule,RouterModule
+    CommonModule,
+    RouterModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatButtonModule,
+  ],
+  exports: [
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [AuthGuard]
 })

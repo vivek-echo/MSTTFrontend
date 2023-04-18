@@ -1,6 +1,3 @@
-<p>addcar works!</p>
-
-
 <div class="container-fluid pt-4 pb-1 px-4">
   <div class="col-lg-12">
       <div class="row g-3">
@@ -90,19 +87,44 @@
                           <input type="text" class="form-control form-control-sm" id="">
                       </div>
                       <div class="col-md-3">
-                          <label for="inputState" class="form-label">State</label>
+                          <!-- <label for="inputState" class="form-label">State</label>
                           <select id="inputState" class="form-select form-select-sm">
                               <option selected>Choose...</option>
                               <option>...</option>
-                          </select>
+                          </select> -->
+                          <div class="form-group" >
+                            <label>Select Country</label>
+                            <select id="inputState" class="form-select form-select-sm" (change)="onChangeCountry($event)">
+                              <option selected>Choose Country...</option>
+                              <option *ngFor="let country of countryInfo; let i = index" value="{{i}}">{{country.CountryName}}</option>
+                            </select>
+                          </div>
+
+                          <div class="form-group" >
+                              <label>Select State</label>
+                              <select id="inputState" class="form-select form-select-sm" (change)="onChangeState($event)">
+                                <option *ngIf="stateInfo === null" value="-1">--Select State--</option>
+                                <option selected>Choose State...</option>
+                                <option *ngFor="let state of stateInfo; let j = index" value="{{j}}">{{state.StateName}}</option>
+                              </select>
+                          </div>
+
+                          <div class="form-group" >
+                              <label>Select City</label>
+                              <select id="inputState" class="form-select form-select-sm" >
+                                  <option *ngIf="cityInfo == null" value="-1">--Select CIty--</option>
+                                  <option selected>Choose City...</option>
+                                <option *ngFor="let city of cityInfo; let k = index" value="{{k}}">{{city}}</option>
+                              </select>
+                          </div>
                       </div>
-                      <div class="col-md-3">
+                      <!-- <div class="col-md-3">
                           <label for="inputState" class="form-label">City</label>
                           <select id="inputState" class="form-select form-select-sm">
                               <option selected>Choose...</option>
                               <option>...</option>
                           </select>
-                      </div>
+                      </div> -->
                       <div class="col-md-3">
                           <label for="OwnerName" class="form-label">Owner Address</label>
                           <textarea rows="3" class="form-control form-control-sm" id=""></textarea>
