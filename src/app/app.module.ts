@@ -36,7 +36,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule
     // NgxOtpInputModule
   ],
-  providers: [AlertHelper,AuthGuard],
+  providers: [AlertHelper,AuthGuard,LoginComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -15,8 +15,9 @@ import { NgxSpinnerService } from "ngx-spinner";
 })
 export class LoginComponent implements OnInit {
 
+
   ngOnInit(): void {
-   
+
     // FOR VIEW PASSWORD STARTS
     $(document).on('click', '.password-indicator', () => {
       var PASSWORD_FIELD = $(this).closest('.password-wrapper').find('input');
@@ -42,6 +43,7 @@ export class LoginComponent implements OnInit {
   userOtp: any = "";
   encryptOtp: any = "";
   validLogin: any;
+  userId: any;
   public api_url = environment.api_url;
   constructor(
     private HttpClient: HttpClient,
@@ -62,7 +64,7 @@ export class LoginComponent implements OnInit {
       return;
     }
     this.loadding = true;
-    
+
     this.loginParams = {
       'email': this.email, 'password': this.password
     }
@@ -71,10 +73,9 @@ export class LoginComponent implements OnInit {
   }
 
   checkUser(data: any) {
-
     this.checkUserValid = true;
-
-    this.encryptOtp = data.otp
+    // this.userId = data.id;
+    this.encryptOtp = data.otp;
     $('#otpModal').modal('show');
     // this.Spinner.hide();
     this.loadding = false;
