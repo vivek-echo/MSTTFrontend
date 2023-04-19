@@ -115,10 +115,10 @@ export class AddcarComponent implements OnInit {
     var country: any;
     country = (countryValue.target as HTMLTextAreaElement).value;
     // this.cityInfo=this.stateInfo[country].Cities;
-    this.stateInfo = this.countryInfo[country]?.States;
+    this.stateInfo = this.countryInfo[country].States;
     console.log(this.countryInfo[country]);
     this.cityInfo = this.stateInfo[0].Cities;
-    console.log(this.countryInfo[countryValue].States);
+    console.log(this.countryInfo[country].States);
     console.log(country);
   }
 
