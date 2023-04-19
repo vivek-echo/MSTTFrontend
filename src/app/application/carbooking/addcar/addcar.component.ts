@@ -11,6 +11,8 @@ import { LocationSelectorService } from 'src/app/services/location-selector.serv
 import { AlertHelper } from 'src/app/core/helper/alert-helper';
 import { LoginComponent } from 'src/app/Authcomoponent/login/login.component';
 import { ApplicationComponent } from '../../application.component';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(
@@ -77,11 +79,14 @@ export class AddcarComponent implements OnInit {
   pollutionValidFrom: any = '';
 
   carDetails: any;
+  public api_url = environment.api_url;
+  addCarValidation: boolean = false;
 
   constructor(
     private service: LocationSelectorService,
     private AlertHelper: AlertHelper,
-    private userId : ApplicationComponent
+    private userId : ApplicationComponent,
+    private HttpClient: HttpClient
   ) {
     // this.form = new FormGroup({
     //   country: this.country,
@@ -254,12 +259,12 @@ export class AddcarComponent implements OnInit {
       );
       return;
     }
-
+    this.addCarValidation = true;
     this.AlertHelper.viewAlert('success', 'VALID', e);
   }
 
   onSubmitCarDetails() {
-
+    console.log("inside submit")
     this.carDetails = {
       userId: 1,
       carType: this.carType,
@@ -280,5 +285,19 @@ export class AddcarComponent implements OnInit {
     };
 
     console.log(this.carDetails);
+
+    if(this.addCarValidation){
+      this.HttpClient.post(this.api_url + "/addCar", this.carDetails).subscribe(data => this.addedCar(data), error => this.errorHandle(error));
+    }
+
+
+  }
+
+  addedCar(e:any){
+    console.log(e);
+  }
+
+  errorHandle(err:any){
+    console.log(err);
   }
 }
