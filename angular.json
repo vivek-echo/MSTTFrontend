@@ -41,6 +41,7 @@
               
               "src/assets/css/icomoon/style.css",
               "src/assets/admin/css/main.css",
+              "src/assets/admin/css/lightgallery.css",
 
               "./node_modules/datatables.net-bs5/css/dataTables.bootstrap5.css"
 
@@ -58,6 +59,8 @@
               "src/assets/js/jquery.magnific-popup.min.js",
               "src/assets/js/isotope.pkgd.min.js",
               "src/assets/js/main.js",
+
+              "src/assets/admin/js/lightgallery-all.min.js",
 
               "./node_modules/datatables.net/js/jquery.dataTables.js",
               "./node_modules/datatables.net-bs5/js/dataTables.bootstrap5.js"

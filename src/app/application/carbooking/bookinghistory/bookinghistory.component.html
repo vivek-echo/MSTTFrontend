@@ -1,0 +1,363 @@
+<div class="container-fluid pt-4 pb-1 px-4">
+    <div class="col-lg-12">
+        <div class="row g-3">
+            <div class="d-flex justify-content-between mt-0">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb p-1">
+                        <li class="breadcrumb-item text-custom"><a href="javascript:void();"><i
+                                    class="myicon-home1 me-2"></i>Home</a></li>
+                        <li class="breadcrumb-item" aria-current="page">Dashboard</li>
+                        <li class="breadcrumb-item active" aria-current="page">Booking History</li>
+                    </ol>
+                </nav>
+                <div>
+                    <button class="btn btn-light btn-sm p-btn-sm btn-light-shadow me-2 rounded">Share</button>
+                    <button class="btn btn-success btn-sm p-btn-sm btn-dark-shadow rounded" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop"> <i class="myicon-plus-square fs-6 me-2"></i>Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid px-4">
+    <div class="col-lg-12">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" routerLink="/Application/addcar">Add Car</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/Application/viewcars">View Cars</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" routerLink="/Application/bookinghistory">Booking History</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="container-fluid">
+
+
+    <div class="row mt-0">
+        <!-- <div class="col-lg-6 col-sm-12">
+            <div id="bar"></div>
+        </div> -->
+        <div class="col-lg-12 col-sm-12">
+            <div class="card border-0">
+                <div class="card-header pt-1">
+                    <span class="d-inline-block align-middle h6 custom-border-left ps-2">Booking History</span>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table id="admin-table" class="table rounded">
+                            <thead class="sticky-top">
+                                <tr class="text-dark">
+                                    <th class="custom-table-head">#</th>
+                                    <th class="custom-table-head">Image</th>
+                                    <th class="custom-table-head">Car Type</th>
+                                    <th class="custom-table-head">Brand/ Model</th>
+                                    <th class="custom-table-head">Owner Name</th>
+                                    <th class="custom-table-head">State</th>
+                                    <th class="custom-table-head">City</th>
+                                    <th class="custom-table-head">RC No.</th>
+                                    <th class="custom-table-head text-center">RC Doc</th>
+                                    <th class="custom-table-head">Booked By</th>
+                                    <th class="custom-table-head">Status</th>
+                                    <th class="custom-table-head text-center">Booking Details</th>
+                                </tr>
+                            </thead>
+                            <tbody class="align-middle">
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>
+                                        <div class="vehicle-image">
+                                            <a href="../../../../assets/admin/images/car.jpg">
+                                                <img src="../../../../assets/admin/images/car.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </td>
+                                    <td>SUV</td>
+                                    <td>Hyundai/ Venue</td>
+                                    <td>Vishal</td>
+                                    <td>Jharkhand</td>
+                                    <td>Tata</td>
+                                    <td>JH06Dg7828</td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-sm btn-light-yellow" data-bs-toggle="tooltip" data-bs-title="View/ Download PDF"><i
+                                                class="myicon-file-pdf fs-1-0"></i></button>
+                                    </td>
+                                    <td>Ranjan</td>
+                                    <td><span class="dot-green"></span> Active</td>
+                                    <td>
+                                        <div class="text-center">
+                                            <div class="btn-group me-2" role="group" aria-label="First group" data-bs-toggle="tooltip" data-bs-title="View Details">
+                                                <button type="button" class="btn btn-sm btn-light-blue"
+                                                    data-bs-toggle="modal" data-bs-target="#viewbookingdetail"><i
+                                                        class="myicon-eye1 fs-1-0"></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>
+                                        <div class="vehicle-image">
+                                            <a href="../../../../assets/admin/images/car.jpg">
+                                                <img src="../../../../assets/admin/images/car.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </td>
+                                    <td>SUV</td>
+                                    <td>Hyundai/ Venue</td>
+                                    <td>Vishal</td>
+                                    <td>Jharkhand</td>
+                                    <td>Tata</td>
+                                    <td>JH06Dg7828</td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-sm btn-light-yellow" data-bs-toggle="tooltip" data-bs-title="View/ Download PDF"><i
+                                                class="myicon-file-pdf fs-1-0"></i></button>
+                                    </td>
+                                    <td>Ranjan</td>
+                                    <td><span class="dot-red"></span> Inactive</td>
+                                    <td>
+                                        <div class="text-center">
+                                            <div class="btn-group me-2" role="group" aria-label="First group" data-bs-toggle="tooltip" data-bs-title="View Details">
+                                                <button type="button" class="btn btn-sm btn-light-blue"
+                                                    data-bs-toggle="modal" data-bs-target="#viewbookingdetail"><i
+                                                        class="myicon-eye1 fs-1-0"></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>
+                                        <div class="vehicle-image view-image">
+                                            <a href="../../../../assets/admin/images/car.jpg">
+                                                <img src="../../../../assets/admin/images/car.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </td>
+                                    <td>SUV</td>
+                                    <td>Hyundai/ Venue</td>
+                                    <td>Vishal</td>
+                                    <td>Jharkhand</td>
+                                    <td>Tata</td>
+                                    <td>JH06Dg7828</td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-sm btn-light-yellow" data-bs-toggle="tooltip" data-bs-title="View/ Download PDF"><i
+                                                class="myicon-file-pdf fs-1-0"></i></button>
+                                    </td>
+                                    <td>Ranjan</td>
+                                    <td><span class="dot-red"></span> Inactive</td>
+                                    <td>
+                                        <div class="text-center">
+                                            <div class="btn-group me-2" role="group" aria-label="First group" data-bs-toggle="tooltip" data-bs-title="View Details">
+                                                <button type="button" class="btn btn-sm btn-light-blue"
+                                                    data-bs-toggle="modal" data-bs-target="#viewbookingdetail"><i
+                                                        class="myicon-eye1 fs-1-0"></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="viewbookingdetail" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="viewbookingdetailLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="viewbookingdetailLabel">Booking Details</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3 row">
+                    <label for="" class="col-sm-3 col-form-label">Booked By</label>
+                    <label for="" class="col-sm-1 col-form-label fw-bold">:</label>
+                    <div class="col-sm-8">
+                        <input type="text" readonly class="form-control-plaintext fw-bold" id=""
+                            value="Ranjan">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="" class="col-sm-3 col-form-label">Car Image</label>
+                    <label for="" class="col-sm-1 col-form-label fw-bold">:</label>
+                    <div class="col-sm-8">
+                        <div class="vehicle-image">
+                            <a href="../../../../assets/admin/images/car.jpg">
+                                <img src="../../../../assets/admin/images/car.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <span class="d-inline-block align-middle h6 custom-border-left mb-3 ps-2">General Information</span>
+                <div class="bg-light p-3 rounded">
+                    <div class="mb-3 row">
+                        <label for="" class="col-sm-3 col-form-label">Car Type</label>
+                        <label for="" class="col-sm-1 col-form-label fw-bold">:</label>
+                        <div class="col-sm-8">
+                            <input type="text" readonly class="form-control-plaintext fw-bold" id=""
+                                value="SUV">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="" class="col-sm-3 col-form-label">Brand/ Model</label>
+                        <label for="" class="col-sm-1 col-form-label fw-bold">:</label>
+                        <div class="col-sm-8">
+                            <input type="text" readonly class="form-control-plaintext fw-bold" id=""
+                                value="Hyundai/ Venue">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="" class="col-sm-3 col-form-label">Manufacturing Year</label>
+                        <label for="" class="col-sm-1 col-form-label fw-bold">:</label>
+                        <div class="col-sm-8">
+                            <input type="text" readonly class="form-control-plaintext fw-bold" id=""
+                                value="22/05/2022">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="" class="col-sm-3 col-form-label">Fuel Type</label>
+                        <label for="" class="col-sm-1 col-form-label fw-bold">:</label>
+                        <div class="col-sm-8">
+                            <input type="text" readonly class="form-control-plaintext fw-bold" id=""
+                                value="Petrol">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="" class="col-sm-3 col-form-label">Mileage(Km/L)</label>
+                        <label for="" class="col-sm-1 col-form-label fw-bold">:</label>
+                        <div class="col-sm-8">
+                            <input type="text" readonly class="form-control-plaintext fw-bold" id=""
+                                value="20">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="" class="col-sm-3 col-form-label">Car Owner Name</label>
+                        <label for="" class="col-sm-1 col-form-label fw-bold">:</label>
+                        <div class="col-sm-8">
+                            <input type="text" readonly class="form-control-plaintext fw-bold" id=""
+                                value="Vishal">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="" class="col-sm-3 col-form-label">State</label>
+                        <label for="" class="col-sm-1 col-form-label fw-bold">:</label>
+                        <div class="col-sm-8">
+                            <input type="text" readonly class="form-control-plaintext fw-bold" id=""
+                                value="Jharkand">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="" class="col-sm-3 col-form-label">City</label>
+                        <label for="" class="col-sm-1 col-form-label fw-bold">:</label>
+                        <div class="col-sm-8">
+                            <input type="text" readonly class="form-control-plaintext fw-bold" id=""
+                                value="Tata">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="" class="col-sm-3 col-form-label">Owner Address</label>
+                        <label for="" class="col-sm-1 col-form-label fw-bold">:</label>
+                        <div class="col-sm-8">
+                            <input type="text" readonly class="form-control-plaintext fw-bold" id=""
+                                value="Tata, Jharkhand, India">
+                        </div>
+                    </div>
+                </div>
+                
+                <span class="d-inline-block align-middle h6 custom-border-left my-3 ps-2">Car Information</span>
+                <div class="bg-light p-3 rounded">
+                    <div class="mb-3 row">
+                        <label for="" class="col-sm-3 col-form-label">Rc No.</label>
+                        <label for="" class="col-sm-1 col-form-label fw-bold">:</label>
+                        <div class="col-sm-8">
+                            <input type="text" readonly class="form-control-plaintext fw-bold" id=""
+                                value="JH06Dg7828">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="" class="col-sm-3 col-form-label">Rc Doc</label>
+                        <label for="" class="col-sm-1 col-form-label fw-bold">:</label>
+                        <div class="col-sm-8">
+                            <button type="button" class="btn btn-sm btn-light-yellow" data-bs-toggle="tooltip" data-bs-title="View/ Download PDF"><i
+                                class="myicon-file-pdf fs-1-0"></i></button>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="" class="col-sm-3 col-form-label">Chassis No.</label>
+                        <label for="" class="col-sm-1 col-form-label fw-bold">:</label>
+                        <div class="col-sm-8">
+                            <input type="text" readonly class="form-control-plaintext fw-bold" id=""
+                                value="ML712921UU88119919">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="" class="col-sm-3 col-form-label">Insurance Doc</label>
+                        <label for="" class="col-sm-1 col-form-label fw-bold">:</label>
+                        <div class="col-sm-8">
+                            <button type="button" class="btn btn-sm btn-light-yellow" data-bs-toggle="tooltip" data-bs-title="View/ Download PDF"><i
+                                class="myicon-file-pdf fs-1-0"></i></button>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="" class="col-sm-3 col-form-label">Insurance Valid From</label>
+                        <label for="" class="col-sm-1 col-form-label fw-bold">:</label>
+                        <div class="col-sm-8">
+                            <input type="text" readonly class="form-control-plaintext fw-bold" id=""
+                                value="22/05/2022">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="" class="col-sm-3 col-form-label">Insurance Valid Till</label>
+                        <label for="" class="col-sm-1 col-form-label fw-bold">:</label>
+                        <div class="col-sm-8">
+                            <input type="text" readonly class="form-control-plaintext fw-bold" id=""
+                                value="22/05/2023">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="" class="col-sm-3 col-form-label">Pollution Doc</label>
+                        <label for="" class="col-sm-1 col-form-label fw-bold">:</label>
+                        <div class="col-sm-8">
+                            <button type="button" class="btn btn-sm btn-light-yellow" data-bs-toggle="tooltip" data-bs-title="View/ Download PDF"><i
+                                class="myicon-file-pdf fs-1-0"></i></button>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="" class="col-sm-3 col-form-label">Pollution Valid From</label>
+                        <label for="" class="col-sm-1 col-form-label fw-bold">:</label>
+                        <div class="col-sm-8">
+                            <input type="text" readonly class="form-control-plaintext fw-bold" id=""
+                                value="22/05/2022">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="" class="col-sm-3 col-form-label">Pollution Valid Till</label>
+                        <label for="" class="col-sm-1 col-form-label fw-bold">:</label>
+                        <div class="col-sm-8">
+                            <input type="text" readonly class="form-control-plaintext fw-bold" id=""
+                                value="22/11/2022">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div> -->
+        </div>
+    </div>
+</div>

@@ -6,6 +6,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ViewlistComponent } from './viewlist/viewlist.component';
 import { AuthGuard } from '../Authcomoponent/authguard/auth.guard';
 import { AddcarComponent } from './carbooking/addcar/addcar.component';
+import { ViewcarsComponent } from './carbooking/viewcars/viewcars.component';
+import { BookinghistoryComponent } from './carbooking/bookinghistory/bookinghistory.component';
 
 const routes : Routes=[
   {
@@ -41,6 +43,16 @@ const routes : Routes=[
     {
       path: "addcar",
       component: AddcarComponent,
+      canActivate:[AuthGuard]
+    },
+    {
+      path: "viewcars",
+      component: ViewcarsComponent,
+      canActivate:[AuthGuard]
+    },
+    {
+      path: "bookinghistory",
+      component: BookinghistoryComponent,
       canActivate:[AuthGuard]
     },
     {

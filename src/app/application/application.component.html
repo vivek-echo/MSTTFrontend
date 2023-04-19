@@ -3,7 +3,7 @@
     <!-- <app-sidenav *ngIf="display"></app-sidenav> -->
     <div *ngIf="display">
     <div class="margin-sidebar" id="sidebar-wrapper"
-        style=" background: linear-gradient(to bottom, #ff0000, #ff8100); font-size: 0.8rem; overflow-x: hidden; ">
+        style=" background: linear-gradient(to bottom, #ff0000, #ff8100); font-size: 0.9rem; overflow-x: hidden; ">
         <div class="sidebar-heading text-center primary-text fs-5 text-uppercase sidebar-border-bottom">
             <i class="myicon-slack me-2"></i>ADMIN
         </div>
@@ -24,27 +24,27 @@
         <div class="list-group list-group-flush my-3">
             <a routerLink="/Application/dashboard"
                 class="list-group-item list-group-item-action bg-transparent white-text active"><i
-                    class="myicon-monitor fs-6 me-2"></i> &nbsp;Dashboard</a>
+                    class="myicon-monitor fs-1-0 me-2"></i> &nbsp;Dashboard</a>
 
-            <a routerLink="/Application/taxibooking"
+            <a routerLink="/Application/addcar"
                 class="list-group-item list-group-item-action bg-transparent white-text"><i
-                    class="myicon-car-service fs-6 me-2"></i> &nbsp;Taxi booking</a>
+                    class="myicon-car-service fs-1-0 me-2"></i> &nbsp;Taxi booking</a>
 
             <div class="d-flex justify-content-start align-items-center">
                 <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
                     aria-controls="collapseExample"
                     class="list-group-item list-group-item-action bg-transparent white-text"><i
-                        class="myicon-table2 fs-6 me-2"></i> &nbsp;Wallet</a>
+                        class="myicon-table2 fs-1-0 me-2"></i> &nbsp;Wallet</a>
                 <i class="myicon-chevron-right"></i>
             </div>
             <div class="collapse" id="collapseExample">
                 <div class="card card-body">
-                    Some placeholder content for the collapse component.
+                    Sub Menu 1
                 </div>
             </div>
 
             <a href="#" (click)="logout($event)" class="list-group-item list-group-item-action bg-transparent"><i
-                    class="myicon-log-out fs-6 me-2"></i> &nbsp;Logout</a>
+                    class="myicon-log-out fs-1-0 me-2"></i> &nbsp;Logout</a>
         </div>
     </div>
 
@@ -78,7 +78,7 @@
                         class="list-group-item list-group-item-action bg-transparent white-text active"><i
                             class="myicon-monitor fs-6 me-2"></i> &nbsp;Dashboard</a>
 
-                    <a routerLink="/Application/takibooking"
+                    <a routerLink="/Application/addcar"
                         class="list-group-item list-group-item-action bg-transparent white-text"><i
                             class="myicon-table2 fs-6 me-2"></i> &nbsp;Taxi booking</a>
 
@@ -99,7 +99,7 @@
                 <!-- for small screen -->
                 <a id="tog-small" data-bs-toggle="offcanvas" href="#menutoggle_small" role="button"
                     aria-controls="menutoggle_small"> <i class="bx bx-menu text-custom fs-4 mt-2 me-3"></i></a>
-                <!-- <h4 class="fs-5 m-0 text-custom" id="dashboardLink">Dashboard</h4> -->
+                <h4 class="fs-5 mt-2 text-custom" id="dashboardLink">MSTT Tour & Travel</h4>
             </div>
 
             <!-- FOR MOBILE -->

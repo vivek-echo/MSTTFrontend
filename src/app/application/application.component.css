@@ -55,7 +55,7 @@ $border-radius-4: 1.4rem; */
   }
   
   #wrapper {
-    font-size: .8rem;
+    font-size: 1rem;
     overflow-x: hidden;
   }
   
@@ -179,13 +179,13 @@ $border-radius-4: 1.4rem; */
   }
   
   .c-details h6 {
-    font-size: .8rem;
+    /* font-size: .8rem; */
     color: #fff !important;
   }
   
   .c-details span {
     font-weight: 300;
-    font-size: .7rem;
+    /* font-size: .7rem; */
   }
   
   /* OFF CANVAS */
