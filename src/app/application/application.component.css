@@ -184,11 +184,11 @@ $border-radius-4: 1.4rem; */
   
   /* OFF CANVAS */
   .offcanvas-start {
-    width: 225px;
+    width: 256px;
   }
   
   .offcanvas {
-    background-color: #d37b26;
+    background: linear-gradient(to bottom, #ff0000, #ff8100);
   }
 
 

@@ -79,17 +79,36 @@
                         </div>
                     </div>
                 </div>
-                <div class="">
-                    <div class="list-group list-group-flush my-3">
-                        <a routerLink="/Application/dashboard"
-                            class="list-group-item list-group-item-action bg-transparent white-text active"><i
-                                class="myicon-monitor fs-6 me-2"></i> &nbsp;Dashboard</a>
-
-                        <a routerLink="/Application/addcar"
-                            class="list-group-item list-group-item-action bg-transparent white-text"><i
-                                class="myicon-table2 fs-6 me-2"></i> &nbsp;Taxi booking</a>
-
+                <div class="list-group list-group-flush my-3">
+                    <a routerLink="/Application/dashboard"
+                        class="list-group-item list-group-item-action bg-transparent white-text active"><i
+                            class="myicon-monitor fs-1-0 me-2"></i> &nbsp;Dashboard</a>
+    
+                    <a data-bs-toggle="collapse" href="#collapseone"
+                        class="list-group-item list-group-item-action bg-transparent white-text"><i
+                            class="myicon-car-service fs-1-0 me-2"></i> &nbsp;Taxi booking <i class="arrow myicon-chevron-right"></i></a>
+                    <div class="collapse" id="collapseone">
+                        <div class="card card-body border-0 px-2 py-1">
+                            <div class="list-group list-group-flush">
+                                <a routerLink="/Application/addcar"
+                                    class="list-group-item list-group-item-action bg-transparent white-text ps-2-0 mx-1"><i
+                                        class="myicon-minus1 fs-6 me-3"></i>Add Car</a>
+                                <a routerLink="/Application/viewcars"
+                                    class="list-group-item list-group-item-action bg-transparent white-text ps-2-0 mx-1"><i
+                                        class="myicon-minus1 fs-6 me-3"></i>View Cars</a>
+                                <a routerLink="/Application/bookinghistory"
+                                    class="list-group-item list-group-item-action bg-transparent white-text ps-2-0 mx-1"><i
+                                        class="myicon-minus1 fs-6 me-3"></i>Booking History</a>
+                            </div>
+                        </div>
                     </div>
+    
+                    <a class="list-group-item list-group-item-action bg-transparent white-text"><i
+                            class="myicon-table2 fs-1-0 me-2"></i> &nbsp;Wallet 
+                    </a>
+    
+                    <a href="#" (click)="logout($event)" class="list-group-item list-group-item-action bg-transparent"><i
+                            class="myicon-log-out fs-1-0 me-2"></i> &nbsp;Logout</a>
                 </div>
             </div>
         </div>
