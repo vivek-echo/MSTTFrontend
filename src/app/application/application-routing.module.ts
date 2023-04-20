@@ -9,6 +9,8 @@ import { AddcarComponent } from './carbooking/addcar/addcar.component';
 import { CarbookingComponent } from './carbooking/carbooking.component';
 import { ViewcarsComponent } from './carbooking/viewcars/viewcars.component';
 import { BookinghistoryComponent } from './carbooking/bookinghistory/bookinghistory.component';
+import { ViewcarsUsersComponent } from './carbooking/users/viewcars-users/viewcars-users.component';
+import { BookinghistoryUsersComponent } from './carbooking/users/bookinghistory-users/bookinghistory-users.component';
 
 const routes : Routes=[
   {
@@ -56,6 +58,19 @@ const routes : Routes=[
       component: BookinghistoryComponent,
       canActivate:[AuthGuard]
     },
+    {
+      path: "users/viewcars-users",
+      component: ViewcarsUsersComponent,
+      canActivate:[AuthGuard]
+    },
+    {
+      path: "users/bookinghistory-users",
+      component: BookinghistoryUsersComponent,
+      canActivate:[AuthGuard]
+    },
+
+
+
     {
       path: "truckbooking",
       component: BusbookingComponent,

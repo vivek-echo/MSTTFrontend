@@ -20,6 +20,8 @@ import { FormsModule } from '@angular/forms';
 import { ViewcarsComponent } from './carbooking/viewcars/viewcars.component';
 import { LoginComponent } from '../Authcomoponent/login/login.component';
 import { BookinghistoryComponent } from './carbooking/bookinghistory/bookinghistory.component';
+import { ViewcarsUsersComponent } from './carbooking/users/viewcars-users/viewcars-users.component';
+import { BookinghistoryUsersComponent } from './carbooking/users/bookinghistory-users/bookinghistory-users.component';
 
 
 
@@ -35,7 +37,9 @@ import { BookinghistoryComponent } from './carbooking/bookinghistory/bookinghist
     AddcarComponent,
     CarbookingComponent,
     ViewcarsComponent,
-    BookinghistoryComponent
+    BookinghistoryComponent,
+    ViewcarsUsersComponent,
+    BookinghistoryUsersComponent
   ],
   imports: [
     CommonModule,
