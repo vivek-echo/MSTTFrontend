@@ -2,67 +2,16 @@
     <!-- Sidebar -->
     <!-- <app-sidenav *ngIf="display"></app-sidenav> -->
     <div *ngIf="display">
-    <div class="margin-sidebar" id="sidebar-wrapper"
-        style=" background: linear-gradient(to bottom, #ff0000, #ff8100); font-size: 0.9rem; overflow-x: hidden; ">
-        <div class="sidebar-heading text-center primary-text fs-5 text-uppercase sidebar-border-bottom">
-            <i class="myicon-slack me-2"></i>ADMIN
-        </div>
-        <div class="card p-3 mb-3">
-            <div class="d-flex justify-content-between">
-                <div class="d-flex flex-row align-items-center">
-                    <div class="icon-trans">
-                        <img class="img-fluid user-image" src="../../../assets/admin/images/testimonials/dh.jpg"
-                            alt="" />
-                    </div>
-                    <div class="ms-2 c-details">
-                        <h6 class="mb-0">Vishal Kumar</h6>
-                        <span>Admin</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="list-group list-group-flush my-3">
-            <a routerLink="/Application/dashboard"
-                class="list-group-item list-group-item-action bg-transparent white-text active"><i
-                    class="myicon-monitor fs-1-0 me-2"></i> &nbsp;Dashboard</a>
-
-            <a routerLink="/Application/addcar"
-                class="list-group-item list-group-item-action bg-transparent white-text"><i
-                    class="myicon-car-service fs-1-0 me-2"></i> &nbsp;Taxi booking</a>
-
-            <div class="d-flex justify-content-start align-items-center">
-                <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-                    aria-controls="collapseExample"
-                    class="list-group-item list-group-item-action bg-transparent white-text"><i
-                        class="myicon-table2 fs-1-0 me-2"></i> &nbsp;Wallet</a>
-                <i class="myicon-chevron-right"></i>
-            </div>
-            <div class="collapse" id="collapseExample">
-                <div class="card card-body">
-                    Sub Menu 1
-                </div>
-            </div>
-
-            <a href="#" (click)="logout($event)" class="list-group-item list-group-item-action bg-transparent"><i
-                    class="myicon-log-out fs-1-0 me-2"></i> &nbsp;Logout</a>
-        </div>
-    </div>
-
-    <!-- for mobile -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="menutoggle_small" aria-labelledby="menutoggle_smallLabel">
-        <div class="offcanvas-header border-bottom">
-            <h5 class="offcanvas-title text-white" id="offcanvasExampleLabel">
+        <div class="margin-sidebar" id="sidebar-wrapper"
+            style=" background: linear-gradient(to bottom, #ff0000, #ff8100); font-size: 0.9rem; overflow-x: hidden; ">
+            <div class="sidebar-heading text-center primary-text fs-5 text-uppercase sidebar-border-bottom">
                 <i class="myicon-slack me-2"></i>ADMIN
-            </h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body p-0" style="font-size: 0.8rem; overflow-x: hidden">
+            </div>
             <div class="card p-3 mb-3">
                 <div class="d-flex justify-content-between">
                     <div class="d-flex flex-row align-items-center">
                         <div class="icon-trans">
-                            <img class="img-fluid user-image" src="../../../../assets/admin/images/testimonials/dh.jpg"
+                            <img class="img-fluid user-image" src="../../../assets/admin/images/testimonials/dh.jpg"
                                 alt="" />
                         </div>
                         <div class="ms-2 c-details">
@@ -72,21 +21,98 @@
                     </div>
                 </div>
             </div>
-            <div class="">
+            <div class="list-group list-group-flush my-3">
+                <a routerLink="/Application/dashboard"
+                    class="list-group-item list-group-item-action bg-transparent white-text active"><i
+                        class="myicon-monitor fs-1-0 me-2"></i> &nbsp;Dashboard</a>
+
+                <a data-bs-toggle="collapse" href="#collapseone"
+                    class="list-group-item list-group-item-action bg-transparent white-text"><i
+                        class="myicon-car-service fs-1-0 me-2"></i> &nbsp;Taxi booking <i class="arrow myicon-chevron-right"></i></a>
+                <div class="collapse" id="collapseone">
+                    <div class="card card-body border-0 px-2 py-1">
+                        <div class="list-group list-group-flush">
+                            <a routerLink="/Application/addcar"
+                                class="list-group-item list-group-item-action bg-transparent white-text ps-2-0 mx-1"><i
+                                    class="myicon-minus1 fs-6 me-3"></i>Add Car</a>
+                            <a routerLink="/Application/viewcars"
+                                class="list-group-item list-group-item-action bg-transparent white-text ps-2-0 mx-1"><i
+                                    class="myicon-minus1 fs-6 me-3"></i>View Cars</a>
+                            <a routerLink="/Application/bookinghistory"
+                                class="list-group-item list-group-item-action bg-transparent white-text ps-2-0 mx-1"><i
+                                    class="myicon-minus1 fs-6 me-3"></i>Booking History</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="list-group-item list-group-item-action bg-transparent white-text"><i
+                        class="myicon-table2 fs-1-0 me-2"></i> &nbsp;Wallet 
+                </a>
+
+                <a href="#" (click)="logout($event)" class="list-group-item list-group-item-action bg-transparent"><i
+                        class="myicon-log-out fs-1-0 me-2"></i> &nbsp;Logout</a>
+            </div>
+        </div>
+
+        <!-- for mobile -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="menutoggle_small"
+            aria-labelledby="menutoggle_smallLabel">
+            <div class="offcanvas-header border-bottom">
+                <h5 class="offcanvas-title text-white" id="offcanvasExampleLabel">
+                    <i class="myicon-slack me-2"></i>ADMIN
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body p-0" style="font-size: 0.8rem; overflow-x: hidden">
+                <div class="card p-3 mb-3">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="icon-trans">
+                                <img class="img-fluid user-image"
+                                    src="../../../../assets/admin/images/testimonials/dh.jpg" alt="" />
+                            </div>
+                            <div class="ms-2 c-details">
+                                <h6 class="mb-0">Vishal Kumar</h6>
+                                <span>Admin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="list-group list-group-flush my-3">
                     <a routerLink="/Application/dashboard"
                         class="list-group-item list-group-item-action bg-transparent white-text active"><i
-                            class="myicon-monitor fs-6 me-2"></i> &nbsp;Dashboard</a>
-
-                    <a routerLink="/Application/addcar"
+                            class="myicon-monitor fs-1-0 me-2"></i> &nbsp;Dashboard</a>
+    
+                    <a data-bs-toggle="collapse" href="#collapseone"
                         class="list-group-item list-group-item-action bg-transparent white-text"><i
-                            class="myicon-table2 fs-6 me-2"></i> &nbsp;Taxi booking</a>
-
+                            class="myicon-car-service fs-1-0 me-2"></i> &nbsp;Taxi booking <i class="arrow myicon-chevron-right"></i></a>
+                    <div class="collapse" id="collapseone">
+                        <div class="card card-body border-0 px-2 py-1">
+                            <div class="list-group list-group-flush">
+                                <a routerLink="/Application/addcar"
+                                    class="list-group-item list-group-item-action bg-transparent white-text ps-2-0 mx-1"><i
+                                        class="myicon-minus1 fs-6 me-3"></i>Add Car</a>
+                                <a routerLink="/Application/viewcars"
+                                    class="list-group-item list-group-item-action bg-transparent white-text ps-2-0 mx-1"><i
+                                        class="myicon-minus1 fs-6 me-3"></i>View Cars</a>
+                                <a routerLink="/Application/bookinghistory"
+                                    class="list-group-item list-group-item-action bg-transparent white-text ps-2-0 mx-1"><i
+                                        class="myicon-minus1 fs-6 me-3"></i>Booking History</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <a class="list-group-item list-group-item-action bg-transparent white-text"><i
+                            class="myicon-table2 fs-1-0 me-2"></i> &nbsp;Wallet 
+                    </a>
+    
+                    <a href="#" (click)="logout($event)" class="list-group-item list-group-item-action bg-transparent"><i
+                            class="myicon-log-out fs-1-0 me-2"></i> &nbsp;Logout</a>
                 </div>
             </div>
         </div>
     </div>
-</div>
     <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->

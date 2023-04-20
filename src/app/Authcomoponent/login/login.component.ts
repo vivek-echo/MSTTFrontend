@@ -93,6 +93,7 @@ export class LoginComponent implements OnInit {
     this.loadding = true;
     this.TokenService.handle(e.access_token, e.data);
     this.Auth.changeAuthStatus(true);
+    $('#otpModal').modal('hide');
     this.route.navigateByUrl('/Application/dashboard')
   }
   errorHandel(e: any) {
