@@ -15,6 +15,8 @@ import { ApplicationComponent } from '../../application.component';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { ViewcarsComponent } from '../viewcars/viewcars.component';
+import { NgxSpinnerService } from 'ngx-spinner';
+
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(
@@ -82,16 +84,22 @@ export class AddcarComponent implements OnInit {
 
   carDetails: any;
   public api_url = environment.api_url;
+  // public userProfile =localStorage.getItem('profile');
+
+
+
   addCarValidation: boolean = false;
   addCarData: any;
   userId: any;
   viewCarData: any;
+  storage: any;
 
   constructor(
     private service: LocationSelectorService,
     private AlertHelper: AlertHelper,
     private HttpClient: HttpClient,
-    private viewCarComp: ViewcarsComponent
+    private viewCarComp: ViewcarsComponent,
+    public spinner: NgxSpinnerService
   ) {
     // this.form = new FormGroup({
     //   country: this.country,
@@ -100,6 +108,13 @@ export class AddcarComponent implements OnInit {
     // });
   }
   ngOnInit(): void {
+    // this.storage=this.profile?.replace("{","")
+    // this.storage = this.storage.replace("}","")
+    // console.log(this.storage);
+    // // this.storage = this.storage.replace("'","")
+    // this.storage = this.storage.split(',')
+    // console.log('storage',this.storage.id);
+
     //FOR TOOLTIP
     // Bootstrap tooltip initialization
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
@@ -271,7 +286,7 @@ export class AddcarComponent implements OnInit {
   }
 
   onSubmitCarDetails() {
-    console.log('inside submit');
+
     this.carDetails = {
       userId: 1,
       carType: this.carType,
@@ -297,6 +312,7 @@ export class AddcarComponent implements OnInit {
     console.log(this.url);
 
     if (this.addCarValidation) {
+      this.spinner.show();
       this.HttpClient.post(this.api_url + '/addCar', this.carDetails).subscribe(
         (data) => this.addedCar(data),
         (error) => this.errorHandle(error)
@@ -307,12 +323,15 @@ export class AddcarComponent implements OnInit {
   addedCar(e: any) {
     this.addCarData = e;
     console.log(e.msg);
+    this.spinner.hide();
+
   }
 
   viewCar() {
     this.userId = {
       userId: '1',
     };
+    this.spinner.show();
     this.HttpClient.post(this.api_url + '/viewCar', this.userId).subscribe(
       (data) => this.viewCarDetails(data),
       (error) => this.errorHandle(error)
@@ -322,7 +341,8 @@ export class AddcarComponent implements OnInit {
   viewCarDetails(e: any) {
     console.log('view car data' + JSON.stringify(e.responseData));
     this.viewCarData = e.responseData;
-    this.viewCarComp.viewCarData(this.viewCarData);
+    // this.viewCarComp.viewCarData(this.viewCarData);
+    this.spinner.hide();
   }
 
   errorHandle(err: any) {

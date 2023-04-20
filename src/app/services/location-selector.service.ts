@@ -20,5 +20,7 @@ export class LocationSelectorService {
   // getCitiesByState(country: string, state: string) {
   //   return this.countryData.getCities(country, state);
   // }
+
+  
   constructor(private http:HttpClient) { }
 }

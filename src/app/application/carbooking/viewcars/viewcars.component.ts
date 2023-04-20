@@ -14,12 +14,12 @@ declare let bootstrap: any;
 export class ViewcarsComponent {
   userId: any;
   public api_url = environment.api_url;
-  carDetails: any;
+  carDetails: any =[];
 
   constructor(private HttpClient: HttpClient) {}
   ngOnInit(): void {
 
-
+    this.viewCar();
     //FOR TOOLTIP
     // Bootstrap tooltip initialization
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
@@ -37,13 +37,25 @@ export class ViewcarsComponent {
 
   }
 
-  viewCarData(data: any) {
-    console.log('inside view car', data);
-    this.carDetails = data;
-    console.log('inside view car', this.carDetails);
-  }
+  viewCar() {
+    this.userId = {
+      userId: '1',
+    };
+    // this.spinner.show();
+    this.HttpClient.post(this.api_url + '/viewCar', this.userId).subscribe((res:any)=>{
+     this.carDetails = res.responseData;
+    }
 
-  test(item: any) {
+    );
+  }
+  // viewCarData(data: any) {
+
+  //   console.log('inside view car', data);
+  //   this.carDetails = data;
+  //   console.log('inside view car', this.carDetails);
+  // }
+
+  getData(item: any) {
     console.log('inside test', item);
   }
 }
