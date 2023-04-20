@@ -60,29 +60,25 @@
 
         <div class="modal-content">
             <div class="modal-header">
-
-
+                <h1 class="modal-title fs-5" id="">Authenticate OTP</h1>
                 <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
             <div class="modal-body">
-                <h4 class="text-center">Authenticate OTP</h4>
                 <p class="text-center">Enter your Otp which is shared in your E-mail Id</p>
-                <div class="row text-center">
-
-                    <input name="otpValid" id="otpValid" class="form-control" type="number" autocomplete="off"
-                        placeholder="Enter your OTP" [(ngModel)]="userOtp">
-                    <input name="encOTP" id="encOTP" class="form-control" type="text" placeholder="Enter your OTP"
-                        [(ngModel)]="encryptOtp">
-
-
-
+                <div class="row">
+                    <div class="col-sm-8 mx-auto">
+                        <input name="otpValid" id="otpValid" class="form-control" type="number" autocomplete="off"
+                            placeholder="Enter your OTP" [(ngModel)]="userOtp">
+                        <input name="encOTP" id="encOTP" class="form-control" type="hidden" placeholder="Enter your OTP"
+                            [(ngModel)]="encryptOtp">
+                    </div>
                 </div>
 
             </div>
             <div class="modal-footer">
 
-                <button class="btn btn-primary" type="button" (click)="validateOtp()">Validate Otp</button>
+                <button class="btn btn-success" type="button" (click)="validateOtp()">Validate Otp</button>
             </div>
         </div>
     </div>

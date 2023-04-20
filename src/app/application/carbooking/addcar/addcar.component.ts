@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare let bootstrap: any;
 import {
   FormControl,
   FormGroup,
@@ -99,10 +100,12 @@ export class AddcarComponent implements OnInit {
     // });
   }
   ngOnInit(): void {
-    // var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    // var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    //   return new bootstrap.Tooltip(tooltipTriggerEl)
-    // })
+    //FOR TOOLTIP
+    // Bootstrap tooltip initialization
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
     this.getCountries();
     // this.imagerendered = false;
   }
