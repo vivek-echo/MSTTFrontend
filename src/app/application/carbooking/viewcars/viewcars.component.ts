@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { AddcarComponent } from '../addcar/addcar.component';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+
 declare let $: any;
 declare let bootstrap: any;
 
 @Component({
   selector: 'app-viewcars',
   templateUrl: './viewcars.component.html',
-  styleUrls: ['./viewcars.component.css']
+  styleUrls: ['./viewcars.component.css'],
 })
-export class ViewcarsComponent implements OnInit {
+export class ViewcarsComponent {
+  userId: any;
+  public api_url = environment.api_url;
+  carDetails: any;
 
-
+  constructor(private HttpClient: HttpClient) {}
   ngOnInit(): void {
 
 
@@ -29,23 +36,6 @@ export class ViewcarsComponent implements OnInit {
     }, 2000);
 
   }
-}
-import { Component } from '@angular/core';
-import { AddcarComponent } from '../addcar/addcar.component';
-import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
-
-@Component({
-  selector: 'app-viewcars',
-  templateUrl: './viewcars.component.html',
-  styleUrls: ['./viewcars.component.css'],
-})
-export class ViewcarsComponent {
-  userId: any;
-  public api_url = environment.api_url;
-  carDetails: any;
-
-  constructor(private HttpClient: HttpClient) {}
 
   viewCarData(data: any) {
     console.log('inside view car', data);
