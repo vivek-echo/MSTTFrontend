@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 declare let $ : any;
+declare var bootstrap: any;
 import { TokenService } from 'src/app/Authcomoponent/services/token.service';
 import { AlertHelper } from 'src/app/core/helper/alert-helper';
 import { Router } from '@angular/router';
@@ -37,6 +38,13 @@ export class ApplicationComponent  implements OnInit {
       $('.side-bar').removeClass('active');
       $('.menu-btn').css("visibility", "visible");
     });
+
+    //FOR TOOLTIP
+    // Bootstrap tooltip initialization
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+    }) 
 
   }
 
