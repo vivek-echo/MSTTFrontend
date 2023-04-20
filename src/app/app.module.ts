@@ -15,6 +15,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { LoadScreenComponent } from './load-screen/load-screen.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AddcarComponent } from './application/carbooking/addcar/addcar.component';
+import { ViewcarsComponent } from './application/carbooking/viewcars/viewcars.component';
 // import { NgxOtpInputModule } from 'ngx-otp-input';
 
 @NgModule({
@@ -36,7 +38,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule
     // NgxOtpInputModule
   ],
-  providers: [AlertHelper,AuthGuard,LoginComponent],
+  providers: [AlertHelper,AuthGuard,LoginComponent,AddcarComponent,ViewcarsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

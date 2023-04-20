@@ -26,7 +26,7 @@
         <a class="nav-link active" aria-current="page" href="javascript:void();">Add Car</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/Application/viewcars']" routerLinkActive="router-link-active">View Cars</a>
+        <a class="nav-link" (click)="viewCar()" [routerLink]="['/Application/viewcars']" routerLinkActive="router-link-active">View Cars</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="javascript:void();">Booking History</a>

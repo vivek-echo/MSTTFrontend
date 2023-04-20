@@ -13,6 +13,7 @@ import { LoginComponent } from 'src/app/Authcomoponent/login/login.component';
 import { ApplicationComponent } from '../../application.component';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { ViewcarsComponent } from '../viewcars/viewcars.component';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(
@@ -81,12 +82,15 @@ export class AddcarComponent implements OnInit {
   carDetails: any;
   public api_url = environment.api_url;
   addCarValidation: boolean = false;
+  addCarData: any;
+  userId: any;
+  viewCarData: any;
 
   constructor(
     private service: LocationSelectorService,
     private AlertHelper: AlertHelper,
-    private userId : ApplicationComponent,
-    private HttpClient: HttpClient
+    private HttpClient: HttpClient,
+    private viewCarComp: ViewcarsComponent
   ) {
     // this.form = new FormGroup({
     //   country: this.country,
@@ -264,7 +268,7 @@ export class AddcarComponent implements OnInit {
   }
 
   onSubmitCarDetails() {
-    console.log("inside submit")
+    console.log('inside submit');
     this.carDetails = {
       userId: 1,
       carType: this.carType,
@@ -273,31 +277,52 @@ export class AddcarComponent implements OnInit {
       fuelType: this.fuelType,
       mileage: this.mileage,
       ownerName: this.ownerName,
+      stateId: 20,
       stateName: this.stateName,
+      cityId: 20,
       cityName: this.cityName,
       address: this.address,
       RCNo: this.RCNo,
       chassisNo: this.chassisNo,
       insuranceValidFrom: this.insuranceValidFrom,
       insuranceValidTill: this.insuranceValidTill,
-      pollutionValidTill: this.pollutionValidTill,
       pollutionValidFrom: this.pollutionValidFrom,
+      pollutionValidTill: this.pollutionValidTill,
     };
 
     console.log(this.carDetails);
+    console.log(this.url);
 
-    if(this.addCarValidation){
-      this.HttpClient.post(this.api_url + "/addCar", this.carDetails).subscribe(data => this.addedCar(data), error => this.errorHandle(error));
+    if (this.addCarValidation) {
+      this.HttpClient.post(this.api_url + '/addCar', this.carDetails).subscribe(
+        (data) => this.addedCar(data),
+        (error) => this.errorHandle(error)
+      );
     }
-
-
   }
 
-  addedCar(e:any){
-    console.log(e);
+  addedCar(e: any) {
+    this.addCarData = e;
+    console.log(e.msg);
   }
 
-  errorHandle(err:any){
+  viewCar() {
+    this.userId = {
+      userId: '1',
+    };
+    this.HttpClient.post(this.api_url + '/viewCar', this.userId).subscribe(
+      (data) => this.viewCarDetails(data),
+      (error) => this.errorHandle(error)
+    );
+  }
+
+  viewCarDetails(e: any) {
+    console.log('view car data' + JSON.stringify(e.responseData));
+    this.viewCarData = e.responseData;
+    this.viewCarComp.viewCarData(this.viewCarData);
+  }
+
+  errorHandle(err: any) {
     console.log(err);
   }
 }
