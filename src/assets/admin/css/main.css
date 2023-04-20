@@ -42,6 +42,14 @@ h6 {
     line-height: 1.2;
 }
 
+.pt-2-0 {
+    padding-top: 2rem !important;
+} 
+
+.ps-2-0 {
+    padding-left: 2rem !important;
+} 
+
 .link-color {
     color: #524A8A;
 }
@@ -418,11 +426,11 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 
 
 .vehicle-image {
-    width: 130px;
+    width: 150px;
 }
 
 .vehicle-image a img{
-    width: 130px;
+    width: 150px;
 }
 
 
@@ -1086,14 +1094,6 @@ div.dataTables_wrapper div.dataTables_info {
     padding: 0.9rem 1.25rem;
     font-size: 1.2rem;
     color: #ffffffdb;
-}
-
-#sidebar-wrapper .list-group {
-    width: 15rem;
-}
-
-#sidebar-wrapper .list-group {
-    width: 15rem;
 }
 
 #wrapper.toggled #sidebar-wrapper {

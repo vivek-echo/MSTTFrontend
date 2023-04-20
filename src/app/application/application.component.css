@@ -28,7 +28,9 @@ $border-radius-4: 1.4rem; */
     border-radius: 1.4rem;
   }
   
-  
+  .border-bottom-0 {
+    border-bottom: 0 !important;
+  }
   
   .primary-text {
     color: #009d63;
@@ -65,7 +67,7 @@ $border-radius-4: 1.4rem; */
   
   
   #sidebar-wrapper {
-    width: 14rem;
+    width: 16rem;
     min-height: 97.5vh;
     border-radius: 1rem;
     overflow: auto;
@@ -81,14 +83,6 @@ $border-radius-4: 1.4rem; */
     font-size: 1.2rem;
     color: #fff;
     border-bottom: 0.5px solid #fa685a !important;
-  }
-  
-  #sidebar-wrapper .list-group {
-    width: 15rem;
-  }
-  
-  #sidebar-wrapper .list-group {
-    width: 15rem;
   }
   
   #wrapper.toggled #sidebar-wrapper {
@@ -108,7 +102,7 @@ $border-radius-4: 1.4rem; */
   }
   
   .list-group-item-action {
-    width: 12.4rem;
+    width: 14.4rem;
   }
   
   .list-group-item:hover {
@@ -157,7 +151,7 @@ $border-radius-4: 1.4rem; */
     word-wrap: break-word;
     background-color: transparent;
     background-clip: border-box;
-    border-bottom: 0.5px solid #fa685a !important;
+    border-bottom: 0.5px solid #fa685a;
     border-radius: 0;
   }
   
@@ -195,4 +189,17 @@ $border-radius-4: 1.4rem; */
   
   .offcanvas {
     background-color: #d37b26;
+  }
+
+
+  /* LIST GROUP MENU */
+
+  .list-group .list-group-item {
+    position: relative;
+  }
+
+  .list-group .list-group-item i.arrow {
+    position: absolute;
+    right: 10px;
+    top: 13px;
   }
