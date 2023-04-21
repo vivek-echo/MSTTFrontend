@@ -24,11 +24,12 @@
             <div class="list-group list-group-flush my-3">
                 <a routerLink="/Application/dashboard"
                     class="list-group-item list-group-item-action bg-transparent white-text active"><i
-                        class="myicon-monitor fs-1-0 me-2"></i> &nbsp;Dashboard</a>
+                        class="myicon-monitor fs-1-2 me-2"></i> &nbsp;Dashboard</a>
 
                 <a data-bs-toggle="collapse" href="#collapseone"
                     class="list-group-item list-group-item-action bg-transparent white-text"><i
-                        class="myicon-car-service fs-1-0 me-2"></i> &nbsp;Taxi booking <i class="arrow myicon-chevron-right"></i></a>
+                        class="myicon-car-service fs-1-2 me-2"></i> &nbsp;Taxi booking <i
+                        class="arrow myicon-chevron-right"></i></a>
                 <div class="collapse" id="collapseone">
                     <div class="card card-body border-0 px-2 py-1">
                         <div class="list-group list-group-flush">
@@ -45,12 +46,36 @@
                     </div>
                 </div>
 
+                <a routerLink="/Application/busbooking" class="list-group-item list-group-item-action bg-transparent white-text"><i
+                        class="myicon-busbooking fs-1-2 me-2"></i> &nbsp;Bus Booking
+                </a>
+
+                <!-- <a data-bs-toggle="collapse" href="#collapsetwo"
+                    class="list-group-item list-group-item-action bg-transparent white-text"><i
+                        class="myicon-busbooking fs-1-2 me-2"></i> &nbsp;Bus booking <i
+                        class="arrow myicon-chevron-right"></i></a>
+                <div class="collapse" id="collapsetwo">
+                    <div class="card card-body border-0 px-2 py-1">
+                        <div class="list-group list-group-flush">
+                            <a routerLink="/Application/busbooking/addbus"
+                                class="list-group-item list-group-item-action bg-transparent white-text ps-2-0 mx-1"><i
+                                    class="myicon-minus1 fs-6 me-3"></i>Add Bus</a>
+                            <a routerLink="/Application/busbooking/viewbuses"
+                                class="list-group-item list-group-item-action bg-transparent white-text ps-2-0 mx-1"><i
+                                    class="myicon-minus1 fs-6 me-3"></i>View Buses</a>
+                            <a routerLink="/Application/busbooking/bookinghistory"
+                                class="list-group-item list-group-item-action bg-transparent white-text ps-2-0 mx-1"><i
+                                    class="myicon-minus1 fs-6 me-3"></i>Booking History</a>
+                        </div>
+                    </div>
+                </div> -->
+
                 <a class="list-group-item list-group-item-action bg-transparent white-text"><i
-                        class="myicon-table2 fs-1-0 me-2"></i> &nbsp;Wallet 
+                        class="myicon-table2 fs-1-2 me-2"></i> &nbsp;Wallet
                 </a>
 
                 <a href="#" (click)="logout($event)" class="list-group-item list-group-item-action bg-transparent"><i
-                        class="myicon-log-out fs-1-0 me-2"></i> &nbsp;Logout</a>
+                        class="myicon-log-out fs-1-2 me-2"></i> &nbsp;Logout</a>
             </div>
         </div>
 
@@ -82,11 +107,12 @@
                 <div class="list-group list-group-flush my-3">
                     <a routerLink="/Application/dashboard"
                         class="list-group-item list-group-item-action bg-transparent white-text active"><i
-                            class="myicon-monitor fs-1-0 me-2"></i> &nbsp;Dashboard</a>
-    
+                            class="myicon-monitor fs-1-2 me-2"></i> &nbsp;Dashboard</a>
+
                     <a data-bs-toggle="collapse" href="#collapseone"
                         class="list-group-item list-group-item-action bg-transparent white-text"><i
-                            class="myicon-car-service fs-1-0 me-2"></i> &nbsp;Taxi booking <i class="arrow myicon-chevron-right"></i></a>
+                            class="myicon-car-service fs-1-2 me-2"></i> &nbsp;Taxi booking <i
+                            class="arrow myicon-chevron-right"></i></a>
                     <div class="collapse" id="collapseone">
                         <div class="card card-body border-0 px-2 py-1">
                             <div class="list-group list-group-flush">
@@ -102,13 +128,34 @@
                             </div>
                         </div>
                     </div>
-    
+
+                    <a data-bs-toggle="collapse" href="#collapsetwo"
+                        class="list-group-item list-group-item-action bg-transparent white-text"><i
+                            class="myicon-car-service fs-1-2 me-2"></i> &nbsp;Bus booking <i
+                            class="arrow myicon-chevron-right"></i></a>
+                    <div class="collapse" id="collapsetwo">
+                        <div class="card card-body border-0 px-2 py-1">
+                            <div class="list-group list-group-flush">
+                                <a routerLink="/Application/busbooking/addbus"
+                                    class="list-group-item list-group-item-action bg-transparent white-text ps-2-0 mx-1"><i
+                                        class="myicon-minus1 fs-6 me-3"></i>Add Bus</a>
+                                <a routerLink="/Application/busbooking/viewbuses"
+                                    class="list-group-item list-group-item-action bg-transparent white-text ps-2-0 mx-1"><i
+                                        class="myicon-minus1 fs-6 me-3"></i>View Buses</a>
+                                <a routerLink="/Application/busbooking/bookinghistory"
+                                    class="list-group-item list-group-item-action bg-transparent white-text ps-2-0 mx-1"><i
+                                        class="myicon-minus1 fs-6 me-3"></i>Booking History</a>
+                            </div>
+                        </div>
+                    </div>
+
                     <a class="list-group-item list-group-item-action bg-transparent white-text"><i
-                            class="myicon-table2 fs-1-0 me-2"></i> &nbsp;Wallet 
+                            class="myicon-table2 fs-1-2 me-2"></i> &nbsp;Wallet
                     </a>
-    
-                    <a href="#" (click)="logout($event)" class="list-group-item list-group-item-action bg-transparent"><i
-                            class="myicon-log-out fs-1-0 me-2"></i> &nbsp;Logout</a>
+
+                    <a href="#" (click)="logout($event)"
+                        class="list-group-item list-group-item-action bg-transparent"><i
+                            class="myicon-log-out fs-1-2 me-2"></i> &nbsp;Logout</a>
                 </div>
             </div>
         </div>
