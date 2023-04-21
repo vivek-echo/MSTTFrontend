@@ -4,14 +4,13 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { CommonService } from 'src/app/services/common.service';
 
-
 @Component({
   selector: 'app-addcar',
   templateUrl: './addcar.component.html',
   styleUrls: ['./addcar.component.css'],
 })
 export class AddcarComponent implements OnInit {
-
+  loadding: boolean = false;
   imageurl: any = '';
   msg = '';
   imagerendered!: boolean;
@@ -36,10 +35,19 @@ export class AddcarComponent implements OnInit {
   stateLoading: boolean = false;
   cityLoading: boolean = false;
 
-  carDetails: any;
+  carDetails: any=[];
 
   addCarValidation: boolean = false;
   addCarData: any;
+
+  fileRc: any = "";
+  imagePath: any;
+  imageSrcRc:any;
+
+  rcImageUpload: any = "";
+  // fileToUploadRc: any = "";
+  // imageUrlRc: any = "";
+  // isimageUrlRc: boolean = false;
 
   public api_url = environment.api_url;
   public userProfile = this.CommonService.getUserProfile();
@@ -54,7 +62,7 @@ export class AddcarComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getState();
-
+    this.imagePath = environment.api_url + "/public/img/products/";
   }
 
   //get sate api from common service
@@ -73,39 +81,33 @@ export class AddcarComponent implements OnInit {
     this.cityLoading = true;
     this.CommonService.getCity(stateId).subscribe((res: any) => {
       this.cityData = res.cityData;
-      console.log(this.cityData );
+      console.log(this.cityData);
       this.cityLoading = false;
     });
 
 
   }
-  //for file select
-  selectFile(event: any) {
-    //Angular 11, for stricter type
-    if (!event.target.files[0] || event.target.files[0].length == 0) {
-      this.msg = 'You must select an image';
-      return;
-    }
 
-    var mimeType = event.target.files[0].type;
+  handleFileInputRc(e: any) {
+    console.log(e);
+    this.fileRc = e.target.files[0];
 
-    if (mimeType.match(/image\/*/) == null) {
-      this.msg = 'Only images are supported';
-      return;
-    }
-
-    var reader = new FileReader();
-    reader.readAsDataURL(event.target.files[0]);
-
-    reader.onload = (_event) => {
-      this.msg = '';
-      this.imageurl = reader.result;
-      this.imagerendered = true;
+    const reader = new FileReader();
+    reader.onload = e => {
+    this.imageSrcRc = reader.result;
+      console.log(reader.result);
     };
+
+    reader.readAsDataURL(this.fileRc);
+
+   console.log(this.fileRc)
   }
+
+  
 
   // submit add car
   registerCar() {
+    // console.log(this.file);return;
     if (this.carType == '') {
       this.AlertHelper.viewAlert('info', 'Required', 'select a valid car type!');
       return;
@@ -207,7 +209,7 @@ export class AddcarComponent implements OnInit {
   }
 
   onSubmitCarDetails() {
-
+    this.loadding = true;
     this.carDetails = {
       userId: this.userProfile.id,
       carType: this.carType,
@@ -216,12 +218,11 @@ export class AddcarComponent implements OnInit {
       fuelType: this.fuelType,
       mileage: this.mileage,
       ownerName: this.ownerName,
-      stateId: 20,
-      // stateName: this.stateName,
-      cityId: 20,
-      // cityName: this.cityName,
+      stateId: this.stateId,
+      cityId: this.cityId,
       address: this.address,
       RCNo: this.RCNo,
+      file:this.fileRc,
       chassisNo: this.chassisNo,
       insuranceValidFrom: this.insuranceValidFrom,
       insuranceValidTill: this.insuranceValidTill,
@@ -252,10 +253,8 @@ export class AddcarComponent implements OnInit {
         this.AlertHelper.viewAlert('error', 'ERROR', res.msg);
 
       }
-    }
-      // (data) => this.addedCar(data),
-      // (error) => this.errorHandle(error)
-    );
+      this.loadding = false;
+    });
 
   }
 
