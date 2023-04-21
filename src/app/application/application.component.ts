@@ -21,7 +21,7 @@ export class ApplicationComponent  implements OnInit {
     private AuthService: AuthService
   ) { }
   ngOnInit(): void {
-      console.log(this.userProfile);
+     
     //jquery for toggle sub menus
     $('.sub-btn').click(() =>{
       $(this).next('.sub-menu').slideToggle();

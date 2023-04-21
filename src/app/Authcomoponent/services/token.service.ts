@@ -33,7 +33,7 @@ export class TokenService {
 
     if(token){
       const payload = this.payload(token)
-      console.log(payload);
+      
       if(payload){
         return (Object.values(this.iss).indexOf(payload.iss) > -1 )? true : false ;
       }
@@ -46,7 +46,7 @@ export class TokenService {
     return this.decode(payload);
   }
   decode(payload:any){
-    // console.log(payload);
+  
     return JSON.parse(atob(payload));
   }
   loggedIn(){

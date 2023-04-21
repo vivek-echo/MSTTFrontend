@@ -27,7 +27,7 @@
                 <a class="nav-link active" aria-current="page" routerLink="/Application/addcar">Add Car</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" (click)="viewCar()" routerLink="/Application/viewcars">View Cars</a>
+                <a class="nav-link" routerLink="/Application/viewcars">View Cars</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" routerLink="/Application/bookinghistory">Booking History</a>
@@ -51,7 +51,8 @@
                     <!-- <span class="d-inline-block align-middle h6">Add Car</span> -->
                 </div>
                 <div class="card-body">
-                    <form class="row g-3 mb-4" (ngSubmit)="onSubmitCarDetails()">
+                    <div class="row g-3 mb-4">
+                        <!-- <form class="row g-3 mb-4" (ngSubmit)="onSubmitCarDetails()"> -->
                         <div class="col-md-3">
                             <label for="carType" class="form-label">Car Type</label>
                             <select id="" class="form-select" name="carType" [(ngModel)]="carType">
@@ -63,18 +64,15 @@
                         </div>
                         <div class="col-md-3">
                             <label for="inputPassword4" class="form-label">Brand</label>
-                            <input type="text" class="form-control" id="" name="carBrand"
-                                [(ngModel)]="carBrand">
+                            <input type="text" class="form-control" id="" name="carBrand" [(ngModel)]="carBrand">
                         </div>
                         <div class="col-md-3">
                             <label for="mnfYear" class="form-label">Manufacturing Year</label>
-                            <input type="date" class="form-control" id="" name="carYear"
-                                [(ngModel)]="carYear">
+                            <input type="date" class="form-control" id="" name="carYear" [(ngModel)]="carYear">
                         </div>
                         <div class="col-md-3">
                             <label for="carType" class="form-label">Fuel Type</label>
-                            <select id="" class="form-select" id="" name="fuelType"
-                                [(ngModel)]="fuelType">
+                            <select id="" class="form-select" id="" name="fuelType" [(ngModel)]="fuelType">
                                 <option value="">Select fuel type...</option>
                                 <option value="1">Petrol</option>
                                 <option value="2">Diesel</option>
@@ -82,44 +80,33 @@
                         </div>
                         <div class="col-md-3">
                             <label for="OwnerName" class="form-label">Mileage(Km/L)</label>
-                            <input type="text" class="form-control" id="" name="mileage"
-                                [(ngModel)]="mileage">
+                            <input type="text" class="form-control" id="" name="mileage" [(ngModel)]="mileage">
                         </div>
                         <div class="col-md-3">
                             <label for="OwnerName" class="form-label">Car Owner Name</label>
-                            <input type="text" class="form-control" id="" name="ownerName"
-                                [(ngModel)]="ownerName">
+                            <input type="text" class="form-control" id="" name="ownerName" [(ngModel)]="ownerName">
                         </div>
-                        <div class="col-md-3">
-                            <label for="country" class="form-label">Select Country</label>
-                            <select id="inputState" class="form-select"
-                                (change)="onChangeCountry($event)">
-                                <option selected>Choose Country...</option>
-                                <option *ngFor="let country of countryInfo; let i = index" value="{{i}}">
-                                    {{country.CountryName}}
-                                </option>
-                            </select>
-                        </div>
+
 
                         <div class="col-md-3">
                             <label for="state" class="form-label">Select State</label>
-                            <select id="inputState" class="form-select" (change)="onChangeState($event)"
-                                name="stateName" [(ngModel)]="stateName">
-                                <option *ngIf="stateInfo === null" value="-1">--Select State--</option>
-                                <option *ngIf="stateLoading == true" value="-1">Loading...</option>
-                                <option selected>Choose State...</option>
-                                <option *ngFor="let state of stateInfo; let j = index" value="{{j}}">
-                                    {{state.StateName}}</option>
+                            <select id="stateId" class="form-select" name="stateId" [(ngModel)]="stateId"
+                                (change)="getCity($any($event.target).value)">
+                                <option value="" *ngIf="stateLoading == false">--Select--</option>
+                                <option value="" *ngIf="stateLoading == true">Loading...</option>
+
+                                <option *ngFor="let state of stateData;" value="{{state.stateId}}">
+                                    {{state.stateName}}</option>
                             </select>
                         </div>
                         <div class="col-md-3">
                             <label for="city" class="form-label">Select City</label>
-                            <select id="inputState" class="form-select" name="cityName"
-                                [(ngModel)]="cityName">
-                                <option selected>Choose City...</option>
-                                <option *ngIf="cityInfo == null" value="-1">--Select CIty--</option>
-                                <!-- <option selected>Choose City...</option> -->
-                                <option *ngFor="let city of cityInfo; let k = index" value="{{k}}">{{city}}</option>
+                            <select id="cityId" class="form-select" name="cityId" [(ngModel)]="cityId">
+                                <option value="" *ngIf="cityLoading == false">--Select--</option>
+                                <option value="" *ngIf="cityLoading == true">Loading...</option>
+                                <option *ngFor="let city of cityData;" value="{{city.cityId}}">
+                                    {{city.cityName}}</option>
+
                             </select>
                         </div>
                         <div class="col-md-3">
@@ -128,12 +115,12 @@
                                 [(ngModel)]="address"></textarea>
                         </div>
 
-                        <span class="d-inline-block align-middle h6 custom-border-left ms-2 mt-3 ps-2 mb-3">Car Information</span>
+                        <span class="d-inline-block align-middle h6 custom-border-left ms-2 mt-3 ps-2 mb-3">Car
+                            Information</span>
 
                         <div class="col-md-3">
                             <label for="RCno" class="form-label">RC No.</label>
-                            <input type="text" class="form-control" id="" name="RCNo"
-                                [(ngModel)]="RCNo">
+                            <input type="text" class="form-control" id="" name="RCNo" [(ngModel)]="RCNo">
                         </div>
                         <div class="col-md-3">
                             <label for="RC" class="form-label">Upload RC</label>
@@ -141,13 +128,13 @@
                                 <input type="file" class="form-control" id="inputGroupFile04"
                                     aria-describedby="RCupload" aria-label="Upload">
                                 <button class="btn btn-sm btn-outline-secondary" type="button" id=""
-                                data-bs-toggle="tooltip" data-bs-title="View/ Download PDF"><i class="myicon-file-pdf fs-1-0"></i></button>
+                                    data-bs-toggle="tooltip" data-bs-title="View/ Download PDF"><i
+                                        class="myicon-file-pdf fs-1-0"></i></button>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <label for="ChassisNo" class="form-label">Chassis No.</label>
-                            <input type="text" class="form-control" id="" name="chassisNo"
-                                [(ngModel)]="chassisNo">
+                            <input type="text" class="form-control" id="" name="chassisNo" [(ngModel)]="chassisNo">
                         </div>
                         <div class="col-md-3">
                             <label for="RC" class="form-label">Upload Insurance</label>
@@ -155,7 +142,8 @@
                                 <input type="file" class="form-control" id="inputGroupFile04"
                                     aria-describedby="RCupload" aria-label="Upload">
                                 <button class="btn btn-sm btn-outline-secondary" type="button" id=""
-                                data-bs-toggle="tooltip" data-bs-title="View/ Download PDF"><i class="myicon-file-pdf fs-1-0"></i></button>
+                                    data-bs-toggle="tooltip" data-bs-title="View/ Download PDF"><i
+                                        class="myicon-file-pdf fs-1-0"></i></button>
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -174,7 +162,8 @@
                                 <input type="file" class="form-control" id="inputGroupFile04"
                                     aria-describedby="RCupload" aria-label="Upload">
                                 <button class="btn btn-sm btn-outline-secondary" type="button" id=""
-                                data-bs-toggle="tooltip" data-bs-title="View/ Download PDF"><i class="myicon-file-pdf fs-1-0"></i></button>
+                                    data-bs-toggle="tooltip" data-bs-title="View/ Download PDF"><i
+                                        class="myicon-file-pdf fs-1-0"></i></button>
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -200,21 +189,24 @@
                                     <input type="file" class="form-control" id="inputGroupFile04"
                                         aria-describedby="RCupload" aria-label="Upload" (change)="selectFile($event)">
                                     <button class="btn btn-sm btn-outline-secondary" type="button" id=""
-                                    data-bs-toggle="tooltip" data-bs-title="View/ Download Image"><i class="myicon-image1 fs-1-0"></i></button>
+                                        data-bs-toggle="tooltip" data-bs-title="View/ Download Image"><i
+                                            class="myicon-image1 fs-1-0"></i></button>
                                     <!-- <div class="col-md-4"><img [src]="url" height="100" width="100"></div> -->
                                 </div>
-                                <div class="col-md-4" *ngIf="imagerendered"><img [src]="url" height="120" width="200">
+                                <div class="col-md-4" *ngIf="imagerendered"><img [src]="imageurl" height="120"
+                                        width="200">
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="mt-3">
                                 <button type="submit" class="btn btn-success me-2"
-                                    (click)="registerCar('car added successfully!')">Submit</button>
+                                    (click)="registerCar()">Submit</button>
                                 <button type="button" class="btn btn-secondary">Cancel</button>
                             </div>
                         </div>
-                    </form>
+                    </div>
+                    <!-- </form> -->
 
                     <!-- <div class="table-responsive">
                       <table id="example" class="table rounded">

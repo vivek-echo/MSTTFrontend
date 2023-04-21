@@ -1,42 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-declare let bootstrap: any;
-import {
-  FormControl,
-  FormGroup,
-  FormGroupDirective,
-  NgForm,
-  Validators,
-} from '@angular/forms';
-import { ErrorStateMatcher } from '@angular/material/core';
-import { LocationSelectorService } from 'src/app/services/location-selector.service';
 import { AlertHelper } from 'src/app/core/helper/alert-helper';
-import { LoginComponent } from 'src/app/Authcomoponent/login/login.component';
-import { ApplicationComponent } from '../../application.component';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { ViewcarsComponent } from '../viewcars/viewcars.component';
-import { NgxSpinnerService } from 'ngx-spinner';
 import { CommonService } from 'src/app/services/common.service';
 
-
-export class MyErrorStateMatcher implements ErrorStateMatcher {
-  isErrorState(
-    control: FormControl | null,
-    form: FormGroupDirective | NgForm | null
-  ): boolean {
-    const isSubmitted = form && form.submitted;
-    return !!(
-      control &&
-      control.invalid &&
-      (control.dirty || control.touched || isSubmitted)
-    );
-  }
-}
-
-interface Country {
-  shortName: string;
-  name: string;
-}
 
 @Component({
   selector: 'app-addcar',
@@ -44,27 +11,8 @@ interface Country {
   styleUrls: ['./addcar.component.css'],
 })
 export class AddcarComponent implements OnInit {
-  form!: FormGroup;
-  matcher = new MyErrorStateMatcher();
 
-  countries!: Country[];
-  states: any = '';
-  cities!: string[];
-  stateLoading: boolean = false;
-
-  country = new FormControl(null, [Validators.required]);
-  state = new FormControl({ value: null, disabled: true }, [
-    Validators.required,
-  ]);
-  city = new FormControl({ value: null, disabled: true }, [
-    Validators.required,
-  ]);
-
-  tooltipList: any;
-  stateInfo: any[] = [];
-  countryInfo: any[] = [];
-  cityInfo: any[] = [];
-  url: any = '';
+  imageurl: any = '';
   msg = '';
   imagerendered!: boolean;
   carType: any = '';
@@ -73,8 +21,6 @@ export class AddcarComponent implements OnInit {
   fuelType: any = '';
   mileage: any = '';
   ownerName: any = '';
-  stateName: any = '';
-  cityName: any = '';
   address: any = '';
   RCNo: any = '';
   chassisNo: any = '';
@@ -82,77 +28,58 @@ export class AddcarComponent implements OnInit {
   insuranceValidTill: any = '';
   pollutionValidTill: any = '';
   pollutionValidFrom: any = '';
+  stateId: any = "";
+  cityId: any = "";
+  stateData: any = [];
+  cityData: any = [];
+
+  stateLoading: boolean = false;
+  cityLoading: boolean = false;
 
   carDetails: any;
-  public api_url = environment.api_url;
-  public userProfile = this.CommonService.getUserProfile();
-
-
-
 
   addCarValidation: boolean = false;
   addCarData: any;
-  userId: any;
-  viewCarData: any;
-  storage: any;
+
+  public api_url = environment.api_url;
+  public userProfile = this.CommonService.getUserProfile();
 
   constructor(
-    private service: LocationSelectorService,
+
     private AlertHelper: AlertHelper,
     private HttpClient: HttpClient,
-    private viewCarComp: ViewcarsComponent,
-    public spinner: NgxSpinnerService,
     public CommonService: CommonService
   ) {
-    // this.form = new FormGroup({
-    //   country: this.country,
-    //   state: this.state,
-    //   city: this.city,
-    // });
+
   }
   ngOnInit(): void {
+    this.getState();
 
-    //FOR TOOLTIP
-    // Bootstrap tooltip initialization
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-    this.getCountries();
-    // this.imagerendered = false;
   }
-  getCountries() {
+
+  //get sate api from common service
+  getState() {
     this.stateLoading = true;
-    // this.countryInfo= ["India"];
-    this.service.getCountries().subscribe(
-      (data2) => {
-        this.countryInfo = data2.Countries;
-        console.log('Data:', this.countryInfo);
-        this.stateLoading = false;
-      },
-      (err) => console.log(err),
-      () => console.log('complete')
-    );
-  }
+    this.CommonService.getState().subscribe((res: any) => {
+      this.stateData = res.stateData;
+      this.stateLoading = false;
+    });
 
-  onChangeCountry(countryValue: any) {
-    var country: any;
-    country = (countryValue.target as HTMLTextAreaElement).value;
-    // this.cityInfo=this.stateInfo[country].Cities;
-    this.stateInfo = this.countryInfo[country].States;
-    console.log(this.countryInfo[country]);
-    this.cityInfo = this.stateInfo[0].Cities;
-    console.log(this.countryInfo[country].States);
-    console.log(country);
-  }
 
-  onChangeState(stateValue: any) {
-    var state: any;
-    state = (stateValue.target as HTMLTextAreaElement).value;
-    this.cityInfo = this.stateInfo[state].Cities;
-    //console.log(this.cityInfo);
   }
+  //get city api from common service
+  getCity(stateId: any) {
 
+    this.cityLoading = true;
+    this.CommonService.getCity(stateId).subscribe((res: any) => {
+      this.cityData = res.cityData;
+      console.log(this.cityData );
+      this.cityLoading = false;
+    });
+
+
+  }
+  //for file select
   selectFile(event: any) {
     //Angular 11, for stricter type
     if (!event.target.files[0] || event.target.files[0].length == 0) {
@@ -172,19 +99,15 @@ export class AddcarComponent implements OnInit {
 
     reader.onload = (_event) => {
       this.msg = '';
-      this.url = reader.result;
+      this.imageurl = reader.result;
       this.imagerendered = true;
     };
   }
 
-  registerCar(e: any) {
+  // submit add car
+  registerCar() {
     if (this.carType == '') {
-      // console.log(this.userId.userId)
-      this.AlertHelper.viewAlert(
-        'info',
-        'Required',
-        'select a valid car type!'
-      );
+      this.AlertHelper.viewAlert('info', 'Required', 'select a valid car type!');
       return;
     }
 
@@ -213,12 +136,12 @@ export class AddcarComponent implements OnInit {
       return;
     }
 
-    if (this.stateName == '') {
+    if (this.stateId == '') {
       this.AlertHelper.viewAlert('info', 'Required', 'invalid state name');
       return;
     }
 
-    if (this.cityName == '') {
+    if (this.cityId == '') {
       this.AlertHelper.viewAlert('info', 'Required', 'invalid city name');
       return;
     }
@@ -278,8 +201,9 @@ export class AddcarComponent implements OnInit {
       );
       return;
     }
-    this.addCarValidation = true;
-    this.AlertHelper.viewAlert('success', 'VALID', e);
+
+    //if validation is not false the submit
+    this.onSubmitCarDetails();
   }
 
   onSubmitCarDetails() {
@@ -293,9 +217,9 @@ export class AddcarComponent implements OnInit {
       mileage: this.mileage,
       ownerName: this.ownerName,
       stateId: 20,
-      stateName: this.stateName,
+      // stateName: this.stateName,
       cityId: 20,
-      cityName: this.cityName,
+      // cityName: this.cityName,
       address: this.address,
       RCNo: this.RCNo,
       chassisNo: this.chassisNo,
@@ -306,26 +230,33 @@ export class AddcarComponent implements OnInit {
     };
 
 
-    if (this.addCarValidation) {
-      
-      this.HttpClient.post(this.api_url + '/addCar', this.carDetails).subscribe(
-        (data) => this.addedCar(data),
-        (error) => this.errorHandle(error)
-      );
+    this.HttpClient.post(this.api_url + '/addCar', this.carDetails).subscribe((res: any) => {
+      if (res.statusResponse == true) {
+        this.carType = "";
+        this.carBrand = "";
+        this.carYear = "";
+        this.fuelType = "";
+        this.mileage = "";
+        this.ownerName = "";
+        this.stateId = "";
+        this.cityId = "";
+        this.address = "";
+        this.RCNo = "";
+        this.chassisNo = "";
+        this.insuranceValidFrom = "";
+        this.insuranceValidTill = "";
+        this.pollutionValidFrom = "";
+        this.pollutionValidTill = "";
+        this.AlertHelper.viewAlert('success', 'SUCCESSFULL', res.msg);
+      } else {
+        this.AlertHelper.viewAlert('error', 'ERROR', res.msg);
+
+      }
     }
-  }
-
-  addedCar(e: any) {
-    this.addCarData = e;
-    console.log(e.msg);
- 
+      // (data) => this.addedCar(data),
+      // (error) => this.errorHandle(error)
+    );
 
   }
 
- 
- 
-
-  errorHandle(err: any) {
-    console.log(err);
-  }
 }
