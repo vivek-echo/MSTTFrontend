@@ -87,13 +87,13 @@ export class ViewcarsUsersComponent {
   }
 
   getCarDetails(){
-    
+
     this.locationSelected={
       state: this.stateId,
       city: this.cityId
     }
 
-    this.HttpClient.post(this.api_url + '/userlocation', this.locationSelected).subscribe((res: any) => {
+    this.HttpClient.post(this.api_url + '/findcar', this.locationSelected).subscribe((res: any) => {
       if (res.statusResponse == true) {
         this.stateId="";
         this.cityId = "";
