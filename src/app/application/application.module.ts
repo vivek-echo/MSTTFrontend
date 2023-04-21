@@ -7,7 +7,6 @@ import { TopnavComponent } from './shared/topnav/topnav.component';
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { ViewlistComponent } from './viewlist/viewlist.component';
-import { BusbookingComponent } from './busbooking/busbooking.component';
 import { AuthGuard } from '../Authcomoponent/authguard/auth.guard';
 import { AddcarComponent } from './carbooking/addcar/addcar.component';
 import { CarbookingComponent } from './carbooking/carbooking.component';
@@ -22,6 +21,8 @@ import { LoginComponent } from '../Authcomoponent/login/login.component';
 import { BookinghistoryComponent } from './carbooking/bookinghistory/bookinghistory.component';
 import { ViewcarsUsersComponent } from './carbooking/users/viewcars-users/viewcars-users.component';
 import { BookinghistoryUsersComponent } from './carbooking/users/bookinghistory-users/bookinghistory-users.component';
+import { SearchbusComponent } from './busbooking/searchbus/searchbus.component';
+import { BookingComponent } from './busbooking/booking/booking.component';
 
 
 
@@ -33,13 +34,14 @@ import { BookinghistoryUsersComponent } from './carbooking/users/bookinghistory-
     SidenavComponent,
     FooterComponent,
     ViewlistComponent,
-    BusbookingComponent,
     AddcarComponent,
     CarbookingComponent,
     ViewcarsComponent,
     BookinghistoryComponent,
     ViewcarsUsersComponent,
-    BookinghistoryUsersComponent
+    BookinghistoryUsersComponent,
+    SearchbusComponent,
+    BookingComponent
   ],
   imports: [
     CommonModule,

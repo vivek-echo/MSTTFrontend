@@ -379,17 +379,8 @@ h6 {
 
 /* main-wrapper */
 #wrapper {
-    /* font-size: .8rem; */
     height: 100vh;
     background-color: #fff;
-    /* background-image: linear-gradient(
-      to right,
-      #baf3d7,
-      #c2f5de,
-      #cbf7e4,
-      #d4f8ea,
-      #ddfaef
-    ); */
 }
 
 .breadcrumb {

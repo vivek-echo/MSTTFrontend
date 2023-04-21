@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule,Routes } from '@angular/router';
 import { ApplicationComponent } from './application.component';
-import { BusbookingComponent } from './busbooking/busbooking.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ViewlistComponent } from './viewlist/viewlist.component';
 import { AuthGuard } from '../Authcomoponent/authguard/auth.guard';
@@ -11,6 +10,8 @@ import { ViewcarsComponent } from './carbooking/viewcars/viewcars.component';
 import { BookinghistoryComponent } from './carbooking/bookinghistory/bookinghistory.component';
 import { ViewcarsUsersComponent } from './carbooking/users/viewcars-users/viewcars-users.component';
 import { BookinghistoryUsersComponent } from './carbooking/users/bookinghistory-users/bookinghistory-users.component';
+import { SearchbusComponent } from './busbooking/searchbus/searchbus.component';
+import { BookingComponent } from './busbooking/booking/booking.component';
 
 const routes : Routes=[
   {
@@ -28,8 +29,16 @@ const routes : Routes=[
       canActivate:[AuthGuard]
     },
     {
-      path: "busbooking",
-      component: BusbookingComponent,
+      path: "searchbus",
+      component: SearchbusComponent,
+      canActivate:[AuthGuard],
+      data:{
+        bookingtype : "Search Bus"
+      }
+    },
+    {
+      path: "busbooking/booking",
+      component: BookingComponent,
       canActivate:[AuthGuard],
       data:{
         bookingtype : "Bus Booking"
@@ -71,38 +80,38 @@ const routes : Routes=[
 
 
 
-    {
-      path: "truckbooking",
-      component: BusbookingComponent,
-      canActivate:[AuthGuard],
-      data:{
-        bookingtype : "Truck Booking"
-      }
-    },
-    {
-      path: "bikebooking",
-      component: BusbookingComponent,
-      canActivate:[AuthGuard],
-      data:{
-        bookingtype : "Bike Booking"
-      }
-    },
-    {
-      path: "airticket",
-      component: BusbookingComponent,
-      canActivate:[AuthGuard],
-      data:{
-        bookingtype : "Air Ticket"
-      }
-    },
-    {
-      path: "hotelBooking",
-      component: BusbookingComponent,
-      canActivate:[AuthGuard],
-      data:{
-        bookingtype : "Hotel Booking"
-      }
-    },
+    // {
+    //   path: "truckbooking",
+    //   component: BusbookingComponent,
+    //   canActivate:[AuthGuard],
+    //   data:{
+    //     bookingtype : "Truck Booking"
+    //   }
+    // },
+    // {
+    //   path: "bikebooking",
+    //   component: BusbookingComponent,
+    //   canActivate:[AuthGuard],
+    //   data:{
+    //     bookingtype : "Bike Booking"
+    //   }
+    // },
+    // {
+    //   path: "airticket",
+    //   component: BusbookingComponent,
+    //   canActivate:[AuthGuard],
+    //   data:{
+    //     bookingtype : "Air Ticket"
+    //   }
+    // },
+    // {
+    //   path: "hotelBooking",
+    //   component: BusbookingComponent,
+    //   canActivate:[AuthGuard],
+    //   data:{
+    //     bookingtype : "Hotel Booking"
+    //   }
+    // },
     {
       path: "viewList",
       component: ViewlistComponent,

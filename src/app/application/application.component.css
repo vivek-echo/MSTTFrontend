@@ -12,6 +12,24 @@ $border-radius-3: 1.7rem;
 $border-radius-4: 1.4rem; */
 
 
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: none;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #ff7657;
+  border-radius: 5px;
+}
+
 .border-radius {
     border-radius: 1rem;
   }
