@@ -5,6 +5,7 @@ import { TokenService } from 'src/app/Authcomoponent/services/token.service';
 import { AlertHelper } from 'src/app/core/helper/alert-helper';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/Authcomoponent/services/auth.service';
+import { CommonService } from '../services/common.service';
 
 @Component({
   selector: 'app-application',
@@ -12,16 +13,22 @@ import { AuthService } from 'src/app/Authcomoponent/services/auth.service';
   styleUrls: ['./application.component.css']
 })
 export class ApplicationComponent  implements OnInit {
-  public userProfile = localStorage.getItem('profile');
+  public userProfile = this.CommonService.getUserProfile();
   display = true;
+  userType: string = "";
+  admin: boolean= false;
+  merchant: boolean= false;
+  customer: boolean= false;
   constructor(
     private TokenService : TokenService,
     private AlertHelper : AlertHelper,
     private route : Router,
-    private AuthService: AuthService
+    private AuthService: AuthService,
+    public CommonService: CommonService
+
   ) { }
   ngOnInit(): void {
-     
+
     //jquery for toggle sub menus
     $('.sub-btn').click(() =>{
       $(this).next('.sub-menu').slideToggle();
@@ -44,7 +51,20 @@ export class ApplicationComponent  implements OnInit {
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl)
-    }) 
+    })
+
+    if(this.userProfile.memberType == 1){
+      this.userType = "Admin";
+      this.admin = true;
+    }
+    if(this.userProfile.memberType == 2){
+      this.userType = "Merchant";
+      this.merchant = true;
+    }
+    if(this.userProfile.memberType == 3){
+      this.userType = "Customer";
+      this.customer = true;
+    }
 
   }
 
