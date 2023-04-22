@@ -42,6 +42,10 @@ h6 {
     line-height: 1.2;
 }
 
+.lh-25 {
+    line-height: 25px;
+}
+
 .pt-2-0 {
     padding-top: 2rem !important;
 } 
@@ -76,6 +80,12 @@ h6 {
 
 .border-radius-4 {
     border-radius: 1.4rem;
+}
+
+.amount-section {
+    position: sticky;
+    bottom: 10px;
+    background: #fff;
 }
 
 .page-item.active .page-link {

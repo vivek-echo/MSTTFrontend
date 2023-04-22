@@ -24,7 +24,7 @@
     <div class="col-lg-12">
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="javascript:void();">Bus Booking</a>
+                <a class="nav-link active" aria-current="page" href="javascript:void();">Passenger Details</a>
             </li>
         </ul>
     </div>
@@ -40,133 +40,96 @@
         <div class="col-lg-12 col-sm-12">
             <div class="card border-0">
                 <div class="card-header pt-1">
-                    <!-- <h4 class="fs-6">Monthly Incidents</h4> -->
-                    <span class="d-inline-block align-middle h6 custom-border-left ps-2 mb-1">Passenger Information</span>
-                    <!-- <span class="d-inline-block align-middle h6">Add Car</span> -->
+                    <span class="d-inline-block align-middle h6 custom-border-left ps-2 mb-2">Passenger
+                        Information</span>
                 </div>
-                <div class="card-body">
+                <div class="card-body border mx-3 rounded">
                     <div class="row g-3 mb-4">
+                        <div class="col-md-12">
+                            <label for="" class="form-label">Passenger 1 | <strong>Seat 20</strong></label>
+                        </div>
                         <div class="col-md-3">
                             <label for="" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="" name="">
+                            <input type="text" class="form-control" id="" name="" placeholder="Name">
                         </div>
-                        <div class="col-md-3">
-                            <label for="" class="form-label">Manufacturing Year</label>
-                            <input type="date" class="form-control" id="" name="">
-                        </div>
-                        <div class="col-md-3">
-                            <label for="" class="form-label">Fuel Type</label>
-                            <select id="" class="form-select" id="" name="">
-                                <option value="">Select fuel type...</option>
-                                <option value="1">Petrol</option>
-                                <option value="2">Diesel</option>
-                            </select>
-                        </div>
-                        <div class="col-md-3">
-                            <label for="" class="form-label">Mileage(Km/L)</label>
-                            <input type="text" class="form-control" id="" name="">
-                        </div>
-                        <div class="col-md-3">
-                            <label for="" class="form-label">Car Owner Name</label>
-                            <input type="text" class="form-control" id="" name="">
-                        </div>
-
-
-                        <div class="col-md-3">
-                            <label for="" class="form-label">Select State</label>
-                            <select id="" class="form-select" name="">
-                                <option value="">--Select--</option>
-                                <option value="">Loading...</option>
-                            </select>
-                        </div>
-                        <div class="col-md-3">
-                            <label for="" class="form-label">Select City</label>
-                            <select id="" class="form-select" name="">
-                                <option value="">--Select--</option>
-                                <option value="">Loading...</option>
-
-                            </select>
-                        </div>
-                        <div class="col-md-3">
-                            <label for="" class="form-label">Owner Address</label>
-                            <textarea rows="3" class="form-control" id="" name=""></textarea>
-                        </div>
-
-                        <!-- <span class="d-inline-block align-middle h6 custom-border-left ms-2 mt-3 ps-2 mb-3">Car
-                            Information</span>
-
-                        <div class="col-md-3">
-                            <label for="RCno" class="form-label">RC No.</label>
-                            <input type="text" class="form-control" id="" name="RCNo">
-                        </div>
-                        <div class="col-md-3">
-                            <label for="RC" class="form-label">Upload RC</label>
-                            <div class="input-group">
-                                <input type="file" class="form-control" id="inputGroupFile04"
-                                    aria-describedby="RCupload" aria-label="Upload">
-                                <button class="btn btn-sm btn-outline-secondary" type="button" id=""
-                                    data-bs-toggle="tooltip" data-bs-title="View/ Download PDF"><i
-                                        class="myicon-file-pdf fs-1-0"></i></button>
+                        <div class="col-md-12">
+                            <label for="" class="form-label mb-2">Gender</label><br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="male" value="option1">
+                                <label class="form-check-label lh-25" for="male">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="female" value="option2">
+                                <label class="form-check-label lh-25" for="female">Female</label>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <label for="ChassisNo" class="form-label">Chassis No.</label>
-                            <input type="text" class="form-control" id="" name="chassisNo">
+                            <label for="" class="form-label">City</label>
+                            <input type="text" class="form-control" id="" name="" placeholder="City">
                         </div>
                         <div class="col-md-3">
-                            <label for="RC" class="form-label">Upload Insurance</label>
-                            <div class="input-group">
-                                <input type="file" class="form-control" id="inputGroupFile04"
-                                    aria-describedby="RCupload" aria-label="Upload">
-                                <button class="btn btn-sm btn-outline-secondary" type="button" id=""
-                                    data-bs-toggle="tooltip" data-bs-title="View/ Download PDF"><i
-                                        class="myicon-file-pdf fs-1-0"></i></button>
-                            </div>
+                            <label for="" class="form-label">State</label>
+                            <input type="text" class="form-control" id="" name="" readonly>
                         </div>
-                        <div class="col-md-3">
-                            <label for="InsuranceYearFrom" class="form-label">Insurance Valid From</label>
-                            <input type="date" class="form-control" id="" name="insuranceValidFrom">
-                        </div>
-                        <div class="col-md-3">
-                            <label for="InsuranceYearTo" class="form-label">Insurance Valid Till</label>
-                            <input type="date" class="form-control" id="" name="insuranceValidTill">
-                        </div>
-                        <div class="col-md-3">
-                            <label for="RC" class="form-label">Upload Pollution</label>
-                            <div class="input-group">
-                                <input type="file" class="form-control" id="inputGroupFile04"
-                                    aria-describedby="RCupload" aria-label="Upload">
-                                <button class="btn btn-sm btn-outline-secondary" type="button" id=""
-                                    data-bs-toggle="tooltip" data-bs-title="View/ Download PDF"><i
-                                        class="myicon-file-pdf fs-1-0"></i></button>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <label for="PollutionYearFrom" class="form-label">Pollution Valid From</label>
-                            <input type="date" class="form-control" id="" name="pollutionValidFrom">
-                        </div>
-                        <div class="col-md-3">
-                            <label for="PollutionYearTo" class="form-label">Pollution Valid Till</label>
-                            <input type="date" class="form-control" id="" name="pollutionValidTill">
-                        </div>
-                        <div class="col-md-3">
-                            <label for="RC" class="form-label">Upload Car Image</label>
-
-                            <div class="input-group">
-                                <input type="file" class="form-control" id="inputGroupFile04"
-                                    aria-describedby="RCupload" aria-label="Upload">
-                                <button class="btn btn-sm btn-outline-secondary" type="button" id=""
-                                    data-bs-toggle="tooltip" data-bs-title="View/ Download Image"><i
-                                        class="myicon-image1 fs-1-0"></i></button>
-                            </div>
-                        </div> -->
                     </div>
+                </div>
+                <div class="card-header pt-4">
+                    <span class="d-inline-block align-middle h6 custom-border-left ps-2 mb-2">Contact Information</span>
+                </div>
+                <div class="card-body border mx-3 rounded">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="alert alert-warning p-2" role="alert">
+                                Your ticket will be sent to these details
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-3">
+                            <label for="" class="form-label">Email Id</label>
+                            <input type="email" class="form-control" id="" name="" placeholder="Email Id">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="" class="form-label">Phone</label>
+                            <input type="text" class="form-control" id="" name="" placeholder="Phone">
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label lh-25" for="defaultCheck1">
+                                    I have a GST number (optional)?
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="" class="form-label">GSTIN</label>
+                            <input type="email" class="form-control" id="" name="" placeholder="GSTIN">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="" class="form-label">Business Name</label>
+                            <input type="text" class="form-control" id="" name="" placeholder="Business Name">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="" class="form-label">Business Address</label>
+                            <input type="text" class="form-control" id="" name="" placeholder="Business Address">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="" class="form-label">Business Email</label>
+                            <input type="text" class="form-control" id="" name="" placeholder="Business Email">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body pt-0 mx-0 amount-section">
+                    <hr class="mt-0">
+                    <small class="mb-2">By clicking on proceed, I agree that I have read and understood the TnCs and the Privacy Policy</small>
+                    <h3>Total Amount : INR 380.00</h3>
                     <div class="col-md-12">
-                        <div class="mt-3">
-                            <button type="submit" class="btn btn-success me-2">Submit</button>
+                        <div class="mt-32">
+                            <button type="submit" class="btn btn-success me-2">Proceed To Pay</button>
                             <button type="button" class="btn btn-secondary">Cancel</button>
                         </div>
                     </div>
+
                 </div>
                 <!-- </form> -->
             </div>
