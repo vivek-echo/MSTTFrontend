@@ -23,6 +23,7 @@ export class SignupComponent {
   signUpParams:any;
   loadding :Boolean = false;
   public api_url = environment.api_url;
+  public asset_url = environment.asset_url;
   constructor(
     private HttpClient : HttpClient,
     private AlertHelper : AlertHelper,

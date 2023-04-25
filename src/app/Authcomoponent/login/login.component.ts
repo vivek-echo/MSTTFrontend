@@ -14,7 +14,7 @@ import { NgxSpinnerService } from "ngx-spinner";
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-
+  public asset_url = environment.asset_url;
 
   ngOnInit(): void {
 

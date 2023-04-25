@@ -4,6 +4,7 @@ import { TokenService } from 'src/app/Authcomoponent/services/token.service';
 import { AlertHelper } from 'src/app/core/helper/alert-helper';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/Authcomoponent/services/auth.service';
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
@@ -11,7 +12,7 @@ import { AuthService } from 'src/app/Authcomoponent/services/auth.service';
 })
 export class SidenavComponent implements OnInit {
   public userProfile = localStorage.getItem('profile');
-
+  public asset_url = environment.asset_url;
   constructor(
     private TokenService : TokenService,
     private AlertHelper : AlertHelper,

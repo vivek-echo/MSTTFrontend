@@ -14,6 +14,7 @@ declare let bootstrap: any;
 export class ViewcarsComponent {
   userId: any;
   public api_url = environment.api_url;
+  public asset_url = environment.asset_url;
   carDetails: any =[];
 
   constructor(private HttpClient: HttpClient) {}

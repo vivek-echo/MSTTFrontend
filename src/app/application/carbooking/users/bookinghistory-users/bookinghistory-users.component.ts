@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { environment } from 'src/environments/environment';
 declare let $: any;
 declare let bootstrap: any;
 
@@ -9,7 +9,7 @@ declare let bootstrap: any;
   styleUrls: ['./bookinghistory-users.component.css']
 })
 export class BookinghistoryUsersComponent {
-
+  public asset_url = environment.asset_url;
   ngOnInit(): void {
 
 

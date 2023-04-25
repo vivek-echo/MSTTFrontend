@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 declare let $: any;
 declare var bootstrap: any;
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-bookinghistory',
@@ -8,7 +9,7 @@ declare var bootstrap: any;
   styleUrls: ['./bookinghistory.component.css']
 })
 export class BookinghistoryComponent implements OnInit {
-
+  public asset_url = environment.asset_url;
   ngOnInit(): void {
 
     //FOR TOOLTIP
