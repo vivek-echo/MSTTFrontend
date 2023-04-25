@@ -11,10 +11,10 @@ import { AuthGuard } from '../Authcomoponent/authguard/auth.guard';
 import { AddcarComponent } from './carbooking/addcar/addcar.component';
 import { CarbookingComponent } from './carbooking/carbooking.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from "@angular/material/form-field";
-import { MatSelectModule } from '@angular/material/select';
+// import { MatButtonModule } from '@angular/material/button';
+// import { MatInputModule } from '@angular/material/input';
+// import { MatFormFieldModule } from "@angular/material/form-field";
+// import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { ViewcarsComponent } from './carbooking/viewcars/viewcars.component';
 import { LoginComponent } from '../Authcomoponent/login/login.component';
@@ -47,15 +47,15 @@ import { BookingComponent } from './busbooking/booking/booking.component';
     CommonModule,
     RouterModule,
     ReactiveFormsModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatButtonModule,
+    // MatFormFieldModule,
+    // MatSelectModule,
+    // MatButtonModule,
     FormsModule,
   ],
   exports: [
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule
+    // MatButtonModule,
+    // MatFormFieldModule,
+    // MatInputModule
   ],
   providers: [AuthGuard]
 })
