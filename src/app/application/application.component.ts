@@ -6,6 +6,7 @@ import { AlertHelper } from 'src/app/core/helper/alert-helper';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/Authcomoponent/services/auth.service';
 import { CommonService } from '../services/common.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-application',
@@ -14,6 +15,7 @@ import { CommonService } from '../services/common.service';
 })
 export class ApplicationComponent  implements OnInit {
   public userProfile = this.CommonService.getUserProfile();
+  public asset_url = environment.asset_url;
   display = true;
   userType: string = "";
   admin: boolean= false;

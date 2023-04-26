@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 declare let $: any;
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-landing',
@@ -7,7 +8,9 @@ declare let $: any;
   styleUrls: ['./landing.component.css']
 })
 export class LandingComponent implements OnInit {
+  public asset_url = environment.asset_url;
   ngOnInit(): void {
+    
 
     // $(".banner-slider").owlCarousel({
     //   loop: true,
