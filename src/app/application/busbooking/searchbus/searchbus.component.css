@@ -160,6 +160,45 @@ ol.cabin li:last-child ol li:nth-child(2){
     box-shadow: 0px 0px 3px 2px #ff7029;
 }
 
+.seat-legend .legend {
+    font-size: 1.5rem;
+}
+
+.seat-legend p {
+    margin-bottom: 0;
+}
+
+.seat-available {
+    color: #c5c2c2;
+}
+.seat-selected {
+    color: #63cb38;
+}
+.seat-unavailable {
+    color: #f38717;
+}
+
+.offers-section h6 {
+    margin-bottom: .5rem;
+}
+
+.offers-section p {
+    margin-bottom: 0;
+    font-size: .875rem;
+}
+
+.booking-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+
 @-webkit-keyframes rubberBand {
     0% {
         -webkit-transform: scale3d(1, 1, 1);
