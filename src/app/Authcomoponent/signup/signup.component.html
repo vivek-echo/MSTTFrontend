@@ -51,14 +51,14 @@
                                        <option value="">--Select--</option>
                                        <option value="1">Bus Owner</option>
                                        <option value="2">Bus Driver</option>
-                                       <option value="3">State Manager</option> 
-                                       <option value="4">District Manager</option> 
-                                       <option value="5">Admin</option> 
+                                       <option value="3">State Manager</option>
+                                       <option value="4">District Manager</option>
+                                       <option value="5">Admin</option>
                                     </select>
                                     <label for="floatingSelect">Member Type</label>
                                     </div>
-                             
-                                 
+
+
                               </div>
                               <hr>
                               <div class="row">
@@ -67,7 +67,7 @@
                                     <label for="firstName">First Name</label>
                                   </div>
                                   <div class="col-1"></div>
-                                  
+
                                   <div class="form-floating mt-3 mb-3 col-5">
                                     <input type="text" class="form-control" id="lastName" placeholder="Enter Your last Name" name="lastName" [(ngModel)]="lastName">
                                     <label for="lastName">Last Name</label>
@@ -79,7 +79,7 @@
                                     <label for="Email">Email</label>
                                   </div>
                                   <div class="col-1"></div>
-                                  
+
                                   <div class="form-floating mt-3 mb-3 col-5">
                                     <input type="text" class="form-control" id="shopName" placeholder="Enter Your last Name" name="shopName" [(ngModel)]="shopName">
                                     <label for="lastName">Travel Agency Name</label>
@@ -91,7 +91,7 @@
                                     <label for="Email">Date Of Birth</label>
                                   </div>
                                   <div class="col-1"></div>
-                                  
+
                                   <div class="form-floating mt-3 mb-3 col-5">
                                     <input type="text" class="form-control" id="address" placeholder="Enter Your address" name="address" [(ngModel)]="address">
                                     <label for="lastName">Address</label>
@@ -103,12 +103,12 @@
                                        <option value="">--Select--</option>
                                        <option value="1">Male</option>
                                        <option value="2">Female</option>
-                                       <option value="3">Others</option> 
+                                       <option value="3">Others</option>
                                     </select>
                                     <label for="floatingSelect">Gender</label>
                                     </div>
                                   <div class="col-1"></div>
-                                  
+
                                   <div class="form-floating mt-3 mb-3 col-5">
                                     <input type="number" class="form-control" id="mobileNo" placeholder="Enter Your Mobile Number" name="mobileNo" [(ngModel)]="mobileNo">
                                     <label for="lastName">Mobile Number</label>
@@ -125,11 +125,11 @@
                                     <label for="lastName">Confirm Password</label>
                                   </div>
                               </div>
-                                
+
                                 <div class="gap-2 text-center mt-5">
                                    <button style="padding: 0.38rem 4rem;" type="submit" (click)="onSubmit()" class="btn btn-primary btn-sm fw-normal">Sign Up</button>
                                 </div>
-                                
+
                                 <div class="login-types text-center mt-4 pb-1">
                                    <small>OR LOGIN WITH</small>
                                 </div>
@@ -169,10 +169,12 @@
                      <div class="row">
                         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                            <div class="form-group position-relative clearfix mb-2">
-                               <select class="form-select">
+                               <select class="form-select" name="memberType" [(ngModel)]="memberType">
                                  <option value="" selected>-- Select Member Type * --</option>
                                  <option value="1">District Manager</option>
                                  <option value="2">Agent</option>
+                                 <option value="3">Merchant</option>
+                                 <option value="4">Customer</option>
                                </select>
                            </div>
                         </div>
@@ -181,52 +183,62 @@
                      <div class="row">
                         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                            <div class="form-group position-relative clearfix">
-                               <input name="name" type="text" class="form-control" placeholder="First Name *" aria-label="First Name">
+                               <input name="name" type="text" class="form-control" placeholder="First Name *" aria-label="First Name" name="firstName" [(ngModel)]="firstName">
                            </div>
                         </div>
                         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                            <div class="form-group position-relative clearfix">
-                               <input name="name" type="text" class="form-control" placeholder="Last Name *" aria-label="Last Name">
+                               <input name="name" type="text" class="form-control" placeholder="Last Name *" aria-label="Last Name" name="lastName" [(ngModel)]="lastName">
                            </div>
                         </div>
                         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                            <div class="form-group position-relative clearfix">
-                              <input name="email" type="email" class="form-control" placeholder="Email *" aria-label="Email">
+                              <input name="email" type="email" class="form-control" placeholder="Email *" aria-label="Email" name="email" [(ngModel)]="email">
+                           </div>
+                        </div>
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                          <div class="form-group position-relative clearfix">
+                              <input name="name" type="text" class="form-control" placeholder="Password *" aria-label="Password" name="password" [(ngModel)]="password">
+                          </div>
+                       </div>
+                       <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                        <div class="form-group position-relative clearfix">
+                            <input name="name" type="text" class="form-control" placeholder="Confirm Password *" aria-label="Confirm Password" name="confirmPassword" [(ngModel)]="confirmPassword">
+                        </div>
+                     </div>
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                           <div class="form-group position-relative clearfix">
+                               <input name="name" type="text" class="form-control" placeholder="Shop Name *" aria-label="Shop Name" name="shopName" [(ngModel)]="shopName">
                            </div>
                         </div>
                         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                            <div class="form-group position-relative clearfix">
-                               <input name="name" type="text" class="form-control" placeholder="Shop Name *" aria-label="Shop Name">
+                               <input name="name" type="date" class="form-control" placeholder="Date Of Birth" aria-label="Date Of Birth" name="dob" [(ngModel)]="dob">
                            </div>
                         </div>
                         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                            <div class="form-group position-relative clearfix">
-                               <input name="name" type="date" class="form-control" placeholder="Date Of Birth" aria-label="Date Of Birth">
+                               <input name="name" type="text" class="form-control" placeholder="Pin Code *" aria-label="Pin Code" name="pinCode" [(ngModel)]="pinCode">
                            </div>
                         </div>
                         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                            <div class="form-group position-relative clearfix">
-                               <input name="name" type="text" class="form-control" placeholder="Pin Code *" aria-label="Pin Code">
+                               <input name="name" type="text" class="form-control" placeholder="State *" aria-label="State" name="state" [(ngModel)]="state">
                            </div>
                         </div>
                         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                            <div class="form-group position-relative clearfix">
-                               <input name="name" type="text" class="form-control" placeholder="State *" aria-label="State">
+                               <input name="name" type="text" class="form-control" placeholder="City *" aria-label="City" name="city" [(ngModel)]="city">
                            </div>
                         </div>
                         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                            <div class="form-group position-relative clearfix">
-                               <input name="name" type="text" class="form-control" placeholder="City *" aria-label="City">
-                           </div>
-                        </div>
-                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                           <div class="form-group position-relative clearfix">
-                               <input name="name" type="text" class="form-control" placeholder="Mobile No. *" aria-label="Mobile No." maxlength="10">
+                               <input name="name" type="text" class="form-control" placeholder="Mobile No. *" aria-label="Mobile No." maxlength="10" name="mobileNo" [(ngModel)]="mobileNo">
                            </div>
                         </div>
                         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                            <div class="form-group position-relative clearfix mb-2">
-                               <select class="form-select">
+                               <select class="form-select" name="gender" [(ngModel)]="gender">
                                  <option value="" selected>-- Gender * --</option>
                                  <option value="1">Male</option>
                                  <option value="2">Female</option>
@@ -235,7 +247,7 @@
                         </div>
                         <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12">
                            <div class="form-group position-relative clearfix">
-                               <input name="name" type="text" class="form-control" placeholder="Address" aria-label="Address">
+                               <input name="name" type="text" class="form-control" placeholder="Address" aria-label="Address" name="address" [(ngModel)]="address">
                            </div>
                         </div>
                      </div>
@@ -254,7 +266,7 @@
                            </div>
                        </div>
                        <div class="form-group mb-0 clearfix">
-                           <button type="submit" class="btn btn-lg btn-primary btn-theme">Create Account</button>
+                           <button type="submit" (click)="onSubmit()" class="btn btn-lg btn-primary btn-theme">Create Account</button>
                        </div>
                        <div class="extra-login clearfix">
                            <span>Or Login With</span>

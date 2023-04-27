@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-  memeberType:any ="";
+  memberType:any ="";
   firstName:any ="";
   lastName:any="";
   email:any="";
@@ -24,6 +24,9 @@ export class SignupComponent {
   loadding :Boolean = false;
   public api_url = environment.api_url;
   public asset_url = environment.asset_url;
+  pinCode: any="";
+  state: any="";
+  city: any="";
   constructor(
     private HttpClient : HttpClient,
     private AlertHelper : AlertHelper,
@@ -33,8 +36,8 @@ export class SignupComponent {
     console.log(this.api_url)
   }
   onSubmit(){
-   
-    if(this.memeberType == ""){
+
+    if(this.memberType == ""){
       this.AlertHelper.viewAlert('error',"Required","Please Select Member Type");
       return;
     }
@@ -56,6 +59,18 @@ export class SignupComponent {
     }
     if(this.dob == ""){
       this.AlertHelper.viewAlert('error',"Required","Please Enter Your Date of Birth");
+      return;
+    }
+    if(this.pinCode == ""){
+      this.AlertHelper.viewAlert('error',"Required","Please Enter Your pin code");
+      return;
+    }
+    if(this.state == ""){
+      this.AlertHelper.viewAlert('error',"Required","Please Enter Your state");
+      return;
+    }
+    if(this.city == ""){
+      this.AlertHelper.viewAlert('error',"Required","Please Enter Your city");
       return;
     }
     if(this.mobileNo == ""){
@@ -80,7 +95,7 @@ export class SignupComponent {
     }
     this.loadding = true;
     this.signUpParams = {
-      'memeberType':this.memeberType ,
+      'memeberType':this.memberType ,
       'firstName':this.firstName ,
       'lastName':this.lastName ,
       'email':this.email,
@@ -101,6 +116,7 @@ export class SignupComponent {
     this.loadding = false;
   }
   handleError(e:any){
+    console.log("google");
     this.loadding = false;
     this.AlertHelper.viewAlert('error',"ERROR",e.msg)
   }
