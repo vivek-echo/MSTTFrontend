@@ -8,5 +8,6 @@ import { environment } from 'src/environments/environment';
 })
 export class FooterComponent {
   public asset_url = environment.asset_url;
+  public asset_url1 = environment.asset_url1;
 
 }

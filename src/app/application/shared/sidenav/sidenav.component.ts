@@ -13,6 +13,7 @@ import { environment } from 'src/environments/environment';
 export class SidenavComponent implements OnInit {
   public userProfile = localStorage.getItem('profile');
   public asset_url = environment.asset_url;
+  public asset_url1 = environment.asset_url1;
   constructor(
     private TokenService : TokenService,
     private AlertHelper : AlertHelper,

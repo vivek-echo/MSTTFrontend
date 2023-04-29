@@ -1,288 +1,198 @@
-<!-- <p>signup works!</p>
-<div class="card">
-    <div class="card-body">
-        <form #signUpform =ngForm (ngSubmit)="onSubmit()" >
-            <input type="text" name="name" class="form-control" [(ngModel)]="name">
-            <input type="email" name="email" class="form-control" [(ngModel)]="email">
-            <input type="password" name="password" class="form-control" [(ngModel)]="password">
-            <button type="submit" class="btn btn-danger">signUp</button>
-        </form>
-    </div>
-</div> -->
-<!-- <div id="loading" *ngIf="loadding == true">
-   <div class="loader"></div>
-</div> -->
- <!-- Login Area -->
- <!-- <section class="position-relative">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-4 col-lg-5 col-xl-5 col-sm-12 login-image-container">
-               <div class="login-info-box position-relative">
-                    <div class="content-center w-100">
-                       <div class="desk-image mx-auto">
-                          <img class="img-fluid w-100" src="{{asset_url}}assets/admin/images/desk.png" alt="desk">
-                       </div>
-                       <div class="login-text">
-                          <h1>Sign Up</h1><br>
-                          <p class="lead mb-3">Already have an account ?</p>
-                          <a routerLink="../login" class="register text-center btn btn-outline-light">Login</a>
-                       </div>
-                    </div>
-               </div>
-            </div>
-            <div class="col-sm-12 col-md-8 col-lg-7 col-xl-7 position-relative">
-              <a routerLink="" class="back-link" data-bs-toggle="tooltip" title="Back">
-                 <div class="arrow-box-circle">
-                    <i class="fa fa-chevron-left mt-0"></i>
-                 </div>
-              </a>
-               <div class="form-box">
+
+
+<div class="pageLoader"  *ngIf="loadding == true">
+   <div class="dot"></div>
+   <div class="dot"></div>
+   <div class="dot"></div>
+   <div class="dot"> </div>
+   <div class="dot"></div>
+</div>
+<div class="login-4">
+   <div class="container-fluid">
+      <div class="row login-box">
+         <div class="col-lg-6 form-section">
+            <div class="form-inner">
+               <a href="login-4.html" class="logo">
+                  <img src="{{asset_url}}assets/admin/images/logo-white.png" alt="logo">
+               </a>
+               <h3>Create an account</h3>
+              
+               <form action="#" method="POST" id="">
                   <div class="row">
-                     <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 mx-auto">
-                       <div class="card border-0">
-                          <div class="card-body p-4">
-                             <div class="rounded-image mb-3 mx-auto">
-                                <img class="img-fluid" src="{{asset_url}}assets/admin/images/user.svg" alt="user">
-                             </div>
-                             <h5 class="text-center">Register Here</h5>
-                              <div class="row">
-                                 <div class="mt-3 mb-3 col-5 form-floating">
-                                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example" [(ngModel)]="memeberType">
-                                       <option value="">--Select--</option>
-                                       <option value="1">Bus Owner</option>
-                                       <option value="2">Bus Driver</option>
-                                       <option value="3">State Manager</option>
-                                       <option value="4">District Manager</option>
-                                       <option value="5">Admin</option>
-                                    </select>
-                                    <label for="floatingSelect">Member Type</label>
-                                    </div>
-
-
-                              </div>
-                              <hr>
-                              <div class="row">
-                                 <div class="form-floating mt-3 mb-3 col-5">
-                                    <input type="text" class="form-control" id="firstName" placeholder="Enter Your First Name" name="firstName" [(ngModel)]="firstName">
-                                    <label for="firstName">First Name</label>
-                                  </div>
-                                  <div class="col-1"></div>
-
-                                  <div class="form-floating mt-3 mb-3 col-5">
-                                    <input type="text" class="form-control" id="lastName" placeholder="Enter Your last Name" name="lastName" [(ngModel)]="lastName">
-                                    <label for="lastName">Last Name</label>
-                                  </div>
-                              </div>
-                              <div class="row">
-                                 <div class="form-floating mt-3 mb-3 col-5">
-                                    <input type="email" class="form-control" id="email" placeholder="Enter Your Email" name="email" [(ngModel)]="email">
-                                    <label for="Email">Email</label>
-                                  </div>
-                                  <div class="col-1"></div>
-
-                                  <div class="form-floating mt-3 mb-3 col-5">
-                                    <input type="text" class="form-control" id="shopName" placeholder="Enter Your last Name" name="shopName" [(ngModel)]="shopName">
-                                    <label for="lastName">Travel Agency Name</label>
-                                  </div>
-                              </div>
-                              <div class="row">
-                                 <div class="form-floating mt-3 mb-3 col-5">
-                                    <input type="date" class="form-control" id="dob" placeholder="Enter Your dob" name="dob" [(ngModel)]="dob">
-                                    <label for="Email">Date Of Birth</label>
-                                  </div>
-                                  <div class="col-1"></div>
-
-                                  <div class="form-floating mt-3 mb-3 col-5">
-                                    <input type="text" class="form-control" id="address" placeholder="Enter Your address" name="address" [(ngModel)]="address">
-                                    <label for="lastName">Address</label>
-                                  </div>
-                              </div>
-                              <div class="row">
-                                 <div class="mt-3 mb-3 col-5 form-floating">
-                                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example" [(ngModel)]="gender">
-                                       <option value="">--Select--</option>
-                                       <option value="1">Male</option>
-                                       <option value="2">Female</option>
-                                       <option value="3">Others</option>
-                                    </select>
-                                    <label for="floatingSelect">Gender</label>
-                                    </div>
-                                  <div class="col-1"></div>
-
-                                  <div class="form-floating mt-3 mb-3 col-5">
-                                    <input type="number" class="form-control" id="mobileNo" placeholder="Enter Your Mobile Number" name="mobileNo" [(ngModel)]="mobileNo">
-                                    <label for="lastName">Mobile Number</label>
-                                  </div>
-                              </div>
-                              <div class="row">
-                                 <div class="form-floating mt-3 mb-3 col-5">
-                                    <input type="password" class="form-control" id="password" placeholder="Enter Your password" name="password" [(ngModel)]="password">
-                                    <label for="lastName">Password</label>
-                                  </div>
-                                  <div class="col-1"></div>
-                                  <div class="form-floating mt-3 mb-3 col-5">
-                                    <input type="password" class="form-control" id="confirmPassword" placeholder="Please confirm your password" name="confirmPassword" [(ngModel)]="confirmPassword">
-                                    <label for="lastName">Confirm Password</label>
-                                  </div>
-                              </div>
-
-                                <div class="gap-2 text-center mt-5">
-                                   <button style="padding: 0.38rem 4rem;" type="submit" (click)="onSubmit()" class="btn btn-primary btn-sm fw-normal">Sign Up</button>
-                                </div>
-
-                                <div class="login-types text-center mt-4 pb-1">
-                                   <small>OR LOGIN WITH</small>
-                                </div>
-                                <div class="text-center mt-1">
-                                   <ul class="social-network social-circle">
-                                      <li><a href="javascript:void();" class="icoGoogle" title="Google"><i class="myicon-google"></i></a></li>
-                                     <li><a href="javascript:void();" class="icoFacebook" title="Facebook"><i class="myicon-facebook1"></i></a></li>
-                                     <li><a href="javascript:void();" class="icoTwitter" title="Twitter"><i class="myicon-twitter1"></i></a></li>
-                                     <li><a href="javascript:void();" class="icoLinkedin" title="Linkedin"><i class="myicon-linkedin1"></i></a></li>
-                                   </ul>
-                                 </div>
-                          </div>
+                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                        <div class="form-group position-relative clearfix mb-2">
+                           <select class="form-select" name="memberType" [(ngModel)]="memberType">
+                              <option value="" selected>-- Select Member Type * --</option>
+                              <option value="1">Admin</option>
+                              <option value="2">Sate manager</option>
+                              <option value="3">Cab driver</option>
+                              <option value="4">Bike driver</option>
+                              <option value="5">Bus driver</option>
+                           </select>
                         </div>
                      </div>
                   </div>
-               </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-
-
-<div class="login-4">
-   <div class="container-fluid">
-       <div class="row login-box">
-           <div class="col-lg-6 form-section">
-               <div class="form-inner">
-                   <a href="login-4.html" class="logo">
-                     <img src="{{asset_url}}assets/admin/images/logo-white.png" alt="logo">
-                   </a>
-                   <h3>Create an account</h3>
-                   <!-- <div class="alert alert-success alert-dismissible fade show" role="alert">
-                       <strong>Congrats,</strong> your account has been created!
-                       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                   </div> -->
-                   <form action="#" method="POST" id="">
-                     <div class="row">
-                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                           <div class="form-group position-relative clearfix mb-2">
-                               <select class="form-select" name="memberType" [(ngModel)]="memberType">
-                                 <option value="" selected>-- Select Member Type * --</option>
-                                 <option value="1">District Manager</option>
-                                 <option value="2">Agent</option>
-                                 <option value="3">Merchant</option>
-                                 <option value="4">Customer</option>
-                               </select>
-                           </div>
-                        </div>
-                     </div>
-                     <hr class="mb-4">
-                     <div class="row">
-                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                           <div class="form-group position-relative clearfix">
-                               <input name="name" type="text" class="form-control" placeholder="First Name *" aria-label="First Name" name="firstName" [(ngModel)]="firstName">
-                           </div>
-                        </div>
-                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                           <div class="form-group position-relative clearfix">
-                               <input name="name" type="text" class="form-control" placeholder="Last Name *" aria-label="Last Name" name="lastName" [(ngModel)]="lastName">
-                           </div>
-                        </div>
-                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                           <div class="form-group position-relative clearfix">
-                              <input name="email" type="email" class="form-control" placeholder="Email *" aria-label="Email" name="email" [(ngModel)]="email">
-                           </div>
-                        </div>
-                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                          <div class="form-group position-relative clearfix">
-                              <input name="name" type="text" class="form-control" placeholder="Password *" aria-label="Password" name="password" [(ngModel)]="password">
-                          </div>
-                       </div>
-                       <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                  <hr class="mb-4">
+                  <div class="row">
+                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                         <div class="form-group position-relative clearfix">
-                            <input name="name" type="text" class="form-control" placeholder="Confirm Password *" aria-label="Confirm Password" name="confirmPassword" [(ngModel)]="confirmPassword">
+                           <input name="name" type="text" class="form-control" placeholder="First Name *"
+                              aria-label="First Name" name="firstName" [(ngModel)]="firstName" autocomplete="off">
                         </div>
                      </div>
-                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                           <div class="form-group position-relative clearfix">
-                               <input name="name" type="text" class="form-control" placeholder="Shop Name *" aria-label="Shop Name" name="shopName" [(ngModel)]="shopName">
-                           </div>
-                        </div>
-                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                           <div class="form-group position-relative clearfix">
-                               <input name="name" type="date" class="form-control" placeholder="Date Of Birth" aria-label="Date Of Birth" name="dob" [(ngModel)]="dob">
-                           </div>
-                        </div>
-                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                           <div class="form-group position-relative clearfix">
-                               <input name="name" type="text" class="form-control" placeholder="Pin Code *" aria-label="Pin Code" name="pinCode" [(ngModel)]="pinCode">
-                           </div>
-                        </div>
-                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                           <div class="form-group position-relative clearfix">
-                               <input name="name" type="text" class="form-control" placeholder="State *" aria-label="State" name="state" [(ngModel)]="state">
-                           </div>
-                        </div>
-                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                           <div class="form-group position-relative clearfix">
-                               <input name="name" type="text" class="form-control" placeholder="City *" aria-label="City" name="city" [(ngModel)]="city">
-                           </div>
-                        </div>
-                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                           <div class="form-group position-relative clearfix">
-                               <input name="name" type="text" class="form-control" placeholder="Mobile No. *" aria-label="Mobile No." maxlength="10" name="mobileNo" [(ngModel)]="mobileNo">
-                           </div>
-                        </div>
-                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                           <div class="form-group position-relative clearfix mb-2">
-                               <select class="form-select" name="gender" [(ngModel)]="gender">
-                                 <option value="" selected>-- Gender * --</option>
-                                 <option value="1">Male</option>
-                                 <option value="2">Female</option>
-                               </select>
-                           </div>
-                        </div>
-                        <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12">
-                           <div class="form-group position-relative clearfix">
-                               <input name="name" type="text" class="form-control" placeholder="Address" aria-label="Address" name="address" [(ngModel)]="address">
-                           </div>
+                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                        <div class="form-group position-relative clearfix">
+                           <input name="name" type="text" class="form-control" placeholder="Last Name *"
+                              aria-label="Last Name" name="lastName" [(ngModel)]="lastName" autocomplete="off">
                         </div>
                      </div>
-                       <!-- <div class="form-group clearfix position-relative password-wrapper">
+                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                        <div class="form-group position-relative clearfix">
+                           <input name="email" type="email" class="form-control" placeholder="Email *"
+                              aria-label="Email" name="email" [(ngModel)]="email" autocomplete="off">
+                        </div>
+                     </div>
+                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                        <div class="form-group position-relative clearfix">
+                           <input name="name" type="password" class="form-control" placeholder="Password *"
+                              aria-label="Password" name="password" [(ngModel)]="password" autocomplete="off">
+                        </div>
+                     </div>
+                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                        <div class="form-group position-relative clearfix">
+                           <input name="name" type="password" class="form-control" placeholder="Confirm Password *"
+                              aria-label="Confirm Password" name="confirmPassword" [(ngModel)]="confirmPassword" autocomplete="off">
+                        </div>
+                     </div>
+                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                        <div class="form-group position-relative clearfix">
+                           <input name="name" type="text" class="form-control" placeholder="Shop Name *"
+                              aria-label="Shop Name" name="shopName" [(ngModel)]="shopName" autocomplete="off">
+                        </div>
+                     </div>
+                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                        <div class="form-group position-relative clearfix">
+                           <input name="name" type="date" class="form-control" placeholder="Date Of Birth"
+                              aria-label="Date Of Birth" name="dob" [(ngModel)]="dob" autocomplete="off">
+                        </div>
+                     </div>
+                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                        <div class="form-group position-relative clearfix">
+                           <input name="name" type="text" class="form-control" placeholder="Pin Code *"
+                              aria-label="Pin Code" name="pinCode" [(ngModel)]="pinCode" autocomplete="off">
+                        </div>
+                     </div>
+                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                        <div class="form-group position-relative clearfix">
+                           <select class="form-select" name="state" [(ngModel)]="state" (change)="getCity($any($event.target).value)">
+                              <option value="" *ngIf="stateLoading == false">-- Select State * --</option>
+                              <option value="" *ngIf="stateLoading == true">Loading...</option>
+
+                              <option *ngFor="let state of stateData;" value="{{state.stateId}}">
+                                 {{state.stateName}}</option>
+                           </select>
+                           <!-- <input name="name" type="text" class="form-control" placeholder="State *" aria-label="State" name="state" [(ngModel)]="state"> -->
+                        </div>
+                     </div>
+                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                        <div class="form-group position-relative clearfix">
+                           <select class="form-select" name="city" [(ngModel)]="city">
+                              <option value="" *ngIf="cityLoading == false">--Select City * --</option>
+                              <option value="" *ngIf="cityLoading == true">Loading...</option>
+                              <option *ngFor="let city of cityData;" value="{{city.cityId}}">
+                                 {{city.cityName}}</option>
+                           </select>
+
+                        </div>
+                     </div>
+                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                        <div class="form-group position-relative clearfix">
+                           <input name="name" type="text" class="form-control" placeholder="Mobile No. *"
+                              aria-label="Mobile No." maxlength="10" name="mobileNo" [(ngModel)]="mobileNo" autocomplete="off">
+                        </div>
+                     </div>
+                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                        <div class="form-group position-relative clearfix mb-2">
+                           <select class="form-select" name="gender" [(ngModel)]="gender">
+                              <option value="" selected>-- Gender * --</option>
+                              <option value="1">Male</option>
+                              <option value="2">Female</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12">
+                        <div class="form-group position-relative clearfix">
+                           <input name="name" type="text" class="form-control" placeholder="Address"
+                              aria-label="Address" name="address" [(ngModel)]="address" autocomplete="off">
+                        </div>
+                     </div>
+                  </div>
+                  <!-- <div class="form-group clearfix position-relative password-wrapper">
                            <input name="password" type="password" class="form-control" autocomplete="off" placeholder="Password" aria-label="Password">
                            <i class="fa fa-eye password-indicator"></i>
                        </div> -->
-                       <div class="form-group checkbox clearfix">
-                           <div class="clearfix float-start">
-                               <div class="form-check">
-                                   <input class="form-check-input" type="checkbox" id="rememberme">
-                                   <label class="form-check-label" for="rememberme">
-                                       I agree to the terms of service
-                                   </label>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="form-group mb-0 clearfix">
-                           <button type="submit" (click)="onSubmit()" class="btn btn-lg btn-primary btn-theme">Create Account</button>
-                       </div>
-                       <div class="extra-login clearfix">
-                           <span>Or Login With</span>
-                       </div>
-                       <div class="clearfix"></div>
-                       <ul class="social-list">
-                           <li><a href="#" class="facebook-color"><i class="myicon-facebook1 facebook-i"></i><span>Facebook</span></a></li>
-                           <li><a href="#" class="twitter-color"><i class="myicon-twitter1 twitter-i"></i><span>Twitter</span></a></li>
-                           <li><a href="#" class="google-color"><i class="myicon-google google-i"></i><span>Google</span></a></li>
-                       </ul>
-                   </form>
-                   <div class="clearfix"></div>
-                   <p>Already a member? <a routerLink="/login">Login here</a></p>
-               </div>
-           </div>
-           <div class="col-lg-6 bg-img clip-home"></div>
-       </div>
+                  <div class="form-group checkbox clearfix">
+                     <div class="clearfix float-start">
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" id="rememberme">
+                           <label class="form-check-label" for="rememberme">
+                              I agree to the terms of service
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-group mb-0 clearfix">
+                     <button type="submit" (click)="onSubmit()" class="btn btn-lg btn-primary btn-theme">Create
+                        Account</button>
+                  </div>
+                  <div class="extra-login clearfix">
+                     <span>Or Login With</span>
+                  </div>
+                  <div class="clearfix"></div>
+                  <ul class="social-list">
+                     <li><a href="#" class="facebook-color"><i
+                              class="myicon-facebook1 facebook-i"></i><span>Facebook</span></a></li>
+                     <li><a href="#" class="twitter-color"><i
+                              class="myicon-twitter1 twitter-i"></i><span>Twitter</span></a></li>
+                     <li><a href="#" class="google-color"><i class="myicon-google google-i"></i><span>Google</span></a>
+                     </li>
+                  </ul>
+               </form>
+               <div class="clearfix"></div>
+               <p>Already a member? <a routerLink="/login">Login here</a></p>
+            </div>
+         </div>
+         <div class="col-lg-6 bg-img clip-home"></div>
+      </div>
    </div>
+</div>
+
+<div class="modal fade otpModal" id="otpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 mb-0" id="">Authenticate OTP</h1>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <p class="text-center">Enter your Otp which is shared in your E-mail Id</p>
+                <div class="row">
+                    <div class="col-sm-8 mx-auto">
+                        <input name="otpValid" id="otpValid" class="form-control" type="number" autocomplete="off"
+                            placeholder="Enter your OTP" [(ngModel)]="userOtp">
+                        <input name="encOTP" id="encOTP" class="form-control" type="hidden" placeholder="Enter your OTP"
+                            [(ngModel)]="encryptOtp">
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+
+                <button class="btn btn-success" type="button" (click)="validateOtp()">Validate Otp</button>
+            </div>
+        </div>
+    </div>
 </div>
