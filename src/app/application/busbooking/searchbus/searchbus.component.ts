@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 declare let $: any;
 declare var bootstrap: any;
 
@@ -32,6 +33,13 @@ export class SearchbusComponent {
       $('#view-image').lightGallery();
     }, 2000);
    
+  }
+
+  constructor(private route: Router) {}
+
+  redirect() {
+    $('#viewSeat').modal('hide');
+    this.route.navigateByUrl('/Application/busbooking/booking')
   }
 
 }
