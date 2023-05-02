@@ -11,7 +11,7 @@
         <div class="d-flex justify-content-between">
           <div class="d-flex flex-row align-items-center">
             <div class="icon-trans">
-              <img class="img-fluid user-image" src="assets/admin/images/testimonials/admin-user.jpg" alt="" />
+              <img class="img-fluid user-image" src="assets/admin/images/admin-user.png" alt="" />
             </div>
             <div class="ms-2 c-details">
               <h6 class="mb-0">Vishal Kumar</h6>
@@ -91,7 +91,7 @@
           <div class="d-flex justify-content-between">
             <div class="d-flex flex-row align-items-center">
               <div class="icon-trans">
-                <img class="img-fluid user-image" src="assets/admin/images/testimonials/dh.jpg" alt="" />
+                <img class="img-fluid user-image" src="assets/admin/images/admin-user.png" alt="" />
               </div>
               <div class="ms-2 c-details">
                 <h6 class="mb-0">Vishal Kumar</h6>
@@ -183,7 +183,7 @@
             </li>
             <li><a class="dropdown-item" href="javascript:void();"><i class="myicon-settings fs-6 me-2"></i>
                 Settings</a></li>
-            <li><a class="dropdown-item text-danger" href="/website/login"><i class="myicon-log-out fs-6 me-2"></i>
+            <li><a class="dropdown-item text-danger" (click)="logout($event)"><i class="myicon-log-out fs-6 me-2"></i>
                 Logout</a></li>
           </ul>
         </div>
@@ -218,7 +218,7 @@
               </li>
               <li><a class="dropdown-item" href="javascript:void();"><i class="myicon-settings fs-6 me-2"></i>
                   Settings</a></li>
-              <li><a class="dropdown-item text-danger" href="/website/login"><i class="myicon-log-out fs-6 me-2"></i>
+              <li><a class="dropdown-item text-danger" (click)="logout($event)"><i class="myicon-log-out fs-6 me-2"></i>
                   Logout</a></li>
             </ul>
           </li>
