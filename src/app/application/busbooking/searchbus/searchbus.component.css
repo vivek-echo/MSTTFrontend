@@ -277,3 +277,80 @@ ol.cabin li:last-child ol li:nth-child(2){
     -webkit-animation-name: rubberBand;
     animation-name: rubberBand;
 }
+
+.dashed-border-left {
+    border-left: 2px dashed #f38717;
+}
+
+.dashed-border-left::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -5px;
+    width: 8px;
+    height: 8px;
+    background-color: #f38717;
+    border-radius: 10px;
+}
+
+.dashed-border-left::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -5px;
+    width: 8px;
+    height: 8px;
+    background-color: #f38717;
+    border-radius: 10px;
+}
+
+.ringering-top {
+    border: 3px solid #f38717;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    left: -8.5px;
+    top: -2.5px;
+    animation: pulsate 1s ease-out;
+    -webkit-animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite; 
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.0
+}
+
+.ringering-bottom {
+    border: 3px solid #f38717;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    left: -8.5px;
+    bottom: -3.5px;
+    animation: pulsate 1s ease-out;
+    -webkit-animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite; 
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.0
+}
+
+@keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
+.lh-22 {
+    line-height: 22px;
+}
+
+.lh-18 {
+    line-height: 18px;
+}

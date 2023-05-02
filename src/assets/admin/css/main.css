@@ -1011,6 +1011,10 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
     font-weight: 500
 }
 
+.text-theme {
+    color: #f38717;
+}
+
 /* cards ends */
 
 
