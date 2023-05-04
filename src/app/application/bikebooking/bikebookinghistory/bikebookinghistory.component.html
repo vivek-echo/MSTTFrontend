@@ -7,7 +7,7 @@
                         <li class="breadcrumb-item text-custom"><a href="javascript:void();"><i
                                     class="myicon-home1 me-2"></i>Home</a></li>
                         <li class="breadcrumb-item" aria-current="page">Dashboard</li>
-                        <li class="breadcrumb-item active" aria-current="page">Booking History</li>
+                        <li class="breadcrumb-item active" aria-current="page">Bike Booking History</li>
                     </ol>
                 </nav>
                 <div>
@@ -24,10 +24,13 @@
     <div class="col-lg-12">
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link" aria-current="page" routerLink="/Application/users/viewcars-users">Find a car</a>
+                <a class="nav-link" aria-current="page" routerLink="/Application/addbike">Add Bike</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" routerLink="/Application/users/bookinghistory-users">Booking History</a>
+                <a class="nav-link" routerLink="/Application/viewbikes">View Bikes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" routerLink="/Application/bikebookinghistory">Bike Booking History</a>
             </li>
         </ul>
     </div>
@@ -43,7 +46,7 @@
         <div class="col-lg-12 col-sm-12">
             <div class="card border-0">
                 <div class="card-header pt-1">
-                    <span class="d-inline-block align-middle h6 custom-border-left ps-2">Booking History</span>
+                    <span class="d-inline-block align-middle h6 custom-border-left ps-2">Bike Booking History</span>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -52,7 +55,7 @@
                                 <tr class="text-dark">
                                     <th class="custom-table-head">#</th>
                                     <th class="custom-table-head">Image</th>
-                                    <th class="custom-table-head">Car Type</th>
+                                    <th class="custom-table-head">Bike Type</th>
                                     <th class="custom-table-head">Brand/ Model</th>
                                     <th class="custom-table-head">Owner Name</th>
                                     <th class="custom-table-head">State</th>
@@ -69,13 +72,13 @@
                                     <th scope="row">1</th>
                                     <td>
                                         <div class="vehicle-image">
-                                            <a href="assets/admin/images/car.jpg">
-                                                <img src="assets/admin/images/car.jpg" alt="">
+                                            <a href="assets/admin/images/z900.gif">
+                                                <img src="assets/admin/images/z900.gif" alt="">
                                             </a>
                                         </div>
                                     </td>
-                                    <td>SUV</td>
-                                    <td>Hyundai/ Venue</td>
+                                    <td>Naked Sports</td>
+                                    <td>Kawasaki/ Z900</td>
                                     <td>Vishal</td>
                                     <td>Jharkhand</td>
                                     <td>Tata</td>
@@ -86,68 +89,6 @@
                                     </td>
                                     <td>Ranjan</td>
                                     <td><span class="dot-green"></span> Active</td>
-                                    <td>
-                                        <div class="text-center">
-                                            <div class="btn-group me-2" role="group" aria-label="First group" data-bs-toggle="tooltip" data-bs-title="View Details">
-                                                <button type="button" class="btn btn-sm btn-light-blue"
-                                                    data-bs-toggle="modal" data-bs-target="#viewbookingdetail"><i
-                                                        class="myicon-eye1 fs-1-0"></i></button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>
-                                        <div class="vehicle-image">
-                                            <a href="assets/admin/images/car.jpg">
-                                                <img src="assets/admin/images/car.jpg" alt="">
-                                            </a>
-                                        </div>
-                                    </td>
-                                    <td>SUV</td>
-                                    <td>Hyundai/ Venue</td>
-                                    <td>Vishal</td>
-                                    <td>Jharkhand</td>
-                                    <td>Tata</td>
-                                    <td>JH06Dg7828</td>
-                                    <td class="text-center">
-                                        <button type="button" class="btn btn-sm btn-light-yellow" data-bs-toggle="tooltip" data-bs-title="View/ Download PDF"><i
-                                                class="myicon-file-pdf fs-1-0"></i></button>
-                                    </td>
-                                    <td>Ranjan</td>
-                                    <td><span class="dot-red"></span> Inactive</td>
-                                    <td>
-                                        <div class="text-center">
-                                            <div class="btn-group me-2" role="group" aria-label="First group" data-bs-toggle="tooltip" data-bs-title="View Details">
-                                                <button type="button" class="btn btn-sm btn-light-blue"
-                                                    data-bs-toggle="modal" data-bs-target="#viewbookingdetail"><i
-                                                        class="myicon-eye1 fs-1-0"></i></button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>
-                                        <div class="vehicle-image view-image">
-                                            <a href="assets/admin/images/car.jpg">
-                                                <img src="assets/admin/images/car.jpg" alt="">
-                                            </a>
-                                        </div>
-                                    </td>
-                                    <td>SUV</td>
-                                    <td>Hyundai/ Venue</td>
-                                    <td>Vishal</td>
-                                    <td>Jharkhand</td>
-                                    <td>Tata</td>
-                                    <td>JH06Dg7828</td>
-                                    <td class="text-center">
-                                        <button type="button" class="btn btn-sm btn-light-yellow" data-bs-toggle="tooltip" data-bs-title="View/ Download PDF"><i
-                                                class="myicon-file-pdf fs-1-0"></i></button>
-                                    </td>
-                                    <td>Ranjan</td>
-                                    <td><span class="dot-red"></span> Inactive</td>
                                     <td>
                                         <div class="text-center">
                                             <div class="btn-group me-2" role="group" aria-label="First group" data-bs-toggle="tooltip" data-bs-title="View Details">
@@ -176,7 +117,7 @@
     <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5 mb-0" id="viewbookingdetailLabel">Booking Details</h1>
+                <h1 class="modal-title fs-5 mb-0" id="viewbookingdetailLabel">Bike Booking Details</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -189,12 +130,12 @@
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="" class="col-sm-3 col-form-label">Car Image</label>
+                    <label for="" class="col-sm-3 col-form-label">Bike Image</label>
                     <label for="" class="col-sm-1 col-form-label fw-bold">:</label>
                     <div class="col-sm-8">
                         <div class="vehicle-image">
-                            <a href="assets/admin/images/car.jpg">
-                                <img src="assets/admin/images/car.jpg" alt="">
+                            <a href="assets/admin/images/z900.gif">
+                                <img src="assets/admin/images/z900.gif" alt="">
                             </a>
                         </div>
                     </div>
@@ -203,11 +144,11 @@
                 <span class="d-inline-block align-middle h6 custom-border-left mb-3 ps-2">General Information</span>
                 <div class="bg-light p-3 rounded">
                     <div class="mb-3 row">
-                        <label for="" class="col-sm-3 col-form-label">Car Type</label>
+                        <label for="" class="col-sm-3 col-form-label">Bike Type</label>
                         <label for="" class="col-sm-1 col-form-label fw-bold">:</label>
                         <div class="col-sm-8">
                             <input type="text" readonly class="form-control-plaintext fw-bold" id=""
-                                value="SUV">
+                                value="Naked Sports">
                         </div>
                     </div>
                     <div class="mb-3 row">
@@ -243,7 +184,7 @@
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="" class="col-sm-3 col-form-label">Car Owner Name</label>
+                        <label for="" class="col-sm-3 col-form-label">Bike Owner Name</label>
                         <label for="" class="col-sm-1 col-form-label fw-bold">:</label>
                         <div class="col-sm-8">
                             <input type="text" readonly class="form-control-plaintext fw-bold" id=""
@@ -276,7 +217,7 @@
                     </div>
                 </div>
                 
-                <span class="d-inline-block align-middle h6 custom-border-left my-3 ps-2">Car Information</span>
+                <span class="d-inline-block align-middle h6 custom-border-left my-3 ps-2">Bike Information</span>
                 <div class="bg-light p-3 rounded">
                     <div class="mb-3 row">
                         <label for="" class="col-sm-3 col-form-label">Rc No.</label>

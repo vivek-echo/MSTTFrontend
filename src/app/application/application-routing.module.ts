@@ -12,6 +12,10 @@ import { ViewcarsUsersComponent } from './carbooking/users/viewcars-users/viewca
 import { BookinghistoryUsersComponent } from './carbooking/users/bookinghistory-users/bookinghistory-users.component';
 import { SearchbusComponent } from './busbooking/searchbus/searchbus.component';
 import { BookingComponent } from './busbooking/booking/booking.component';
+import { AddbikeComponent } from './bikebooking/addbike/addbike.component';
+import { ViewbikesComponent } from './bikebooking/viewbikes/viewbikes.component';
+import { BikebookinghistoryComponent } from './bikebooking/bikebookinghistory/bikebookinghistory.component';
+import { ViewbikesUsersComponent } from './bikebooking/users/viewbikes-users/viewbikes-users.component';
 
 const routes : Routes=[
   {
@@ -44,6 +48,8 @@ const routes : Routes=[
         bookingtype : "Bus Booking"
       }
     },
+
+    //FOR TAXI BOOKING
     {
       path: "taxibooking",
       component: CarbookingComponent,
@@ -75,6 +81,28 @@ const routes : Routes=[
     {
       path: "users/bookinghistory-users",
       component: BookinghistoryUsersComponent,
+      canActivate:[AuthGuard]
+    },
+
+    //FOR BIKE BOOKING
+    {
+      path: "addbike",
+      component: AddbikeComponent,
+      canActivate:[AuthGuard]
+    },
+    {
+      path: "viewbikes",
+      component: ViewbikesComponent,
+      canActivate:[AuthGuard]
+    },
+    {
+      path: "bikebookinghistory",
+      component: BikebookinghistoryComponent,
+      canActivate:[AuthGuard]
+    },
+    {
+      path: "users/viewbikes-users",
+      component: ViewbikesUsersComponent,
       canActivate:[AuthGuard]
     },
 

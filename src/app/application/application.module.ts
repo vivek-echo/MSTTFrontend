@@ -23,6 +23,12 @@ import { ViewcarsUsersComponent } from './carbooking/users/viewcars-users/viewca
 import { BookinghistoryUsersComponent } from './carbooking/users/bookinghistory-users/bookinghistory-users.component';
 import { SearchbusComponent } from './busbooking/searchbus/searchbus.component';
 import { BookingComponent } from './busbooking/booking/booking.component';
+import { BikebookingComponent } from './bikebooking/bikebooking.component';
+import { TruckbookingComponent } from './truckbooking/truckbooking.component';
+import { AddbikeComponent } from './bikebooking/addbike/addbike.component';
+import { ViewbikesComponent } from './bikebooking/viewbikes/viewbikes.component';
+import { BikebookinghistoryComponent } from './bikebooking/bikebookinghistory/bikebookinghistory.component';
+import { ViewbikesUsersComponent } from './bikebooking/users/viewbikes-users/viewbikes-users.component';
 
 
 
@@ -41,7 +47,13 @@ import { BookingComponent } from './busbooking/booking/booking.component';
     ViewcarsUsersComponent,
     BookinghistoryUsersComponent,
     SearchbusComponent,
-    BookingComponent
+    BookingComponent,
+    BikebookingComponent,
+    TruckbookingComponent,
+    AddbikeComponent,
+    ViewbikesComponent,
+    BikebookinghistoryComponent,
+    ViewbikesUsersComponent
   ],
   imports: [
     CommonModule,

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'custom-icomoon';
-  src:  url('fonts/custom-icomoon.eot?ot1ls2');
-  src:  url('fonts/custom-icomoon.eot?ot1ls2#iefix') format('embedded-opentype'),
-    url('fonts/custom-icomoon.ttf?ot1ls2') format('truetype'),
-    url('fonts/custom-icomoon.woff?ot1ls2') format('woff'),
-    url('fonts/custom-icomoon.svg?ot1ls2#custom-icomoon') format('svg');
+  src:  url('fonts/custom-icomoon.eot?iitoza');
+  src:  url('fonts/custom-icomoon.eot?iitoza#iefix') format('embedded-opentype'),
+    url('fonts/custom-icomoon.ttf?iitoza') format('truetype'),
+    url('fonts/custom-icomoon.woff?iitoza') format('woff'),
+    url('fonts/custom-icomoon.svg?iitoza#custom-icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,39 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.myicon-statement:before {
+  content: "\ec1e";
+}
+.myicon-hotel:before {
+  content: "\ec21";
+}
+.myicon-registration:before {
+  content: "\ec1d";
+}
+.myicon-busbooking:before {
+  content: "\ec1f";
+}
+.myicon-airplane:before {
+  content: "\ec20";
+}
+.myicon-nsdl:before {
+  content: "\ec17";
+}
+.myicon-rc:before {
+  content: "\ec18";
+}
+.myicon-rc1:before {
+  content: "\ec19";
+}
+.myicon-dl:before {
+  content: "\ec1a";
+}
+.myicon-dc:before {
+  content: "\ec1b";
+}
+.myicon-bc:before {
+  content: "\ec1c";
+}
 .myicon-health-insurance:before {
   content: "\ec16";
 }
@@ -1450,7 +1483,7 @@
 .myicon-briefcase:before {
   content: "\ead1";
 }
-.myicon-airplane:before {
+.myicon-airplane1:before {
   content: "\ead2";
 }
 .myicon-truck:before {
