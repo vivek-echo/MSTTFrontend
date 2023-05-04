@@ -29,6 +29,12 @@ import { AddbikeComponent } from './bikebooking/addbike/addbike.component';
 import { ViewbikesComponent } from './bikebooking/viewbikes/viewbikes.component';
 import { BikebookinghistoryComponent } from './bikebooking/bikebookinghistory/bikebookinghistory.component';
 import { ViewbikesUsersComponent } from './bikebooking/users/viewbikes-users/viewbikes-users.component';
+import { BikebookinghistoryUsersComponent } from './bikebooking/users/bikebookinghistory-users/bikebookinghistory-users.component';
+import { AddtruckComponent } from './truckbooking/addtruck/addtruck.component';
+import { ViewtrucksComponent } from './truckbooking/viewtrucks/viewtrucks.component';
+import { TruckbookinghistoryComponent } from './truckbooking/truckbookinghistory/truckbookinghistory.component';
+import { TruckbookinghistoryUsersComponent } from './truckbooking/users/truckbookinghistory-users/truckbookinghistory-users.component';
+import { ViewtrucksUsersComponent } from './truckbooking/users/viewtrucks-users/viewtrucks-users.component';
 
 
 
@@ -53,7 +59,13 @@ import { ViewbikesUsersComponent } from './bikebooking/users/viewbikes-users/vie
     AddbikeComponent,
     ViewbikesComponent,
     BikebookinghistoryComponent,
-    ViewbikesUsersComponent
+    ViewbikesUsersComponent,
+    BikebookinghistoryUsersComponent,
+    AddtruckComponent,
+    ViewtrucksComponent,
+    TruckbookinghistoryComponent,
+    TruckbookinghistoryUsersComponent,
+    ViewtrucksUsersComponent
   ],
   imports: [
     CommonModule,

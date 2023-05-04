@@ -16,6 +16,12 @@ import { AddbikeComponent } from './bikebooking/addbike/addbike.component';
 import { ViewbikesComponent } from './bikebooking/viewbikes/viewbikes.component';
 import { BikebookinghistoryComponent } from './bikebooking/bikebookinghistory/bikebookinghistory.component';
 import { ViewbikesUsersComponent } from './bikebooking/users/viewbikes-users/viewbikes-users.component';
+import { BikebookinghistoryUsersComponent } from './bikebooking/users/bikebookinghistory-users/bikebookinghistory-users.component';
+import { AddtruckComponent } from './truckbooking/addtruck/addtruck.component';
+import { ViewtrucksComponent } from './truckbooking/viewtrucks/viewtrucks.component';
+import { TruckbookinghistoryComponent } from './truckbooking/truckbookinghistory/truckbookinghistory.component';
+import { ViewtrucksUsersComponent } from './truckbooking/users/viewtrucks-users/viewtrucks-users.component';
+import { TruckbookinghistoryUsersComponent } from './truckbooking/users/truckbookinghistory-users/truckbookinghistory-users.component';
 
 const routes : Routes=[
   {
@@ -103,6 +109,39 @@ const routes : Routes=[
     {
       path: "users/viewbikes-users",
       component: ViewbikesUsersComponent,
+      canActivate:[AuthGuard]
+    },
+    {
+      path: "users/bikebookinghistory-users",
+      component: BikebookinghistoryUsersComponent,
+      canActivate:[AuthGuard]
+    },
+
+
+    //FOR TRUCK BOOKING
+    {
+      path: "addtruck",
+      component: AddtruckComponent,
+      canActivate:[AuthGuard]
+    },
+    {
+      path: "viewtrucks",
+      component: ViewtrucksComponent,
+      canActivate:[AuthGuard]
+    },
+    {
+      path: "truckbookinghistory",
+      component: TruckbookinghistoryComponent,
+      canActivate:[AuthGuard]
+    },
+    {
+      path: "users/viewtrucks-users",
+      component: ViewtrucksUsersComponent,
+      canActivate:[AuthGuard]
+    },
+    {
+      path: "users/truckbookinghistory-users",
+      component: TruckbookinghistoryUsersComponent,
       canActivate:[AuthGuard]
     },
 
