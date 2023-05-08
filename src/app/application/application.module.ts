@@ -35,6 +35,7 @@ import { ViewtrucksComponent } from './truckbooking/viewtrucks/viewtrucks.compon
 import { TruckbookinghistoryComponent } from './truckbooking/truckbookinghistory/truckbookinghistory.component';
 import { TruckbookinghistoryUsersComponent } from './truckbooking/users/truckbookinghistory-users/truckbookinghistory-users.component';
 import { ViewtrucksUsersComponent } from './truckbooking/users/viewtrucks-users/viewtrucks-users.component';
+import { UpdateprofileComponent } from './updateprofile/updateprofile.component';
 
 
 
@@ -65,7 +66,8 @@ import { ViewtrucksUsersComponent } from './truckbooking/users/viewtrucks-users/
     ViewtrucksComponent,
     TruckbookinghistoryComponent,
     TruckbookinghistoryUsersComponent,
-    ViewtrucksUsersComponent
+    ViewtrucksUsersComponent,
+    UpdateprofileComponent
   ],
   imports: [
     CommonModule,

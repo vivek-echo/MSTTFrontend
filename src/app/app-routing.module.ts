@@ -6,6 +6,7 @@ import { SignupComponent } from './Authcomoponent/signup/signup.component';
 import { HomeModule } from './Home/home.module';
 import { AuthGuard } from './Authcomoponent/authguard/auth.guard';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { UpdateprofileComponent } from './application/updateprofile/updateprofile.component';
 
 
 
@@ -25,6 +26,10 @@ const appRoutes : Routes=[
   {
     path: 'signup',
     component:SignupComponent
+  },
+  {
+    path: 'updateprofile',
+    component:UpdateprofileComponent
   },
   {
     path: "Application",

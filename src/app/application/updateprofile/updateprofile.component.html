@@ -1,0 +1,210 @@
+<!-- <div class="pageLoader"  *ngIf="loadding == true">
+   <div class="dot"></div>
+   <div class="dot"></div>
+   <div class="dot"></div>
+   <div class="dot"> </div>
+   <div class="dot"></div>
+</div> -->
+<div class="login-4">
+    <div class="container-fluid">
+        <div class="row login-box">
+            <div class="col-lg-12 form-section">
+                <div class="form-inner">
+                    <a href="login-4.html" class="logo">
+                        <img src="assets/admin/images/mstt.png" alt="logo">
+                    </a>
+                    <h3>Update Profile</h3>
+
+                    <form action="#" method="POST" id="">
+                        <div class="row">
+                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3">
+                                <label for="Name" class="text-start">Name</label>
+                                <div class="form-group position-relative clearfix">
+                                    <input type="text" class="form-control" aria-label="Name" name="Name" value="Vishal"
+                                        autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3">
+                                <label for="email" class="text-start">Email</label>
+                                <div class="form-group position-relative clearfix">
+                                    <input type="email" class="form-control" placeholder="Email" aria-label="Email"
+                                        name="email" value="email@example.com" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3">
+                                <label for="Dob" class="text-start">DOB</label>
+                                <div class="form-group position-relative clearfix">
+                                    <input type="text" class="form-control" name="dob" value="10-05-1990"
+                                        autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3">
+                                <label for="pincode" class="text-start">Pincode</label>
+                                <div class="form-group position-relative clearfix">
+                                    <input type="text" class="form-control" aria-label="Pin Code" name="pinCode"
+                                        value="555111" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3">
+                                <div class="form-group position-relative clearfix">
+                                    <label for="State" class="text-start">State</label>
+                                    <input type="text" class="form-control" aria-label="state" name="state"
+                                        value="Jharkhand" autocomplete="off" disabled>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3">
+                                <label for="City" class="text-start">City</label>
+                                <div class="form-group position-relative clearfix">
+                                    <input type="text" class="form-control" value="Ranchi" aria-label="City" name="city"
+                                        autocomplete="off" disabled>
+
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3">
+                                <label for="Mobile" class="text-start">Mobile</label>
+                                <div class="form-group position-relative clearfix">
+                                    <input type="text" class="form-control" aria-label="Mobile No." value="8784445454"
+                                        maxlength="10" name="mobileNo" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3">
+                                <label for="Aadhar No" class="text-start">Aadhar No</label>
+                                <div class="form-group position-relative clearfix">
+                                    <input type="text" class="form-control" aria-label="Aadhar No."
+                                        value="8888-5888-8545" name="adhar" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3">
+                                <label for="Pan No" class="text-start">Pan No</label>
+                                <div class="form-group position-relative clearfix">
+                                    <input name="PAN" type="text" class="form-control" aria-label="Pan No."
+                                        value="DOGksj2121" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3">
+                                <label for="UploadDL" class="text-start">DL No</label>
+                                <div class="form-group position-relative clearfix">
+                                    <input name="DL" type="text" class="form-control" aria-label="DL No."
+                                        value="JH0192nhajj19292i" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3">
+                                <label for="Upload Aadhar" class="text-start">Upload Aadhaar</label>
+                                <div class="form-group position-relative clearfix">
+                                    <input name="UploadDL" type="file" class="form-control" aria-label="Upload Aadhaar"
+                                        autocomplete="off">
+                                    <code class="ms-2 text-white text-monospace">(File max size < 2MB)</code>
+                                    <code class="ms-2 text-white float-end me-2"><a href="">View</a></code>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3">
+                                <label for="Upload PAN" class="text-start">Upload PAN</label>
+                                <div class="form-group position-relative clearfix">
+                                    <input name="uploadPAN" type="file" class="form-control" aria-label="Upload PAN"
+                                        autocomplete="off">
+                                    <code class="ms-2 text-white text-monospace">(File max size < 2MB)</code>
+                                    <code class="ms-2 text-white float-end me-2"><a href="">View</a></code>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3">
+                                <label for="Upload DL" class="text-start">Upload DL</label>
+                                <div class="form-group position-relative clearfix">
+                                    <input name="uploadDL" type="file" class="form-control" aria-label="Upload DL"
+                                        autocomplete="off">
+                                    <code class="ms-2 text-white text-monospace">(File max size < 2MB)</code>
+                                    <code class="ms-2 text-white float-end me-2"><a href="">View</a></code>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3">
+                                <label for="address" class="text-start">Address</label>
+                                <div class="form-group position-relative clearfix">
+                                    <textarea name="" id="" cols="43" rows="3">Ranchi, Jharkhand</textarea>
+                                </div>
+                            </div>
+                            <h4 class="text-white mb-2">Bank Details</h4>
+                            <hr class="mb-4 text-white mx-2">
+                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3">
+                                <label for="Bank Name" class="text-start">Bank Name</label>
+                                <div class="form-group position-relative clearfix">
+                                    <input type="text" class="form-control" aria-label="Pin Code" name="BankName"
+                                        value="SBI" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3">
+                                <div class="form-group position-relative clearfix">
+                                    <label for="A/C No" class="text-start">A/C No</label>
+                                    <input type="text" class="form-control" aria-label="A/C No" name="A/CNo"
+                                        value="89895475544" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3">
+                                <div class="form-group position-relative clearfix">
+                                    <label for="IFSC Code" class="text-start">IFSC Code</label>
+                                    <input type="text" class="form-control" aria-label="IFSC Code" name="IFSCNo"
+                                        value="SBIN121222" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3">
+                                <label for="Upload Passbook" class="text-start">Upload Passbook</label>
+                                <div class="form-group position-relative clearfix">
+                                    <input name="uploadPassbook" type="file" class="form-control" aria-label="Upload Passbook"
+                                        autocomplete="off">
+                                    <code class="ms-2 text-white text-monospace">(File max size < 2MB)</code>
+                                    <code class="ms-2 text-white float-end me-2"><a href="">View</a></code>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="form-group clearfix position-relative password-wrapper">
+                           <input name="password" type="password" class="form-control" autocomplete="off" placeholder="Password" aria-label="Password">
+                           <i class="fa fa-eye password-indicator"></i>
+                       </div> -->
+                        <!-- <div class="form-group checkbox clearfix">
+                            <div class="clearfix float-start">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="rememberme">
+                                    <label class="form-check-label" for="rememberme">
+                                        I agree to the terms of service
+                                    </label>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="form-group mb-0 clearfix">
+                            <button type="submit" class="btn btn-lg btn-primary btn-theme">Update</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- <div class="col-lg-6 bg-img clip-home"></div> -->
+        </div>
+    </div>
+</div>
+
+<!-- <div class="modal fade otpModal" id="otpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 mb-0" id="">Authenticate OTP</h1>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <p class="text-center">Enter your Otp which is shared in your E-mail Id</p>
+                <div class="row">
+                    <div class="col-sm-8 mx-auto">
+                        <input name="otpValid" id="otpValid" class="form-control" type="number" autocomplete="off"
+                            placeholder="Enter your OTP" [(ngModel)]="userOtp">
+                        <input name="encOTP" id="encOTP" class="form-control" type="hidden" placeholder="Enter your OTP"
+                            [(ngModel)]="encryptOtp">
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+
+                <button class="btn btn-success" type="button" (click)="validateOtp()">Validate Otp</button>
+            </div>
+        </div>
+    </div>
+</div> -->
